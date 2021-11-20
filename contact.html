@@ -5,70 +5,114 @@
         <title>Contact</title>
         <link rel="stylesheet" href="css/css.css">
     </head>
-
-    <style>
-
-    </style>
     
     <body>
         <header></header>
         <main>
-            <form action="#" method="get">
-                <div>
-                    <h3>Vos coordonnées</h3>
-                    <div>
-                        <label>Nom</label>
-                        <input type="text" id="nom">
-                    </div><br>
-    
-                    <div>
-                        <label>Prénom</label>
-                        <input type="text" id="prénom">
-                    </div><br>
-    
-                    <div>
-                        <label>Adresse</label>
-                        <input type="text" id="adresse">
-                    </div><br>
-    
-                    <div>
-                        <label>Ville</label>
-                        <input type="text" id="ville">
-                    </div><br>
+			<div class="ContactRegistration">
+				<form action="#" method="get">
+					<h2 class="registration">Nous Contacter</h2>
+					<div class="details">
+						<h3>Vos coordonnées</h3>
+						<div>
+							<label>Nom</label>
+							<input type="text" id="nom">
+						</div><br>
+		
+						<div>
+							<label>Prénom</label>
+							<input type="text" id="prénom">
+						</div><br>
+		
+						<div>
+							<label>Adresse</label>
+							<input type="text" id="adresse">
+						</div><br>
+		
+						<div>
+							<label>Ville</label>
+							<input type="text" id="ville">
+						</div><br>
 
-                    <div>
-                        <label>Code Postal</label>
-                        <input type="number" id="CodePostal">
-                    </div><br>
-                    
-                    <div>
-                        <label>Email</label>
-                        <input type="email" id="email">
-                    </div><br>
-                </div>
+						<div>
+							<label>Code Postal</label>
+							<input type="number" id="CodePostal">
+						</div><br>
+						
+						<div>
+							<label>Email</label>
+							<input type="email" id="email">
+						</div><br>
+					</div>
 
-                <div>
-                    <h3>Votre message</h3>
+					<div class="details">
+						<h3>Votre message</h3>
 
-                    <div>
-                        <div>
-                            <label>Sujet</label>
-                            <input type="text" id="sujet">
-                        </div>
-                    </div><br>
-                    <div>
-                        <div>
-                            <label>Message</label>
-                            <input type="text" id="message">
-                        </div>
-                    </div><br>
-                    <div>
-                        <button type="submit">
-                            Envoyer
-                        </button>
-                    </div>
-                </div>
-            </form>
+						<div>
+							<div>
+								<label>Sujet</label>
+								<input type="text" id="sujet">
+							</div>
+						</div><br>
+						<div>
+							<div>
+								<label>Message :</label>
+								<textarea name="message"></textarea>
+							</div>
+						</div><br>
+						
+						<div class="sendTo">
+							<button type="submit">
+								Envoyer
+							</button>
+						</div>
+					</div>
+				</form>
+			</div>
+			
+			<div class="horaire">
+			<table>
+				<tr>
+					<th></th>
+					<th>Matin</th>
+					<th>Après-midi</th>
+				</tr>
+				<tr>
+					<td rowspan="1">Lundi</td>
+					<td>8h00 - 11h30</td>
+					<td>14h00 - 19h00</td>
+				</tr> 
+				<tr>
+					<td rowspan="1">Mardi</td>
+					<td>8h00 - 11h30</td>
+					<td>14h00 - 19h00</td>
+				</tr> 
+				<tr>
+					<td rowspan="1">Mercredi</td>
+					<td>8h00 - 11h30</td>
+					<td>14h00 - 19h00</td>
+				</tr>
+				<tr>
+					<td rowspan="1">Jeudi</td>
+					<td>Fermé</td>
+					<td>14h00 - 20h00</td>
+				</tr>
+				<tr>
+					<td rowspan="1">Vendredi</td>
+					<td>8h00 - 11h30</td>
+					<td>14h00 - 19h00</td>
+				</tr>
+				<tr>
+					<td rowspan="1">Samedi</td>
+					<td>8h00 - 11h30</td>
+					<td>14h00 - 20h00</td>
+				</tr>
+				<tr>
+					<td rowspan="1">Dimanche</td>
+					<td>Fermé</td>
+					<td>Fermé</td>
+				</tr>
+			</table>
         </main>
         <footer></footer>
 

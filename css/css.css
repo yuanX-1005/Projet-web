@@ -59,6 +59,47 @@ html, body{
     padding: 5px;
 }
 
+/* Formulaire */
+	.ContactRegistration{
+		width: 500px;
+		background-color:rgb(105, 171, 144, 0.4);
+		margin: auto;
+		color: #FFFFF;
+		padding: 10px 0px 10px 0px;
+		border-radius: 15px 15px 15px 15px;
+		
+	}
+	
+	.registration{
+		text-align: center;
+	}
+	
+	.details{
+		margin-left: 10%;
+		margin-top: 10%;
+	}
+	
+	.sendTo {
+		text-align: center;
+	}
+	
+	textarea {
+		font: 1em sans-serif;
+		width: 300px;
+		box-sizing: border-box;
+		border: 1px solid #999;
+}
+/* Tableau : Heures d'ouverture */
+	table{
+		margin-top : 50px;
+		border: 2px solid #fdbfc9 ;
+		text-align: center;
+	}
+	
+	th,td{
+		border : 1px solid #beb887;
+	}
+
 
 @media screen and (min-width : 900px) and (max-width:1200px){
 
