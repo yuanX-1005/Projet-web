@@ -194,8 +194,12 @@ textarea {
 }
 
 /* Tableau : Heures d'ouverture */
+.horaire{
+    margin: 2% auto;
+}
+
 table{
-    margin-top : 50px;
+    margin : 50px auto 10px;
     border: 2px solid var(--fourth-color) ;
     text-align: center;
 }
