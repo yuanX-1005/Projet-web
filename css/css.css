@@ -1,0 +1,78 @@
+:root {
+    /*backagrounds colors*/
+    --base-bag-color :;
+    --main-bag-color:#63a58a;
+    --second-bag-color:...;
+    --third-bag-color:...;
+
+    /* texts colors */
+    --main-text-color:...;
+    --second-text-color:...;
+    --third-text-color:...;
+
+    /* fonts sizes */
+    --font-size-1: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+    --font-size-2: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+    --font-size-3: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+    --font-size-4: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+
+    /*button style */
+    --main-btn-color:...;
+    --second-btn-color:...;
+    --third-btn-color:...;
+
+    --main-btn-height:...;
+    --second-btn-height:...;
+    --third-btn-height:...;
+}
+
+/* font used */
+@font-face {
+    font-family: "Open Sans";
+    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
+        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+    font-weight: bold;
+}
+
+
+html, body{
+    font-family: "...", serif;
+    background-color: var();
+    color: var();
+}
+
+.box{
+    display: flex;
+    flex-direction: row; /* or row-reverse or column or start ... coller vers quelle endroit*/
+    flex-wrap: wrap; /*retourne de la ligne*/
+}
+
+.container{
+    background-color: green;
+    display: flex; /*inline-flex*/
+    /*flex-wrap: wrap; */
+    flex-flow: row reverse nowrap;
+}
+
+.item{
+    background-color: yellow;
+    padding: 5px;
+}
+
+
+@media screen and (min-width : 900px) and (max-width:1200px){
+
+}
+
+@media (min-width : 900px) and (max-width:1200px){
+    
+}
+
+@media (width >=900px) and (max-width <= 1200px){
+    
+}
+
+@media (900px <= width <= 1200px){
+    
+}
+
