@@ -215,7 +215,23 @@ footer{
 /***====================== Media query ================================*****/
 
 
-@media (900px <= width <= 1200px){
-    
-} 
+@media (min-width : 300px) and (max-width:560px){
+    /**
+    *   Navbar ********************************
+    **/
 
+    /*logo de navbar*/
+    .nav-logo{
+        width: 15%;
+        padding: 0 3% 0 2%;
+    }
+
+    .nav-logo img{
+        max-width: 70px;
+    }
+
+    /* menu de navbar */
+    .nav-content-border{
+        font-size: 14px;
+    }
+}
