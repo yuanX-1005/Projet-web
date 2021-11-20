@@ -1,20 +1,16 @@
 :root {
     /*backagrounds colors*/
-    --base-bag-color :;
+    --base-bag-color :#000000;
     --main-bag-color:#63a58a;
-    --second-bag-color:...;
-    --third-bag-color:...;
-
-    /* texts colors */
-    --main-text-color:...;
-    --second-text-color:...;
-    --third-text-color:...;
+    --second-bag-color:#beb887;
+    --third-bag-color:#69ab90;
+    --fourth-color : #fdbfc9;
 
     /* fonts sizes */
     --font-size-1: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
-    --font-size-2: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+    /* --font-size-2: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
     --font-size-3: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
-    --font-size-4: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+    --font-size-4: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768)); */
 
     /*button style */
     --main-btn-color:...;
@@ -28,21 +24,30 @@
 
 /* font used */
 @font-face {
-    font-family: "Open Sans";
-    src: url("/fonts/OpenSans-Regular-webfont.woff2") format("woff2"),
-        url("/fonts/OpenSans-Regular-webfont.woff") format("woff");
+    font-family: "Chivo-Regular";
+    src: url("/polices/Chivo-Regular.ttf") format("woff2");
     font-weight: bold;
 }
 
 
 html, body{
-    font-family: "...", serif;
+    font-family: "Chivo-Regular", serif;
     background-color: var();
     color: var();
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding : 0;
+}
+
+/* proprietaire par defaut */
+a:link, a:active{
+    color: var(--base-bag-color);
+    text-decoration: none;
 }
 
 .box{
-    display: flex;
+    display: inline-flex;
     flex-direction: row; /* or row-reverse or column or start ... coller vers quelle endroit*/
     flex-wrap: wrap; /*retourne de la ligne*/
 }
@@ -54,9 +59,24 @@ html, body{
     flex-flow: row reverse nowrap;
 }
 
-.item{
-    background-color: yellow;
-    padding: 5px;
+.row{
+    display: inline-block;
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+/* Navbar */
+nav{
+    display: flex;
+    align-items: stretch;
+    background-color: var(--fourth-color);
+}
+.nav-logo{
+    padding: 0 6% 0 4%;
+}
+
+.nav-logo img{
+    max-height: 40px;
+    max-width: max-content;
 }
 
 /* Formulaire */
@@ -101,11 +121,14 @@ html, body{
 	}
 
 
+.nav-link{
+    padding:  0 2%;
+}
 @media screen and (min-width : 900px) and (max-width:1200px){
 
 }
 
-@media (min-width : 900px) and (max-width:1200px){
+/* @media (min-width : 900px) and (max-width:1200px){
     
 }
 
@@ -115,5 +138,5 @@ html, body{
 
 @media (900px <= width <= 1200px){
     
-}
+} */
 
