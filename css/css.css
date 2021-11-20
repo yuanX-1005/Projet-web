@@ -1,39 +1,88 @@
 :root {
-    /*backagrounds colors*/
-    --base-bag-color :#000000;
+    /*backagrounds colors : nommée en chiffre -> pour eviter le changement de couleur par la suite*/
+    --base-bag-color :#e8e8e8;
     --main-bag-color:#63a58a;
     --second-bag-color:#beb887;
-    --third-bag-color:#69ab90;
-    --fourth-color : #fdbfc9;
+    --third-color : #fdbfc9;
 
     /* fonts sizes */
     --font-size-1: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
-    /* --font-size-2: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
-    --font-size-3: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
-    --font-size-4: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768)); */
-
-    /*button style */
-    --main-btn-color:...;
-    --second-btn-color:...;
-    --third-btn-color:...;
-
-    --main-btn-height:...;
-    --second-btn-height:...;
-    --third-btn-height:...;
 }
 
-/* font used */
+/************Font used***********/
+/* pour les titres */
 @font-face {
-    font-family: "Chivo-Regular";
-    src: url("/polices/Chivo-Regular.ttf") format("woff2");
+    font-family: "Chivo";
+    src: url("/polices/Chivo-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "Chivo";
+    src: url("/polices/Chivo-Bold.ttf") format("truetype");
     font-weight: bold;
 }
 
+/*Pour les paragraphes*/
+@font-face {
+    font-family: "CrimsonPro";
+    src: url("/polices/CrimsonPro-Bold.ttf") format("truetype");
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: "CrimsonPro";
+    src: url("/polices/CrimsonPro-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+/*Pour les citations*/
+@font-face {
+    font-family: "Estonia";
+    src: url("/polices/Estonia-Regular.ttf") format("truetype");
+    font-weight: normal;
+}
+
+/************Code basique***********/
+
+/*text-align*/
+.center{
+    text-align: center;
+}
+
+.right{
+    text-align: right;
+}
+
+.left{
+    text-align: left;
+}
+
+
+/************Couleur***********/
+.bgBaseColor{
+    background-color : var(--base-bag-color);
+}
+
+.bgMainColor{
+    background-color : var(--main-bag-color);
+}
+
+.bgSecColor{
+    background-color : var(--second-bag-color);
+}
+
+.bgThrColor{
+    background-color : var(--third-bag-color);
+}
+
+
 
 html, body{
-    font-family: "Chivo-Regular", serif;
-    background-color: var();
-    color: var();
+    background-color: var(--base-bag-color);
+    color: black;
+    font-family: "CrimsonPro", serif;
+    font-size: 16px;
     height: 100%;
     width: 100%;
     margin: 0;
@@ -41,36 +90,28 @@ html, body{
 }
 
 /* proprietaire par defaut */
-a:link, a:active{
-    color: var(--base-bag-color);
+a:link, a:active, a:visited{
+    color: black;
     text-decoration: none;
 }
 
-.box{
-    display: inline-flex;
-    flex-direction: row; /* or row-reverse or column or start ... coller vers quelle endroit*/
-    flex-wrap: wrap; /*retourne de la ligne*/
-}
+/**
+*   Navbar ********************************
+**/
 
-.container{
-    background-color: green;
-    display: flex; /*inline-flex*/
-    /*flex-wrap: wrap; */
-    flex-flow: row reverse nowrap;
-}
-
-.row{
-    display: inline-block;
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
 /* Navbar */
 nav{
+    height: 50px;
+    width: 100%;
     display: flex;
-    align-items: stretch;
-    background-color: var(--fourth-color);
+    background-color: var(--third-color);
+    justify-content :space-around;
+    box-shadow: 3px 3px 30px #999;
 }
+
+/*logo de navbar*/
 .nav-logo{
+    width: 20%;
     padding: 0 6% 0 4%;
 }
 
@@ -79,51 +120,87 @@ nav{
     max-width: max-content;
 }
 
-/* Formulaire */
-	.ContactRegistration{
-		width: 500px;
-		background-color:rgb(105, 171, 144, 0.4);
-		margin: auto;
-		color: #FFFFF;
-		padding: 10px 0px 10px 0px;
-		border-radius: 15px 15px 15px 15px;
-		
-	}
-	
-	.registration{
-		text-align: center;
-	}
-	
-	.details{
-		margin-left: 10%;
-		margin-top: 10%;
-	}
-	
-	.sendTo {
-		text-align: center;
-	}
-	
-	textarea {
-		font: 1em sans-serif;
-		width: 300px;
-		box-sizing: border-box;
-		border: 1px solid #999;
+/* menu de navbar */
+.nav-content-border{
+    width: 80%;
+    display: flex;
+    align-items: center;
 }
-/* Tableau : Heures d'ouverture */
-	table{
-		margin-top : 50px;
-		border: 2px solid #fdbfc9 ;
-		text-align: center;
-	}
-	
-	th,td{
-		border : 1px solid #beb887;
-	}
-
 
 .nav-link{
-    padding:  0 2%;
+    margin: 0 2%;
+    font-weight: bold;
 }
+
+/***======================================================*****/
+
+/**
+*   Page ACCUEIL ********************************
+**/
+
+
+
+/**
+*   Page CONTACT ********************************
+**/
+
+/* Formulaire */
+.contactRegistration{
+    margin : 5% 2%;
+    background-color:var(--main-bag-color);
+    color: #ffffff;
+    padding: 10px 0px;
+    border-radius: 15px;
+}
+
+.registration{
+    text-align: center;
+}
+
+.details{
+    margin-left: 10%;
+    margin-top: 10%;
+}
+
+.sendTo {
+    text-align: center;
+}
+
+textarea {
+    font: 1em sans-serif;
+    /* width: 300px; */
+    box-sizing: border-box;
+    border: 1px solid #999;
+}
+
+/* Tableau : Heures d'ouverture */
+table{
+    margin-top : 50px;
+    border: 2px solid var(--fourth-color) ;
+    text-align: center;
+}
+
+th,td{
+    border : 1px solid var(--second-bag-color);
+}
+
+/***======================================================*****/
+
+main{
+    margin : 0 16%;
+}
+
+/*à supprimer*/
+.example{
+    width: 100%;
+    text-align: left;
+    margin : 3% 0% 2%;
+}
+
+
+/***======================================================*****/
+
+
 @media screen and (min-width : 900px) and (max-width:1200px){
 
 }
