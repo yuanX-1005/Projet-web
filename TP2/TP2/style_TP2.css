@@ -1,10 +1,14 @@
+* { 
+    box-sizing: border-box; 
+}
+
 body{
     background-color: #306090;
     color:#ffffff;
     font-family: "Trebuchet MS";
-    margin: 1em 1%;
-    padding: 10px;
-    border: 3px solid black;
+    /* margin: 1em 1%;
+    padding: 10px; */
+    /* border: 3px solid black; */
 }
 
 #page{
@@ -18,9 +22,13 @@ body{
 }
 
 .logo{
-    background-color: gray;
+    /*background-color: gray;*/
     width: 70px;
+    border-radius: 100%;
+    box-shadow: 0 0 18px #91bd09;
+    -webkit-box-shadow: 0 0 18px #91bd09;
 }
+
 
 header h1{
     font-weight: bold;
@@ -74,10 +82,16 @@ main{
 .transition p{
     color: coral;
     font-size: 14px;
+    transition: all 1s ease-out;
+}
+
+.transition p:hover{
+    color: #ffffff;
+    font-size: 16px;
 }
 
 footer{
-    margin-top: -100px;
+    margin-top: 150px;
     height: 100px;
 }
 
