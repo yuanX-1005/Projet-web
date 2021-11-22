@@ -8,7 +8,6 @@
 
     <style>
         .formulaire{
-            width: 800px;
             margin: auto;
             background-color: grey;
             font: Georgia, serif;
@@ -16,7 +15,13 @@
         }
 
         input{
-            border-color:transparent transparent red transparent;
+            border: none;
+            border-bottom: 2px solid lightgrey;
+            margin : 5px 2%;
+        }
+
+        input:invalid{
+            border-bottom: 2px solid red;
         }
 
         .row1{
@@ -24,6 +29,7 @@
             flex-direction: row; 
             flex-wrap: wrap;
             justify-content: space-around;
+            margin : 1px 5px;
         }
 
     </style>
@@ -36,14 +42,14 @@
                 <div>
                     <h3>Coordonnées</h3>
                     <div class="row1">
-                        <input type="text" placeholder="Nom" id="nom">
-                        <input type="text" placeholder="Prénom"id="prénom">
-                        <input type="text" placeholder="Adresse de livraison" id="adresse">
+                        <input type="text" placeholder="Nom" id="nom" required>
+                        <input type="text" placeholder="Prénom"id="prénom"  required>
+                        <input type="text" placeholder="Adresse de livraison" id="adresse"  required>
                     </div><br>
                     <div class="row1">
-                        <input type="number" placeholder="Téléphone" id="telephone">
-                        <input type="email" placeholder="E-mail" id="email">
-                        <input type="password" placeholder="Mot de passe" id="mdp">
+                        <input type="number" placeholder="Téléphone" id="telephone"  required>
+                        <input type="email" placeholder="E-mail" id="email"  required>
+                        <input type="password" placeholder="Mot de passe" id="mdp"  required>
                     </div><br>
 
                     <div>
@@ -55,7 +61,7 @@
                     </div><br>
 
                     <div>
-                        <label>Mode de paiement</label>
+                        <h3>Mode de paiement</h3>
                         <input type="radio" value="Paiement sur place">
                         <input type="radio" value="Paiement en ligne">
                     </div><br>
