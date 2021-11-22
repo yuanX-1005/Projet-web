@@ -16,20 +16,15 @@
         }
 
         input{
-            border-color:transparent transparent lightgray transparent;
+            border-color:transparent transparent red transparent;
         }
 
-        .container{
+        .row1{
             display: flex;
-            flex-direction: row;
-            flex-wrap: nowrap;
+            flex-direction: row; 
+            flex-wrap: wrap;
+            justify-content: space-around;
         }
-
-    
-
-       
-
-     
 
     </style>
     <body>
@@ -40,35 +35,19 @@
             <form action="#" method="get">
                 <div>
                     <h3>Coordonnées</h3>
-                    <div class="container">
-                        <div>
-                            <input type="text" placeholder="Nom" id="nom">
-                        </div><br>
-
-                        <div>
-                            <input type="text" placeholder="Prénom"id="prénom">
-                        </div><br>
-
-                        <div>
-                            <input type="text" placeholder="Adresse de livraison" id="adresse">
-                        </div><br>
-
-                        <div id="telephone">
-                            <input type="number" placeholder="Téléphone">
-                        </div><br>
+                    <div class="row1">
+                        <input type="text" placeholder="Nom" id="nom">
+                        <input type="text" placeholder="Prénom"id="prénom">
+                        <input type="text" placeholder="Adresse de livraison" id="adresse">
                     </div><br>
-                    
-                    <div>      
-                        <input type="email" id="email">
+                    <div class="row1">
+                        <input type="number" placeholder="Téléphone" id="telephone">
+                        <input type="email" placeholder="E-mail" id="email">
+                        <input type="password" placeholder="Mot de passe" id="mdp">
                     </div><br>
 
                     <div>
-                        <label>Mot de passe</label>
-                        <input type="password" id="mdp">
-                    </div><br>
-
-                    <div>
-                        <label>Mode de livraison</label>
+                        <h3>Mode de livraison</h3>
                         <select id="livraison">
                             <option>Livraison à domicile</option>
                             <option>Retrait sur place</option>
