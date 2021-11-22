@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <title>Commande»</title>
+        <link rel="stylesheet" href="style_TP2.css">
+    </head>
+
+    <style>
+        .formulaire{
+            width: 800px;
+            margin: auto;
+            background-color: grey;
+            font: Georgia, serif;
+           
+        }
+
+        input{
+            border-color:transparent transparent lightgray transparent;
+        }
+
+        .container{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: nowrap;
+        }
+
+    
+
+       
+
+     
+
+    </style>
+    <body>
+        <header>
+            <h1>Passez votre commande ici</h1>
+        </header>
+        <div class="formulaire">
+            <form action="#" method="get">
+                <div>
+                    <h3>Coordonnées</h3>
+                    <div class="container">
+                        <div>
+                            <input type="text" placeholder="Nom" id="nom">
+                        </div><br>
+
+                        <div>
+                            <input type="text" placeholder="Prénom"id="prénom">
+                        </div><br>
+
+                        <div>
+                            <input type="text" placeholder="Adresse de livraison" id="adresse">
+                        </div><br>
+
+                        <div id="telephone">
+                            <input type="number" placeholder="Téléphone">
+                        </div><br>
+                    </div><br>
+                    
+                    <div>      
+                        <input type="email" id="email">
+                    </div><br>
+
+                    <div>
+                        <label>Mot de passe</label>
+                        <input type="password" id="mdp">
+                    </div><br>
+
+                    <div>
+                        <label>Mode de livraison</label>
+                        <select id="livraison">
+                            <option>Livraison à domicile</option>
+                            <option>Retrait sur place</option>
+                        </select>
+                    </div><br>
+
+                    <div>
+                        <label>Mode de paiement</label>
+                        <input type="radio" value="Paiement sur place">
+                        <input type="radio" value="Paiement en ligne">
+                    </div><br>
+
+                    <div>
+                        <label>Je souhaite recevoir une facture</label>
+                        <input type="checkbox" checked>
+                    </div><br>
+
+                    <div>
+                        <h3>Menu à commander</h3>
+
+                        <div>
+                            <label>Entrée :</label>
+                            <select id="entree">
+                                <option>Soupe de légumes</option>
+                                <option>Salade aux fruits de mer</option>
+                            </select>
+                        </div><br>
+
+                        <div>
+                            <label>Plats :</label>
+                            <select id="plats">
+                                <option>Couscous au poisson</option>
+                                <option>Côte de veau aux petits légumes</option>
+                            </select>
+                        </div><br>
+
+                        <div>
+                            <label>Desserts :</label>
+                            <select id="desserts">
+                                <option>Tiramisu</option>
+                                <option>Mousse au chocolat</option>
+                            </select>
+                        </div><br>
+                    </div>
+                    <div>
+                        <button type="submit">
+                            Ajouter
+                        </button>
+                        <button type="reset">
+                            Annuler
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </body>
+</html>

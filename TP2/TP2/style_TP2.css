@@ -1,0 +1,89 @@
+body{
+    background-color: #306090;
+    color:#ffffff;
+    font-family: "Trebuchet MS";
+    margin: 1em 1%;
+    padding: 10px;
+    border: 3px solid black;
+}
+
+#page{
+    color: #000000;
+    background-color:#ffffff; 
+    background-position:top right; 
+    background-repeat:no-repeat;
+    border:3px solid #000000; 
+    min-height:20em; 
+    height:55em;
+}
+
+.logo{
+    background-color: gray;
+    width: 70px;
+}
+
+header h1{
+    font-weight: bold;
+    color: black;
+    box-shadow: 5px 5px 5px rgba(255, 255,.2, 0.5);
+    border: 2px thick coral;
+    border-radius: 5px;
+    text-align: center;
+    background-color: whitesmoke;
+    margin:5%;
+    
+}
+
+nav h1, nav h2{
+    border: 0.5px dashed transparent;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+}
+
+nav h1{
+    text-align: center;
+}
+
+nav h2{
+    width: 25%;
+}
+
+.container{
+    display: flex;
+    flex-direction : row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container h2:hover{
+    color: darksalmon;
+}
+
+.container ol{
+   display: none;
+}
+
+main{
+    margin-bottom:-100px;
+    padding-bottom: 100px;
+}
+
+.transition p{
+    color: coral;
+    font-size: 14px;
+}
+
+footer{
+    margin-top: -100px;
+    height: 100px;
+}
+
+footer div p{
+    width: 100%;
+    font-size: 12px;
+    margin: 2%;
+}
+
