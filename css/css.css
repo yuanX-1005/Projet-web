@@ -293,11 +293,64 @@ th,td{
 }
 
 /***====================== Footer ================================*****/
+
 footer{
     background-color: var(--third-color);
-    margin-top: -100px;
-    line-height: 100px;
-    height: 100px;
+    /* margin-top: -100px;
+    line-height: 100px;*/
+    /* height: 300px; */
+    flex-shrink: 0;
+    width: 100%;
+} 
+
+.detailsFooter{
+    width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 50px 0 100px;
+}
+
+.bloc{
+    width: 25%;
+    margin: 0 30px;
+}
+
+.infoFooter-Act h3,
+.infoFooter-Con h3,
+.infoFooter-Hor h3,
+.infoFooter-Reseaux h3{
+    font-size: 16px;
+    padding-bottom: 20px;
+}
+
+.infoFooter-Con p{
+    padding: 5px 0;
+}
+
+.infoFooter-Reseaux .icon i{
+    margin-top: 2%;
+}
+
+.listeActivites,
+.listeHoraires{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.listeActivites li{
+    padding: 2px 0;
+}
+ 
+.listeActivites a{
+    text-decoration: none;
+    color: var(--main-bag-color);
+}
+
+.listeActivites a:hover{
+    color:var(--second-bag-color);
 }
 
 /***====================== Media query ================================*****/
