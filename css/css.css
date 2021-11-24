@@ -76,6 +76,47 @@
     background-color : var(--third-bag-color);
 }
 
+/************Width***********/
+.w-10{
+    width: 10%;
+}
+.w-20{
+    width: 20%;
+}
+.w-30{
+    width: 30%;
+}
+.w-40{
+    width: 40%;
+}
+.w-50{
+    width: 50%;
+}
+.w-60{
+    width: 60%;
+}
+.w-70{
+    width: 70%;
+}
+.w-80{
+    width: 80%;
+}
+.w-90{
+    width: 90%;
+}
+.w-100{
+    width: 100%;
+}
+
+.flex{
+    display: flex;
+}
+
+.justice-contant-center{
+    justify-content: center;
+}
+
+
 /************Body***********/
 
 
@@ -142,15 +183,47 @@ nav{
 /***========================= Main =============================*****/
 
 main{
-    margin : -60px 16% -100px;
+    margin : -60px 0 -100px;
     padding-top: 60px;
     min-height: 100%;
     padding-bottom: 100px;
 }
 
+.main{
+    margin: auto 16%;
+}
+
+.container-livre{
+    display: flex;
+    flex-wrap: wrap;
+    margin : 2% 16%;
+}
+
+.container-citation{
+    height: 200px;
+    border-bottom: 2px solid var(--main-bag-color);
+    border-top: 2px solid var(--main-bag-color);
+
+    /* background-color: var(--main-bag-color); */
+}
+
+.container-citation p{
+    text-align: center;
+    font-family: "Estonia",serif;
+    font-size: 24px;
+}
+
+.couvert{
+    max-width: 100px;
+}
+
 /**
 *   Page ACCUEIL ********************************
 **/
+
+.show-img{
+    max-width: 100%;
+}
 
 /*à supprimer*/
 .example{
