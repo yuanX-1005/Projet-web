@@ -6,6 +6,7 @@
         <link rel="stylesheet" href="css/css.css">
         <meta name="viewport=" content="width=device-width, initial-scale=1">
     </head>
+   
     <body>
         <header>
           <!-- Navbar -->
@@ -21,64 +22,43 @@
             </nav>
         </header>
         <main>
-			<div class="contactRegistration">
-				<form action="#" method="get">
-					<h2 class="registration">Nous Contacter</h2>
+            <div class="contactRegistration">
+                <div class="registration">Nous Contacter</div>
+				<form action="#">
 					<div class="details">
-						<h3>Vos coordonnées</h3>
-						<div>
-							<label>Nom</label>
-							<input type="text" id="nom">
-						</div><br>
-		
-						<div>
-							<label>Prénom</label>
-							<input type="text" id="prénom">
-						</div><br>
-		
-						<div>
-							<label>Adresse</label>
-							<input type="text" id="adresse">
-						</div><br>
-		
-						<div>
-							<label>Ville</label>
-							<input type="text" id="ville">
-						</div><br>
-
-						<div>
-							<label>Code Postal</label>
-							<input type="number" id="CodePostal">
-						</div><br>
-						
-						<div>
-							<label>Email</label>
-							<input type="email" id="email">
-						</div><br>
-					</div>
-
-					<div class="details">
-						<h3>Votre message</h3>
-
-						<div>
-							<div>
-								<label>Sujet</label>
-								<input type="text" id="sujet">
-							</div>
-						</div><br>
-						<div>
-							<div>
-								<label>Message :</label>
-								<textarea name="message"></textarea>
-							</div>
-						</div><br>
-						
-						<div class="sendTo">
-							<button type="submit" class="bgSecColor">
-								Envoyer
-							</button>
+						<!-- <h3>Vos coordonnées</h3> -->
+                        <div class="input-box">
+							<input type="text" placeholder="Nom" required>
+						</div>
+						<div class="input-box">
+							<input type="text" placeholder="Prénom" required>
+						</div>
+						<div class="input-box">
+							<input type="text" placeholder="Adresse" required>
+						</div>
+						<div class="input-box">
+							<input type="text" placeholder="Ville" required>
+						</div>
+						<div class="input-box">
+							<input type="text" placeholder="Téléphone" required>
+						</div>
+						<div class="input-box">
+							<input type="email" placeholder="E-mail" required>
 						</div>
 					</div>
+
+					<div class="details">
+                    <!-- <h3>Votre message</h3> -->
+                        <div class="input-box">
+                            <input type="text" id="sujet" placeholder="Sujet" required>
+                        </div>
+                        <div class="input-box">
+                            <textarea name="message" placeholder="Message ..." required></textarea>
+                        </div>
+					</div>
+                    <div class="button">
+                        <input type="submit" value="Envoyer">
+                    </div>
 				</form>
 			</div>
 
@@ -86,7 +66,7 @@
                 <h2 class="center">Horaire</h2>
                 <table>
                     <tr>
-                        <th></th>
+                        <th>Jour</th>
                         <th>Matin</th>
                         <th>Après-midi</th>
                     </tr>

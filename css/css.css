@@ -158,7 +158,40 @@ main{
     text-align: left;
     margin : 3% 0% 2%;
 }
+/**
+*   Page A PROPOS ********************************
+**/
+.aPropos{
+    margin-top: 5%;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
 
+.aPropos .description{
+    position: relative;
+    max-width: 450px;
+    background: var( --second-bag-color);
+    margin: 10px;
+    padding: 15px;
+    display: flex;
+}
+
+.aPropos .description .imgPropos{
+    max-width: 150px;
+    flex: 0, 0, 150px;
+}
+
+
+.aPropos .description .imgPropos img{
+    max-width: 100%;
+}
+
+.aPropos .description .imgDescription{
+    margin-left: 20px;
+}
 
 /**
 *   Page CONTACT ********************************
@@ -167,30 +200,81 @@ main{
 /* Formulaire */
 .contactRegistration{
     margin : 5% 2%;
+    /* max-width: 700px; */
+    width: 100%;
     background-color:var(--main-bag-color);
-    color: #ffffff;
-    padding: 10px 0px;
-    border-radius: 15px;
+    padding: 25px 30px;
+    border-radius: 10px;
 }
-
-.registration{
+ 
+.contactRegistration .registration{
     text-align: center;
+    font-size: 25px;
+    font-weight: 500;
+    position: relative;
+} 
+
+.contactRegistration form .details{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
 }
 
-.details{
-    margin-left: 10%;
-    margin-top: 10%;
+form .details .input-box{
+    margin: 20px 0 15px 20px;
+    width: calc(100% / 2 - 20px);
 }
 
-.sendTo {
-    text-align: center;
+.details .input-box input{
+    height: 30px;
+    width: 70%;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #fdbfc9;
+    padding-left: 15px;
+    font-size: 16px;
+}
+
+.details .input-box input:focus,
+.details .input-box input:valid{
+    border: solid;
+    border-color: var(--second-bag-color);
+}
+
+form {
+    margin-top: 5%;
+}
+
+form .button{
+    height: 30px;
+    margin: 30px 0;
+}
+
+form .button input{
+    display: block;
+    margin: auto;
+    height: 100%;
+    outline: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: var(  --second-bag-color);
+}
+
+.details .input-box textarea:focus,
+.details .input-box textarea:valid{
+    border: solid;
+    border-color: var(--second-bag-color);
 }
 
 textarea {
     font: 1em sans-serif;
-    /* width: 300px; */
+    width: 75%;
+    height: 100px;
+    outline: none;
     box-sizing: border-box;
-    border: 1px solid #999;
+    border: 2px solid #fdbfc9;
 }
 
 /* Tableau : Heures d'ouverture */
