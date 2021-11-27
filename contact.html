@@ -5,6 +5,7 @@
         <title>Contact</title>
         <link rel="stylesheet" href="css/css.css">
         <meta name="viewport=" content="width=device-width, initial-scale=1">
+        <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
     </head>
    
     <body>
@@ -62,54 +63,124 @@
 				</form>
 			</div>
 
-			<div class="horaire">
-                <h2 class="center">Horaires d'ouverture</h2>
+            <div class="message-envoye">
                 <table>
-                    <tr>
-                        <th>Jour</th>
-                        <th>Matin</th>
-                        <th>Après-midi</th>
-                    </tr>
-                    <tr>
-                        <td rowspan="1">Lundi</td>
-                        <td>8h00 - 11h30</td>
-                        <td>14h00 - 19h00</td>
-                    </tr> 
-                    <tr>
-                        <td rowspan="1">Mardi</td>
-                        <td>8h00 - 11h30</td>
-                        <td>14h00 - 19h00</td>
-                    </tr> 
-                    <tr>
-                        <td rowspan="1">Mercredi</td>
-                        <td>8h00 - 11h30</td>
-                        <td>14h00 - 19h00</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="1">Jeudi</td>
-                        <td>Fermé</td>
-                        <td>14h00 - 20h00</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="1">Vendredi</td>
-                        <td>8h00 - 11h30</td>
-                        <td>14h00 - 19h00</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="1">Samedi</td>
-                        <td>8h00 - 11h30</td>
-                        <td>14h00 - 20h00</td>
-                    </tr>
-                    <tr>
-                        <td rowspan="1">Dimanche</td>
-                        <td>Fermé</td>
-                        <td>Fermé</td>
-                    </tr>
+                    <thead>
+                        <caption>Les informations que vous avez envoyé : </caption>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td colspan="2">Nom Pr&eacute;nom :</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Adresse :</td>
+                        </tr>
+                        <tr>
+                            <td>T&eacute;l&eacute;phone :</td>
+                            <td>E-mail :</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Sujet :</td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">Message</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+			<div class="horaire">
+                <table>
+                    <thead>
+                        <caption>Horaires d'ouverture</caption>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th>Jour</th>
+                            <th>Matin</th>
+                            <th>Après-midi</th>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">Lundi</td>
+                            <td>8h00 - 11h30</td>
+                            <td>14h00 - 19h00</td>
+                        </tr> 
+                        <tr>
+                            <td rowspan="1">Mardi</td>
+                            <td>8h00 - 11h30</td>
+                            <td>14h00 - 19h00</td>
+                        </tr> 
+                        <tr>
+                            <td rowspan="1">Mercredi</td>
+                            <td>8h00 - 11h30</td>
+                            <td>14h00 - 19h00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">Jeudi</td>
+                            <td>Fermé</td>
+                            <td>14h00 - 20h00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">Vendredi</td>
+                            <td>8h00 - 11h30</td>
+                            <td>14h00 - 19h00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">Samedi</td>
+                            <td>8h00 - 11h30</td>
+                            <td>14h00 - 20h00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="1">Dimanche</td>
+                            <td>Fermé</td>
+                            <td>Fermé</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
         </main>
         <footer>
-
+            <div class="container-footer">
+                <div class="detailsFooter flex">
+                    <div class="footer-bloc">
+                        <h3>Nos Activités</h3>
+                        <ul class="listeActivites">
+                            <li><a href="#">Événement</a></li>
+                            <li><a href="#">Concours</a></li>
+                            <li><a href="#">Lecture</a></li>
+                            <li><a href="#">Calligraphie</a></li>
+                            <li><a href="#">Créativité</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-bloc">
+                        <h3>Nous Contacter</h3>
+                        <p>777-777-777</p>
+                        <p>biblioShop@gmail.com</p>
+                        <p>12 rue de Paradis, 75010, Paris</p>
+                    </div>
+                    <div class="footer-bloc center">
+                        <h3>Nos Horaires</h3>
+                        <ul class="listeHoraires">
+                            <li>✔️ Lun 8h00 - 19h00</li>
+                            <li>✔️ Mar 8h00 - 19h00</li>
+                            <li>✔️ Mer 8h00 - 19h00</li>
+                            <li>✔️ Jeu 14h00 - 20h00</li>
+                            <li>✔️ Ven 8h00 - 19h00</li>
+                            <li>✔️ Sam 8h00 - 20h00</li>
+                            <li>❌ Dim fermé - fermé</li>
+                        </ul>
+                    </div>
+                    <div class="footer-bloc center">
+                        <h3>Suivez-nous</h3>
+                        <div class="icons flex flex-nowrap justice-contant-space-around">
+                            <a href=""><i class="fab fa-facebook"></i></a>
+                            <a href=""><i class="fab fa-instagram"></i></a>
+                            <a href=""><i class="fab fa-twitter"></i></a>
+                            <a href=""><i class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
 
     </body>

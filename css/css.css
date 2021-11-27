@@ -7,6 +7,7 @@
 
     /* fonts sizes */
     --font-size-1: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+    --main-margin:16%; 
 }
 
 /************Font used***********/
@@ -83,8 +84,14 @@
 .w-20{
     width: 20%;
 }
+.w-25{
+    width : 25%
+}
 .w-30{
     width: 30%;
+}
+.w-33{
+    width: 33.33%;
 }
 .w-40{
     width: 40%;
@@ -112,8 +119,16 @@
     display: flex;
 }
 
+.flex-nowrap{
+    flex-wrap: nowrap;
+}
+
 .justice-contant-center{
     justify-content: center;
+}
+
+.justice-contant-space-around{
+    justify-content: space-around;
 }
 
 
@@ -139,9 +154,9 @@ a:link, a:active, a:visited{
 
 /***========================= Header =============================*****/
 header{
-    margin-bottom: -60px;
-    line-height: 60px;
-    height: 60px;
+    margin-bottom: -50px;
+    line-height: 50px;
+    height: 50px;
 }
 /**
 *   Navbar ********************************
@@ -155,6 +170,8 @@ nav{
     background-color: var(--third-color);
     justify-content :space-around;
     box-shadow: 3px 3px 30px #999;
+    position: fixed;
+    top:0;
 }
 
 /*logo de navbar*/
@@ -166,6 +183,9 @@ nav{
 .nav-logo img{
     max-height: 40px;
     max-width: max-content;
+    /* margin: auto 2%; */
+    /* top: 50%; */
+    /* bottom: 50%; */
 }
 
 /* menu de navbar */
@@ -183,20 +203,20 @@ nav{
 /***========================= Main =============================*****/
 
 main{
-    margin : -60px 0 -100px;
-    padding-top: 60px;
+    margin: -50px 0 -100px;
+    padding-top: 50px;
     min-height: 100%;
     padding-bottom: 100px;
 }
 
 .main{
-    margin: auto 16%;
+    margin: auto var(--main-margin);
 }
 
 .container-livre{
     display: flex;
     flex-wrap: wrap;
-    margin : 2% 16%;
+    margin : 2% var(--main-margin);
 }
 
 .container-citation{
@@ -236,20 +256,20 @@ main{
 **/
 .aPropos{
     margin-top: 5%;
-    position: relative;
+    /* position: relative; */
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    align-items: center;
+    /* align-items: center; */
+    width: 100%;
 }
 
 .aPropos .description{
-    position: relative;
-    max-width: 450px;
+    max-width: 45%;
     background: var( --second-bag-color);
-    margin: 10px;
     padding: 15px;
     display: flex;
+    margin-top: 2%;
 }
 
 .aPropos .description .imgPropos{
@@ -350,62 +370,74 @@ textarea {
     border: 2px solid #fdbfc9;
 }
 
-/* Tableau : Heures d'ouverture */
-.horaire{
-    margin: 2% auto;
+/* Tableau : Les messages obtenus */
+.message-envoye table{
+    width : 100%;
+    
 }
 
-table{
-    margin : 50px auto 10px;
+.message-envoye td{ 
+    padding: 1%;
+    border-bottom:2px solid var(--third-color);
+}
+
+.message-envoye caption, .horaire caption{
+    font-size: var(--font-size-1);
+    font-weight: bold;
+}
+
+/* Tableau : Heures d'ouverture */
+.horaire{
+    margin: 15% auto 2%;
+}
+
+.horaire table{
+    width: 60%;
+    margin : 5% auto 2%;
     border: 2px solid var(--main-bag-color) ;
     text-align: center;
 }
 
-th,td{
+.horaire th,.horaire td{
     border : 1px solid var(--main-bag-color);
+    padding: 1% 4%;
 }
 
 /***====================== Footer ================================*****/
 
 footer{
+    font-size: 12px;
     background-color: var(--third-color);
     /* margin-top: -100px;
     line-height: 100px;*/
     /* height: 300px; */
-    flex-shrink: 0;
+    /* flex-shrink: 0; */
     width: 100%;
 } 
 
-.detailsFooter{
-    width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    padding: 50px 0 100px;
+.container-footer{
+    max-width: 100%;
+    margin : auto var(--main-margin);
+    padding: 2% 0;
 }
 
-.bloc{
+/*contenus du footer*/
+footer h3{
+    margin: 1% auto;
+    padding: 1% auto;
+}
+
+.footer-bloc{
     width: 25%;
-    margin: 0 30px;
+    margin: 5px 2%;
 }
 
-.infoFooter-Act h3,
-.infoFooter-Con h3,
-.infoFooter-Hor h3,
-.infoFooter-Reseaux h3{
+/* reseau sociaux */
+
+.icons i{
+    margin: 20px 2%;
+    padding: 5%;
     font-size: 16px;
-    padding-bottom: 20px;
-}
-
-.infoFooter-Con p{
-    padding: 5px 0;
-}
-
-.infoFooter-Reseaux .icon i{
-    margin-top: 2%;
-    display: inline-block;
-	padding-right: 18px !important;
 }
 
 .listeActivites,
@@ -415,23 +447,65 @@ footer{
     padding: 0;
 }
 
+.listeHoraires li{
+    white-space: nowrap;
+}
+
 .listeActivites li{
     padding: 2px 0;
 }
  
 .listeActivites a{
     text-decoration: none;
-    color: var(--main-bag-color);
 }
 
-.listeActivites a:hover{
+.listeActivites a:hover, .reseau-sociaux a:hover i {
     color:var(--second-bag-color);
 }
 
+.reseau-sociaux a:hover i{
+
+}
 /***====================== Media query ================================*****/
+@media (min-width : 560px) and (max-width: 1200px){
+    :root {
+        /* fonts sizes */
+        --main-margin:5%; 
+    }
+}
+
+@media (max-width : 900px){
+    /**
+*   Page A PROPOS ********************************
+**/
+    .aPropos{
+        margin-top: 5%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .aPropos .description{
+        max-width: 100%;
+        background: var( --second-bag-color);
+        padding: 15px;
+        display: flex;
+        margin-top: 2%;
+    }
+
+}
+
 
 
 @media (min-width : 300px) and (max-width:560px){
+
+    :root {
+        /* fonts sizes */
+        --main-margin:2%;
+    }
+
+
     /**
     *   Navbar ********************************
     **/
@@ -450,4 +524,6 @@ footer{
     .nav-content-border{
         font-size: 14px;
     }
+
+
 }
