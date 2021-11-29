@@ -6,6 +6,8 @@
         <link rel="stylesheet" href="css/css.css">
         <meta name="viewport=" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
+        <script src="js/js.js"></script>
+
     </head>
    
     <body>
@@ -25,41 +27,41 @@
         <main class="main">
             <div class="contactRegistration">
                 <div class="registration">Nous Contacter</div>
-				<form action="#">
+				<form action="#" method="get" type="multipart/form-data" onsubmit="lancer(); return false;">
 					<div class="details">
 						<!-- <h3>Vos coordonnées</h3> -->
                         <div class="input-box">
-							<input type="text" placeholder="Nom" required>
+							<input name="name" type="text" placeholder="Nom" value="" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Prénom" required>
+							<input name="prenom" type="text" placeholder="Prénom" value="" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Adresse" required>
+							<input name="adresse" type="text" placeholder="Adresse" value="" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Ville" required>
+							<input name="ville" type="text" placeholder="Ville" value="" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Téléphone" required>
+							<input name="tele" type="number" placeholder="Téléphone" value="" required>
 						</div>
 						<div class="input-box">
-							<input type="email" placeholder="E-mail" required>
+							<input name="email" type="email" placeholder="E-mail" value=""  required>
 						</div>
 					</div>
 
 					<div class="details">
                     <!-- <h3>Votre message</h3> -->
                         <div class="input-box">
-                            <input type="text" id="sujet" placeholder="Sujet" required>
+                            <input type="text" name="sujet" placeholder="Sujet" value="" required>
                         </div>
                         <div class="input-box">
-                            <textarea name="message" placeholder="Message ..." required></textarea>
+                            <textarea name="message" placeholder="Message ..." value="" required></textarea>
                         </div>
 					</div>
                     <div class="button">
-                        <input type="submit" value="Envoyer">
-                    </div>
+                        <input id="submit" onclick="lancer()" type="submit" value="Envoyer">
+                    </div>  
 				</form>
 			</div>
 
@@ -70,20 +72,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="2">Nom Pr&eacute;nom :</td>
+                            <td colspan="2" id="nom-prenomEnvoye">Nom Pr&eacute;nom :</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Adresse :</td>
+                            <td colspan="2" id="adresseEnvoye">Adresse :</td>
                         </tr>
                         <tr>
-                            <td>T&eacute;l&eacute;phone :</td>
-                            <td>E-mail :</td>
+                            <td id="telephoneEnvoye">T&eacute;l&eacute;phone :</td>
+                            <td id="emailEnvoye">E-mail :</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Sujet :</td>
+                            <td colspan="2" id="sujetEnvoye">Sujet :</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Message</td>
+                            <td colspan="2" id="messageEnvoye">Message</td>
                         </tr>
                     </tbody>
                 </table>

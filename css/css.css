@@ -294,7 +294,7 @@ main{
 .contactRegistration{
     margin : 5% 2%;
     /* max-width: 700px; */
-    width: 100%;
+    /* width: 100%; */
     background-color:var(--main-bag-color);
     padding: 25px 30px;
     border-radius: 10px;
@@ -433,7 +433,6 @@ footer h3{
 }
 
 /* reseau sociaux */
-
 .icons i{
     margin: 20px 2%;
     padding: 5%;
@@ -463,9 +462,6 @@ footer h3{
     color:var(--second-bag-color);
 }
 
-.reseau-sociaux a:hover i{
-
-}
 /***====================== Media query ================================*****/
 @media (min-width : 560px) and (max-width: 1200px){
     :root {
