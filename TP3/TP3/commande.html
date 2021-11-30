@@ -67,7 +67,7 @@
                     </div>
                 
                     <button type="submit" class="btn" id="ajouter">Ajouter</button>
-                    <button type="button" class="btn"  >Supprimer</button>
+                    <button type="button" class="btn" id="supprimer">Supprimer</button>
                     <button type="reset"  class="btn" >Annuler</button>
                 </div>
             </form>
@@ -77,12 +77,12 @@
                 <table class="table">
                     <tbody>
                         <tr>
-                            <td colspan="2">Nom</td>
-                            <td colspan="2">Adresse de livraison</td>
-                            <td colspan="2">Mode de livraison</td>
-                            <td colspan="2">Entr&eacute;e</td>
-                            <td colspan="2">Plat</td>
-                            <td colspan="2">Dessert</td>
+                            <td>Nom</td>
+                            <td>Adresse de livraison</td>
+                            <td>Mode de livraison</td>
+                            <td>Entr&eacute;e</td>
+                            <td>Plat</td>
+                            <td>Dessert</td>
                         </tr>
                         
                     </tbody>
@@ -141,6 +141,18 @@
                     tdReponse6.appendChild(t6);
                     var select = document.querySelector(".table tbody");
                     select.appendChild(trReponse);
+                    var btnSup = document.querySelector('#supprimer');
+                    btnSup.onclick = function(){
+                        supprimer();
+                    }
+
+                    function supprimer(){
+                        // var supElement = querySelector(".table tbody tr:last-of-type");
+                        while(select.firstChild){
+                            select.removeChild(select.firstChild);
+                        }
+                        
+                    }
                 }
             });
             
