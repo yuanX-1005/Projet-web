@@ -88,6 +88,7 @@
                             <td colspan="2">Plat</td>
                             <td colspan="2">Dessert</td>
                         </tr>
+                        
                     </tbody>
                 </table>
             </div>
@@ -96,18 +97,28 @@
             window.addEventListener('load', function(){
                 var loginForm = document.forms.login;
                 var nom,livraison;
-                console.log(loginForm.elements[name="nom"]);
+                // console.log(loginForm.elements[name="nom"]);
                 function ajouter(){
                     nom = loginForm.elements[name="nom"].value;
                     livraison = loginForm.elements[name="livraison"].value;
                 }
-
                 var btn = document.querySelector('#ajouter');
                 btn.onclick = function(){
                     ajouter();
                     console.log(nom + " " + livraison);
+                    affichierReponse();
                     return false;
                 }
+                
+                function affichierReponse(){
+                    alert(333);
+                    var trReponse = document.createElement("tr");
+                    var tdReponse = document.createElement("td");
+                    trReponse.appendChild(tdReponse);
+                    var t = document.createTextNode(nom);
+                    document.body.appendChild(trReponse);
+                }
+
             });
             
 
