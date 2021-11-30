@@ -74,7 +74,7 @@
         </header>
         <main>
             <div class="infoRecuperer">
-                <table>
+                <table class="table">
                     <tbody>
                         <tr>
                             <td colspan="2">Nom</td>
@@ -100,8 +100,13 @@
                 // console.log(loginForm.elements[name="nom"]);
                 function ajouter(){
                     nom = loginForm.elements[name="nom"].value;
+                    adresse = loginForm.elements[name="adresse"].value;
                     livraison = loginForm.elements[name="livraison"].value;
+                    entree = loginForm.elements[name="entree"].value;
+                    plat = loginForm.elements[name="plat"].value;
+                    dessert = loginForm.elements[name="dessert"].value;
                 }
+
                 var btn = document.querySelector('#ajouter');
                 btn.onclick = function(){
                     ajouter();
@@ -113,15 +118,36 @@
                 function affichierReponse(){
                     alert(333);
                     var trReponse = document.createElement("tr");
-                    var tdReponse = document.createElement("td");
-                    trReponse.appendChild(tdReponse);
-                    var t = document.createTextNode(nom);
-                    document.body.appendChild(trReponse);
+                    
+                    var tdReponse1 = document.createElement("td");
+                    var tdReponse2 = document.createElement("td");
+                    var tdReponse3 = document.createElement("td");
+                    var tdReponse4 = document.createElement("td");
+                    var tdReponse5 = document.createElement("td");
+                    var tdReponse6 = document.createElement("td");
+                    var t1 = document.createTextNode(nom);
+                    var t2 = document.createTextNode(adresse);
+                    var t3 = document.createTextNode(livraison);
+                    var t4 = document.createTextNode(entree);
+                    var t5 = document.createTextNode(plat);
+                    var t6 = document.createTextNode(dessert);
+                    trReponse.appendChild(tdReponse1);
+                    trReponse.appendChild(tdReponse2);
+                    trReponse.appendChild(tdReponse3);
+                    trReponse.appendChild(tdReponse4);
+                    trReponse.appendChild(tdReponse5);
+                    trReponse.appendChild(tdReponse6);
+                    tdReponse1.appendChild(t1);
+                    tdReponse2.appendChild(t2);
+                    tdReponse3.appendChild(t3);
+                    tdReponse4.appendChild(t4);
+                    tdReponse5.appendChild(t5);
+                    tdReponse6.appendChild(t6);
+                    var select = document.querySelector(".table tbody");
+                    select.appendChild(trReponse);
                 }
-
             });
             
-
         </script>
     </body>
 </html>
