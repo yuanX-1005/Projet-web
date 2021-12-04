@@ -27,36 +27,36 @@
         <main class="main">
             <div class="contactRegistration">
                 <div class="registration">Nous Contacter</div>
-				<form name="contactForm" action="#">
+				<form name="contactForm">
 					<div class="details">
 						<!-- <h3>Vos coordonnées</h3> -->
                         <div class="input-box">
-							<input type="text" placeholder="Nom" required>
+							<input type="text" name="nom" placeholder="Nom" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Prénom" required>
+							<input type="text" name="prenom" placeholder="Prénom" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Adresse" required>
+							<input type="text" name="adresse" placeholder="Adresse" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Ville" required>
+							<input type="text"name="ville"  placeholder="Ville" required>
 						</div>
 						<div class="input-box">
-							<input type="text" placeholder="Téléphone" required>
+							<input type="text" name="tele" placeholder="Téléphone" required>
 						</div>
 						<div class="input-box">
-							<input type="email" placeholder="E-mail" required>
+							<input type="email" name="email" placeholder="E-mail" required>
 						</div>
 					</div>
 
 					<div class="details">
                     <!-- <h3>Votre message</h3> -->
                         <div class="input-box">
-                            <input type="text" id="sujet" placeholder="Sujet" required>
+                            <input type="text" id="sujet" name="sujet" placeholder="Sujet" required>
                         </div>
                         <div class="input-box">
-                            <textarea name="message" placeholder="Message ..." required></textarea>
+                            <textarea name="message" name="message" placeholder="Message ..." required></textarea>
                         </div>
 					</div>
                     <div class="button">
