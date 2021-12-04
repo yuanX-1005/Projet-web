@@ -8,7 +8,7 @@ body{
     font-family: "Trebuchet MS";
     margin: 1em 1%;
     padding: 10px;
-   
+    font: Georgia, serif;
 }
 
 .formDetails{
@@ -39,51 +39,28 @@ input{
     background-color: gray;
 }
 
-table td {
-    margin : auto 0;
-    font-weight: 600;
-    padding: 45px;
-}
-
 button{
     text-transform: uppercase;
     border: none;
-    background-color:lightblue;
-}
-/* .formulaire h2{
-    font-weight: bold;
-    color: black;
-    box-shadow: 5px 5px 5px rgba(255, 255,.2, 0.5);
-    border: 2px thick coral;
-    border-radius: 5px;
-    text-align: center;
-    background-color: whitesmoke;
-    margin:5%;
+    background-color:bisque;
+    box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
 }
 
+button:hover {
+    background-color:darksalmon; /* Green */
+    color: white;
+  }
 
-.formulaire h2, .formulaire h3{
-    border: 0.5px dashed transparent;
-    background-color: white;
-    color: black;
-    border-radius: 5px;
-    text-align: center;
-    margin:5%;
-} */
-
-
-/*Page commande*/
-/* .formulaire{
-    margin: auto;
-    background-color: grey;
-    font: Georgia, serif;
-   
+  /* Tableau : Les messages obtenus */
+.infoRecuperer table{
+    font-weight: 600;
+    width : 100%;
 }
 
-
-
-input:invalid{
-    border-bottom: 2px solid red;
+.infoRecuperer td{ 
+    padding: 1%;
+    border-bottom:2px solid var(--third-color);
 }
+
 
 

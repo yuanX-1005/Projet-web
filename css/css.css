@@ -251,6 +251,15 @@ main{
     text-align: left;
     margin : 3% 0% 2%;
 }
+
+.container-livre .example {
+    text-align: center; 
+}
+
+.container-citation p{
+    font-style: italic;
+    color: var(--second-bag-color);
+}
 /**
 *   Page A PROPOS ********************************
 **/
