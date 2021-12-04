@@ -1,5 +1,5 @@
 * { 
-    box-sizing: border-box; 
+    box-sizing: border-box;
 }
 
 body{
@@ -28,15 +28,23 @@ input{
 
 .container{
     display: flex;
-    flex-direction: row; 
+    flex-direction: row;
     flex-wrap: wrap;
     margin: 15px 5px 15px 0;
-} 
+}
 
 .infoRecuperer{
     margin-top: 50px;
     border: 3px solid gray;
     background-color: gray;
+    width: 80vw;
+    overflow: scroll;
+
+}
+
+.infoRecuperer table{
+    table-layout:fixed;
+
 }
 
 button{
@@ -45,6 +53,30 @@ button{
     background-color:bisque;
     box-shadow: 2px 2px 2px 1px rgba(0, 0, 255, .2);
 }
+button:hover {
+    background-color:darksalmon; /* Green */
+    color: white;
+  }
+/* .formulaire h2{
+    font-weight: bold;
+    color: black;
+    box-shadow: 5px 5px 5px rgba(255, 255,.2, 0.5);
+    border: 2px thick coral;
+    border-radius: 5px;
+    text-align: center;
+    background-color: whitesmoke;
+    margin:5%;
+}
+
+
+.formulaire h2, .formulaire h3{
+    border: 0.5px dashed transparent;
+    background-color: white;
+    color: black;
+    border-radius: 5px;
+    text-align: center;
+    margin:5%;
+} */
 
 button:hover {
     background-color:darksalmon; /* Green */
@@ -57,10 +89,7 @@ button:hover {
     width : 100%;
 }
 
-.infoRecuperer td{ 
+.infoRecuperer td{
     padding: 1%;
     border-bottom:2px solid var(--third-color);
 }
-
-
-
