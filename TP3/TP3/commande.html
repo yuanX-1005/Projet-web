@@ -4,68 +4,68 @@
     <head>
         <title>Commande</title>
         <meta charset="utf-8">
-        <link href="style_TP3.css" rel="stylesheet"> 
+        <link href="style_TP3.css" rel="stylesheet">
         <meta name="viewport" content="width=device-width">
 
     </head>
-    
+
     <!-- Le corps-->
-    
+
     <body>
         <header>
             <form class="formulaire" action=""  name="login">
-                <h2>Passez votre commande ici </h2>   
-                <span id="dateheure"></span>       
-                
+                <h2>Passez votre commande ici </h2>
+                <span id="dateheure"></span>
+
                 <div class="formDetails">
                     <h3>Coordonnées</h3>
-                    <div class="container">          
-                        <input type="text" name="nom" placeholder="Nom" required>     
-                        <input type="text" name="prenom" placeholder="Prénom" required>       
-                        <input type="text" name="adresse" placeholder="Adresse de livraison" required>                    
-                        <input type="email" name="email" placeholder="email" required>  
+                    <div class="container">
+                        <input type="text" name="nom" placeholder="Nom" required>
+                        <input type="text" name="prenom" placeholder="Prénom" required>
+                        <input type="text" name="adresse" placeholder="Adresse de livraison" required>
+                        <input type="email" name="email" placeholder="email" required>
                     </div>
 
                     <strong>Mode de livraison : </strong>
-                    <div class="container">      
+                    <div class="container">
                         <select name="livraison" id="livraison" size=1>
                             <option value="Sur place">Retrait sur place
                             <option value="Livraison">Livraison à domicile
                         </select>
                     </div>
-                    
+
                     <strong>Mode de paiement</strong>
-                    <div class="container">  
+                    <div class="container">
                         <input type="radio" name="sur place">Paiement sur place
                         <input type="radio" name="en ligne">Paiement en ligne
                     </div>
-                    
+
                     <strong>Je souhaite recevoir une facture</strong>
                     <input type="checkbox" name=”facture”>
 
                     <h3>Menu à commander</h3>
-                    
-                    <div class="container">  
+
+                    <div class="container">
                         <strong>Entrée : </strong>
-                        <select name="entree" id="entreeId" >       
+                        <select name="entree" id="entreeId" >
                             <option value="soupe de légumes">Soupe de légumes
                             <option value="salade aux fruits de mer">Salade aux fruits de mer
                         </select>
-                        
+
                         <strong>Plat : </strong>
                         <select name="plat" >
                             <option value="Couscous au poisson">Couscous au poisson
                             <option value="Côte de veau aux petits légumes">Côte de veau aux petits légumes
                         </select>
 
-                        
+
                         <strong>Dessert : </strong>
                         <select name="dessert" >
                             <option value="Tiramisu">Tiramusi
                             <option value="Mousse au chocolat">Mousse au chocolat
                         </select>
                     </div>
-                
+
                     <button type="submit" class="btn" id="ajouter">Ajouter</button>
                     <button type="button" class="btn" id="supprimer">Supprimer</button>
                     <button type="reset"  class="btn" >Annuler</button>
@@ -75,6 +75,7 @@
         <main>
             <div class="infoRecuperer">
                 <table class="table">
+                <table>
                     <tbody>
                         <tr>
                             <td>Nom</td>
@@ -84,7 +85,7 @@
                             <td>Plat</td>
                             <td>Dessert</td>
                         </tr>
-                        
+
                     </tbody>
                 </table>
             </div>
@@ -110,11 +111,11 @@
                     affichierReponse();
                     return false;
                 }
-                
+
                 function affichierReponse(){
                     alert(333);
                     var trReponse = document.createElement("tr");
-                    
+
                     var tdReponse1 = document.createElement("td");
                     var tdReponse2 = document.createElement("td");
                     var tdReponse3 = document.createElement("td");
@@ -154,7 +155,7 @@
                     }
                 }
             });
-            
+
         </script>
     </body>
 </html>
