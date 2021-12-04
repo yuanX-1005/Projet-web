@@ -7,6 +7,7 @@
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
         <meta name="viewport=" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
+        <script src="./js/js.js"></script>
     </head>
 
     <body>
@@ -26,7 +27,7 @@
         <main class="main">
             <div class="contactRegistration">
                 <div class="registration">Nous Contacter</div>
-				<form action="#">
+				<form name="contactForm" action="#">
 					<div class="details">
 						<!-- <h3>Vos coordonnées</h3> -->
                         <div class="input-box">
@@ -59,7 +60,7 @@
                         </div>
 					</div>
                     <div class="button">
-                        <input type="submit" value="Envoyer">
+                        <input id="ajouter" type="submit" value="Envoyer">
                     </div>
 				</form>
 			</div>
@@ -71,20 +72,20 @@
                     </thead>
                     <tbody>
                         <tr>
-                            <td colspan="2">Nom Pr&eacute;nom :</td>
+                            <td colspan="2" id="nomRecu">Nom Pr&eacute;nom :</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Adresse :</td>
+                            <td colspan="2" id="adresseRecu">Adresse :</td>
                         </tr>
                         <tr>
-                            <td>T&eacute;l&eacute;phone :</td>
-                            <td>E-mail :</td>
+                            <td id="phoneRecu">T&eacute;l&eacute;phone :</td>
+                            <td id="emailRecu">E-mail :</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Sujet :</td>
+                            <td colspan="2" id="sujetRecu">Sujet :</td>
                         </tr>
                         <tr>
-                            <td colspan="2">Message</td>
+                            <td colspan="2" id="messageRecu">Message</td>
                         </tr>
                     </tbody>
                 </table>
