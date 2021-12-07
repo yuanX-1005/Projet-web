@@ -14,7 +14,6 @@ window.addEventListener('load', function(){
 
     function ajouterToForm(){
       
-        
         // alert(444);
         var nomRecu = document.getElementById('nomRecu');
         var adresseRecu = document.getElementById('adresseRecu');
@@ -23,7 +22,6 @@ window.addEventListener('load', function(){
         var sujetRecu = document.getElementById('sujetRecu');
         var messageRecu = document.getElementById('messageRecu');
         nomRecu.textContent+=" "+ contactForm.elements[name="nom"].value+" " +contactForm.elements[name="prenom"].value;
-        nomRecu.textContent+=" "+contactForm.elements[name="prenom"].value;
         adresseRecu.textContent+=" "+contactForm.elements[name="adresse"].value+" " + contactForm.elements[name="ville"].value;
         phoneRecu.textContent+=" "+contactForm.elements[name="tele"].value;
         emailRecu.textContent+=" "+contactForm.elements[name="email"].value;
