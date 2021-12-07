@@ -1,34 +1,81 @@
 window.addEventListener('load', function(){
     // alert(111);
-    var contactForm = document.forms.contactForm;
-    var btn = document.querySelector('#ajouter');
-    btn.onclick = function(){
-        // alert(222);
-        if(contactForm.checkValidity()){
-            ajouterToForm();
-            return false;
-        }else{
-            alert("There is still an empty field");
-        }
+    // var contactForm = document.forms.contactForm;
+    var btnAjouter = document.querySelector('#ajouter');
+    var btnSupprimer = document.querySelector('#supprimer');
+    btnAjouter.onclick = function(){
+        ajouterToForm();
+        return false;
     }
 
-    function ajouterToForm(){
-      
-        // alert(444);
-        var nomRecu = document.getElementById('nomRecu');
-        var adresseRecu = document.getElementById('adresseRecu');
-        var phoneRecu = document.getElementById('phoneRecu');
-        var emailRecu = document.getElementById('emailRecu');
-        var sujetRecu = document.getElementById('sujetRecu');
-        var messageRecu = document.getElementById('messageRecu');
-        nomRecu.textContent+=" "+ contactForm.elements[name="nom"].value+" " +contactForm.elements[name="prenom"].value;
-        adresseRecu.textContent+=" "+contactForm.elements[name="adresse"].value+" " + contactForm.elements[name="ville"].value;
-        phoneRecu.textContent+=" "+contactForm.elements[name="tele"].value;
-        emailRecu.textContent+=" "+contactForm.elements[name="email"].value;
-        sujetRecu.textContent+=" "+contactForm.elements[name="sujet"].value;
-        messageRecu.textContent+=" "+contactForm.elements[name="message"].value;
 
-        
+    btnSupprimer.onclick = function(){
+        supprimerMessage()
+    }
+
+    //Ajouter les données envoyées dans un tableau
+    function ajouterToForm(){
+        // alert(444);
+        const newItem1 = document.createElement('tr')
+        const nomTd = document.createElement('td')
+        const newItem2 = document.createElement('tr')
+        const adresseTd = document.createElement('td')
+        const newItem3 = document.createElement('tr')
+        const phoneTd = document.createElement('td')
+        const emailTd = document.createElement('td')
+        const newItem4 = document.createElement('tr')
+        const sujetTd = document.createElement('td')
+        const newItem5 = document.createElement('tr')
+        const messageTd = document.createElement('td')
+
+        // alert(555)
+        nomTd.textContent = "Nom Prénom : " + document.contactForm.nom.value
+        nomTd.textContent += " "+ document.contactForm.prenom.value
+        adresseTd.textContent = "Adresse : " + document.contactForm.adresse.value
+        adresseTd.textContent += " "+ document.contactForm.ville.value
+        phoneTd.textContent = "Téléphone : " + document.contactForm.tele.value
+        emailTd.textContent = "E-mail : " +document.contactForm.email.value
+        sujetTd.textContent = "Sujet : " +document.contactForm.sujet.value
+        messageTd.textContent = "Message : "+ document.contactForm.message.value
+
+        // alert(666)
+        nomTd.setAttribute("colspan","2")   
+        adresseTd.setAttribute("colspan","2")
+        sujetTd.setAttribute("colspan","2")
+        messageTd.setAttribute("colspan","2")
+        messageTd.setAttribute("class","colorVide")
+
+        newItem1.append(nomTd)
+        newItem2.append(adresseTd)
+        newItem3.append(phoneTd,emailTd)
+        newItem4.append(sujetTd)
+        newItem5.append(messageTd)
+
+        if (!document.contactForm.nom.checkValidity() ||
+        !document.contactForm.prenom.checkValidity() ||
+        !document.contactForm.adresse.checkValidity() ||
+        !document.contactForm.email.checkValidity() ||
+        !document.contactForm.tele.checkValidity() 
+       ) {
+            alert("erreur de saisir")
+            return
+      }
+
+        const tableMessage = document.querySelector('.tableMessage tbody')
+        tableMessage.appendChild(newItem1)
+        tableMessage.appendChild(newItem2)
+        tableMessage.appendChild(newItem3)
+        tableMessage.appendChild(newItem4)
+        tableMessage.appendChild(newItem5)
+
+       
+    }
+
+    function supprimerMessage(){
+        const tbody = document.querySelector('.tableMessage tbody' )
+        while (tbody.firstChild) {
+          tbody.removeChild(tbody.firstChild)
+        }
     }
     
     

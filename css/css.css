@@ -14,26 +14,26 @@
 /* pour les titres */
 @font-face {
     font-family: "Chivo";
-    src: url("/polices/Chivo-Regular.ttf") format("truetype");
+    src: url("./../polices/Chivo-Regular.ttf") format("truetype");
     font-weight: normal;
 }
 
 @font-face {
     font-family: "Chivo";
-    src: url("/polices/Chivo-Bold.ttf") format("truetype");
+    src: url("./../polices/Chivo-Bold.ttf") format("truetype");
     font-weight: bold;
 }
 
 /*Pour les paragraphes*/
 @font-face {
     font-family: "CrimsonPro";
-    src: url("/polices/CrimsonPro-Bold.ttf") format("truetype");
+    src: url("./../polices/CrimsonPro-Bold.ttf") format("truetype");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "CrimsonPro";
-    src: url("/polices/CrimsonPro-Regular.ttf") format("truetype");
+    src: url("./../polices/CrimsonPro-Regular.ttf") format("truetype");
     font-weight: normal;
 }
 
@@ -121,6 +121,9 @@
 
 .flex-nowrap{
     flex-wrap: nowrap;
+}
+.flex-wrap{
+    flex-wrap: wrap;
 }
 
 .justice-contant-center{
@@ -300,6 +303,10 @@ main{
 **/
 
 /* Formulaire */
+form {
+    margin-top: 5%;
+}
+
 .contactRegistration{
     margin : 5% 2%;
     /* max-width: 700px; */
@@ -313,40 +320,46 @@ main{
     text-align: center;
     font-size: 25px;
     font-weight: 500;
-    position: relative;
 } 
 
-.contactRegistration form .details{
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+.input-box{
+    margin: 1% 0;
+    text-align: center;
+    /* width: calc(100% / 2 - 20px); */
 }
 
-form .details .input-box{
-    margin: 20px 0 15px 20px;
-    width: calc(100% / 2 - 20px);
-}
 
-.details .input-box input{
+.input-box input{
     height: 30px;
-    width: 70%;
+    width: 80%;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #fdbfc9;
-    padding-left: 15px;
+    border: 2px solid var(--third-color);
+    margin: auto;
     font-size: 16px;
 }
 
-.details .input-box input:focus,
-.details .input-box input:valid{
+.input-box input[name="sujet"],.input-box input[name="message"]{
+    width: 100%;
+}
+
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box input:valid,
+.input-box textarea:valid{
     border: solid;
     border-color: var(--second-bag-color);
 }
 
-form {
-    margin-top: 5%;
+textarea {
+    width: 100%;
+    height: 100px;
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid var(--third-color);
 }
 
+/*buttons de forme */
 form .button{
     height: 30px;
     margin: 30px 0;
@@ -354,40 +367,40 @@ form .button{
 
 form .button input{
     display: block;
-    margin: auto;
+    margin: auto 2%;
     height: 100%;
     outline: none;
-    border-radius: 5px;
+    border-radius: 4px;
     font-size: 16px;
     font-weight: 500;
     letter-spacing: 1px;
-    background: var(  --second-bag-color);
+    background: var(--second-bag-color);
+    color: #fff;
+    border: none;
+    padding: 1% 4%;
+    line-height: 18px;
+    box-shadow: 3px 3px 30px #999;
 }
 
-.details .input-box textarea:focus,
-.details .input-box textarea:valid{
-    border: solid;
-    border-color: var(--second-bag-color);
-}
-
-textarea {
-    font: 1em sans-serif;
-    width: 75%;
-    height: 100px;
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid #fdbfc9;
+form .button input:hover{
+    background: var(--third-color);
+    color: black;
+    box-shadow: 3px 5px 30px #999;
 }
 
 /* Tableau : Les messages obtenus */
 .message-envoye table{
     width : 100%;
-    
 }
 
 .message-envoye td{ 
     padding: 1%;
     border-bottom:2px solid var(--third-color);
+}
+
+.message-envoye td.colorVide{
+    padding: 1%;
+    border-bottom:2px solid var(--main-bag-color);
 }
 
 .message-envoye caption, .horaire caption{
@@ -500,7 +513,6 @@ footer h3{
     }
 
 }
-
 
 
 @media (min-width : 300px) and (max-width:560px){
