@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang ="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Cuisine internationale </title>
+    <!--<link rel="stylesheet" href="styleTP1Partie2.css"> -->
+
+    <style>
+       
+    
+        table {
+
+         border-collapse: collapse; /* pour que toutes les cellules aient une seule bordure*/
+         border: 2px solid rgb(233, 27, 27);
+         margin:auto;
+                 
+        }
+    
+        td, th {
+          
+          border: 1px solid rgb(12, 1, 1);
+          padding: 10px 20px;
+          text-align: center;
+        }
+    
+      
+
+        .align {
+
+            text-align: left;
+        }
+    
+        .align2 {
+            text-align: right ;
+        }
+     
+        </style>
+
+  </head>
+  
+
+<body>
+    <TABLE> <!--Debut de tableau-->
+     
+        <colgroup>
+            <col style="background-color: rgb(167, 167, 166)" span= "1">     <!--  colorier en gris la colonne 1 (span = 1 : colonne numéro 1)  -->
+            <col style="background-color: rgb(167, 167, 93)" span= "2">
+     
+        </colgroup>
+
+
+
+        <tr>
+            <Th>   </Th>
+            <Th>Recette</Th>
+            <Th>Prix</Th>            
+        </tr>
+
+        <tr>
+            <Th rowspan="2" > Entrée </Th>
+            <TD class="align"> Soupe de légumes </TD>
+            <TD class="align2"> 8 euro </TD>    
+        </tr>
+        
+        <tr>
+            <TD class="align">Salade aux fruits de mer</TD>
+            <TD class="align2">9 euro</TD>            
+        </tr>
+        <tr>
+            <Th rowspan="2">Plat</Th>
+            <TD class="align">Couscous au poisson</TD>
+            <TD class="align2">14 euro</TD>            
+        </tr>
+        <tr>
+            <TD class="align">Côte de veau aux petits légumes</TD>
+            <TD class="align2">12 euro</TD>            
+        </tr>
+        <tr>
+            <Th rowspan="2">Dessert</Th>
+            <TD class="align">Tiramisu</TD>
+            <TD class="align2">6 euro</TD>            
+        </tr>
+        <tr>
+            <TD class="align">Mousse au chocolat</TD>
+            <TD class="align2">5 euro</TD>            
+        </tr>
+        
+        
+    </TABLE> <!--fin de tableau-->
+</body>
+</html>
