@@ -19,6 +19,9 @@
             /* bottom: 50%; */
         }
        
+        .bouton{
+            padding: 2px 5px;
+        }
     
         table {
 
@@ -36,7 +39,6 @@
         }
     
       
-
         .align {
 
             text-align: left;
@@ -66,45 +68,165 @@
             <col style="background-color: rgb(167, 167, 93)" span= "2">
      
         </colgroup>
-
-
-
-        <tr>
-            <Th>   </Th>
-            <Th>Recette</Th>
-            <Th>Prix</Th>            
-        </tr>
-
-        <tr>
-            <Th rowspan="2" > Entrée </Th>
-            <TD class="align"> Soupe de légumes </TD>
-            <TD class="align2"> 8 euro </TD>    
-        </tr>
+    <div id="menu-table">
+        <TABLE> <!--Debut de tableau-->
         
-        <tr>
-            <TD class="align">Salade aux fruits de mer</TD>
-            <TD class="align2">9 euro</TD>            
-        </tr>
-        <tr>
-            <Th rowspan="2">Plat</Th>
-            <TD class="align">Couscous au poisson</TD>
-            <TD class="align2">14 euro</TD>            
-        </tr>
-        <tr>
-            <TD class="align">Côte de veau aux petits légumes</TD>
-            <TD class="align2">12 euro</TD>            
-        </tr>
-        <tr>
-            <Th rowspan="2">Dessert</Th>
-            <TD class="align">Tiramisu</TD>
-            <TD class="align2">6 euro</TD>            
-        </tr>
-        <tr>
-            <TD class="align">Mousse au chocolat</TD>
-            <TD class="align2">5 euro</TD>            
-        </tr>
+            <colgroup>
+                <col style="background-color: rgb(167, 167, 166)" span= "1">     <!--  colorier en gris la colonne 1 (span = 1 : colonne numéro 1)  -->
+                <col style="background-color: rgb(167, 167, 93)" span= "2">
         
+            </colgroup>
+
+
+            <tr>
+                <Th>   </Th>
+                <Th>Recette</Th>
+                <Th>Prix</Th>            
+            </tr>
+
+            <tr>
+                <Th rowspan="2" > Entrée </Th>
+                <TD class="align"> Soupe de légumes </TD>
+                <TD class="align2"> 8 euro </TD>    
+            </tr>
+            
+            <tr>
+                <TD class="align">Salade aux fruits de mer</TD>
+                <TD class="align2">9 euro</TD>            
+            </tr>
+            <tr>
+                <Th rowspan="2">Plat</Th>
+                <TD class="align">Couscous au poisson</TD>
+                <TD class="align2">14 euro</TD>            
+            </tr>
+            <tr>
+                <TD class="align">Côte de veau aux petits légumes</TD>
+                <TD class="align2">12 euro</TD>            
+            </tr>
+            <tr>
+                <Th rowspan="2">Dessert</Th>
+                <TD class="align">Tiramisu</TD>
+                <TD class="align2">6 euro</TD>            
+            </tr>
+            <tr>
+                <TD class="align">Mousse au chocolat</TD>
+                <TD class="align2">5 euro</TD>            
+            </tr>
+            
+            
+        </TABLE> <!--fin de tableau-->
+    </div>
+
+    <div id="album-table">
+        <table name="albulm" onsubmit="return false" action="#">
+            <caption><h2>Albulm</h2></caption>
+            <tr>
+                <td>PhotoId</td>
+                <td>Id</td>
+                <td>Titre</td>
+                <td>URL1</td>
+                <td>URL2</td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+
+        var albulm = document.querySelector("#album-table");
+        var table = document.querySelector("#menu-table");
+        albulm.style.display = none;
+        table.style.display = bloc;
+
+        function pause(ms) {
+            return new Promise(resolve => setTimeout(resolve, ms));
+        }
+
+
+        function startTime() {
+          while(true) 
+          {
+            await pause(1);
+            var cejour = new Date();
+            var options = {weekday: "long", year: "numeric", month: "long", day: "2-digit"};
+            var date = cejour.toLocaleDateString("fr-FR", options);
+            var heure = ("0" + cejour.getHours()).slice(-2) + ":" + ("0" + cejour.getMinutes()).slice(-2) + ":" + ("0" + cejour.getSeconds()).slice(-2);
+            var dateheure = date + " " + heure;
+            var dateheure = dateheure.replace(/(^\w{1})|(\s+\w{1})/g, lettre => lettre.toUpperCase());
+            document.getElementById('dateheure').innerHTML = dateheure;
+          }
+        }
         
-    </TABLE> <!--fin de tableau-->
+        function menu(){
+            var albulm = document.querySelector("#album-table");
+            var table = document.querySelector("#menu-table");
+            albulm.style.display = none;
+            table.style.display = bloc;
+        }
+
+        function album(){
+            var albulm = document.querySelector("#album-table");
+            var table = document.querySelector("#menu-table");
+            albulm.style.display = bloc;
+            table.style.display = none;
+        }
+
+        function getAlbulm(){
+            fetch("https://jsonplaceholder.typicode.com/albums/1/photos?_start=")
+                .then((response) => reponse.json())
+                .then(function(data){
+                    console.log(data)
+                });
+        }
+
+
+        function createAlbulm(){
+            //alert(newCommandForm.elements.prenom.value)
+            // Ex3)2)
+            console.log(albulm.elements.nom.value)
+            console.log(albulm.elements.adresse.value)
+
+            // Ex3)3)
+            const newItem = document.createElement('tr')
+            const photoIdTd = document.createElement('td')
+            const idTd = document.createElement('td')
+            const titreTd = document.createElement('td')
+            const url1Td = document.createElement('td')
+            const url2Td = document.createElement('td')
+            photoIdTd.textContent = document.albulm.nom.value
+            idTd.textContent = document.albulm.adresse.value
+            titreTd.textContent = albulm.newCommand.livraison.value
+            url1Td.textContent = document.albulm.entree.value
+            url2Td.textContent = document.albulm.plat.value
+
+            
+            //const selectEntree = document.getElementById("entreeId");
+            //const valeurselectionnee = selectEntree.options[selectEntree.selectedIndex].value;
+            //const textselectionne = selectEntree.options[selectEntree.selectedIndex].text;
+        
+            // Ex3)3)iii)
+            //const table = document.querySelector('table')
+            newItem.append(photoIdTd, idTd, titreTd, url1Td, url2Td)
+            console.log(entreeTd.textContent)
+            console.log(platTd.textContent)
+            console.log(desserTd.textContent)
+
+            /*Ex3)3)vii)   */
+
+            if (!document.albulm.nom.checkValidity() ||
+                !document.albulm.prenom.checkValidity() ||
+                !document.albulm.adresse.checkValidity() ||
+                !document.albulm.email.checkValidity()
+                ) {
+                    return
+                }
+
+            // Ex3)3)v)
+            /* le premier élément dans le document qui contient la classe "datatable" est retourné*/
+            const table = document.querySelector('.datatable tbody')
+            /*  Ex2)3)vi) */
+            table.appendChild(newItem)
+
+        }
+     </script>
 </body>
 </html>
