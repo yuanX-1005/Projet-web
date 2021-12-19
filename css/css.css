@@ -178,11 +178,16 @@ nav{
 }
 
 /*logo de navbar*/
-.nav-logo{
+/* .nav-logo{
     width: 20%;
     padding: 0 6% 0 4%;
-}
+} */
 
+/***/
+.nav-logo{
+    padding-left: 4%;
+}
+/***/
 .nav-logo img{
     max-height: 40px;
     max-width: max-content;
@@ -198,10 +203,61 @@ nav{
     align-items: center;
 }
 
-.nav-link{
+/* .nav-link{
     margin: 0 2%;
     font-weight: bold;
+} */
+/***/
+.nav-link {
+    --c: rgb(99, 165, 138) ;
+    font-size: 16px;
+    border-radius: 0.5em;
+    width: 12em;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    margin: 0.5em;
 }
+
+.nav-link span {
+    position: absolute;
+    width: 25%;
+    height: 100%;
+    background-color: var(--c);
+    transform: translateY(150%);
+    border-radius: 50%;
+    left: calc((var(--n) - 1) * 25%);
+    transition: 0.5s;
+    transition-delay: calc((var(--n) - 1) * 0.1s);
+    z-index: -1;
+}
+
+.nav-link:hover span {
+    transform: translateY(0) scale(2);
+}
+
+.nav-link span:nth-child(1) {
+    --n: 1;
+}
+
+.nav-link span:nth-child(2) {
+    --n: 2;
+}
+
+.nav-link span:nth-child(3) {
+    --n: 3;
+}
+
+.nav-link span:nth-child(4) {
+    --n: 4;
+}
+
+.nav-link span:nth-child(5) {
+    --n: 5;
+}
+/***/
 
 /***========================= Main =============================*****/
 
@@ -511,7 +567,24 @@ footer h3{
         display: flex;
         margin-top: 2%;
     }
+    
+    
+    /***/
+    /*Navbar */
+    .nav-link{
+        font-size: 11px;
+    }
 
+    .nav-logo img{
+        padding-top: 7px;
+        max-height: 25px;
+        max-width: max-content;
+        /* margin: auto 2%; */
+        /* top: 50%; */
+        /* bottom: 50%; */
+    }
+
+    /***/
 }
 
 
@@ -528,19 +601,19 @@ footer h3{
     **/
 
     /*logo de navbar*/
-    .nav-logo{
+    /* .nav-logo{
         width: 15%;
         padding: 0 3% 0 2%;
     }
 
     .nav-logo img{
         max-width: 70px;
-    }
+    } */
 
     /* menu de navbar */
-    .nav-content-border{
+    /* .nav-content-border{
         font-size: 14px;
-    }
+    } */
 
 
 }
