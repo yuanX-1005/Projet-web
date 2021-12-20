@@ -357,6 +357,35 @@ main{
     margin-left: 20px;
 }
 
+.imgDescription p{
+    text-align: justify;
+}
+/**
+*   Page CATEGORIES ********************************
+**/
+.slide-img img{
+    height: 200px;
+    width: 100%;
+}
+
+.box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 400px;
+}
+
+.slide-img{
+    margin-left: 10px;
+    margin-right: 10px;
+}
+
+#leftarrow, #rightarrow{
+    margin-left: 12px;
+    width: 3%;
+    display: inline-block;
+}
+
 /**
 *   Page ACTIVITES ********************************
 **/

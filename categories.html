@@ -21,7 +21,36 @@
                 </div>
             </nav>
         </header>
-        <main class="">
+        <main class="main" onload="show()">
+            <div class="box">
+                <div id="leftarrow" onclick="moveleft()">
+                    <button>&lt;</button>
+                </div>
+                <div class="slide-img" id="i2">
+                    <img src="images/livres/Elle1.jpg">
+                </div>
+                <div class="slide-img" id="i2">
+                    <img src="images/livres/Elle2.jpg">
+                </div>
+                <div class="slide-img" id="i3">
+                    <img src="images/livres/Elle3.jpg">
+                </div>
+                <div class="slide-img" id="i4">
+                    <img src="images/livres/mic1.jpg">
+                </div>
+                <div class="slide-img" id="i5">
+                    <img src="images/livres/mic2.jpg">
+                </div>
+                <div class="slide-img" id="i6">
+                    <img src="images/livres/mic3.jpg">
+                </div>
+                <div class="slide-img" id="i7">
+                    <img src="images/livres/mic3.jpg">
+                </div>
+                <div id="rightarrow" onclick="moveright()">
+                    <button>&gt;</button>
+                </div>
+            </div>
             <div class="container-livre">
                 <h2 class="w-100 center">Categorie 1</h2>
                 <div class="w-30 flex justice-contant-center">
@@ -117,7 +146,6 @@
                     </p>
                 </section>
             </div>
-            
         </main>
         <footer>
             <div class="container-footer">
@@ -141,13 +169,13 @@
                     <div class="footer-bloc center">
                         <h3>Nos Horaires</h3>
                         <ul class="listeHoraires">
-                            <li>✔️ Lun 8h00 - 19h00</li>
-                            <li>✔️ Mar 8h00 - 19h00</li>
-                            <li>✔️ Mer 8h00 - 19h00</li>
-                            <li>✔️ Jeu 14h00 - 20h00</li>
-                            <li>✔️ Ven 8h00 - 19h00</li>
-                            <li>✔️ Sam 8h00 - 20h00</li>
-                            <li>❌ Dim fermé - fermé</li>
+                            <li><i class="fas fa-check"></i> Lun 8h00 - 19h00</li>
+                            <li><i class="fas fa-check"></i> Mar 8h00 - 19h00</li>
+                            <li><i class="fas fa-check"></i> Mer 8h00 - 19h00</li>
+                            <li><i class="fas fa-check"></i> Jeu 14h00 - 20h00</li>
+                            <li><i class="fas fa-check"></i> Ven 8h00 - 19h00</li>
+                            <li><i class="fas fa-check"></i> Sam 8h00 - 20h00</li>
+                            <li><i class="fas fa-times"></i> Dim fermé - fermé</li>
                         </ul>
                     </div>
                     <div class="footer-bloc center">
