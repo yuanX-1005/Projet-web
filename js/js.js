@@ -77,37 +77,46 @@ window.addEventListener('load', function(){
           tbody.removeChild(tbody.firstChild)
         }
     }
+});
 
-    $(document).ready(function() {
-        $('#autoWidth').lightSlider({
-            autoWidth:true,
-            loop:true,
-            onSliderLoad: function() {
-                $('#autoWidth').removeClass('cS-hidden');
-            } 
-        });  
-    });
+var gauche=1;
+var droite=5;  
 
-    //Décaler les images 
-    // var left = 1;
-    // var right = 5;
+function show(){
+    for(i=gauche;i<=droite;i++)
+    {
+        document.getElementById("p"+i).style.display="inline-block";
+    }
+}
+//Décaler les images vers la gauche
+function decalageGauche(){
+    if (gauche <=3 && droite<=7){
+        document.getElementById("p"+gauche).style.display="none";
+        gauche+=1;
+        droite+=1;
 
-    function show(){
-        for(i=left;i<=right;i++)
-        {
-            document.getElementById("p1").style.display="inline-block";
+        for(i=gauche;i<=droite;i++){
+            document.getElementById("p"+i).style.display="inline-block";
         }
     }
-    //Décaler les images vers la gauche
-    // function moveleft(){
-    //     document.getElementById("p"+i).style.display="none";
-    //     left+=1;
-    //     right+=1;
+    else
+        return;
+}
 
-    //     for(i=left;i<=right;i++){
-    //         document.getElementById("p"+i).style.display="inline-block";
-    //     }
-    // }
-    
-    
-});
+//Décaler les images vers la droite
+function decalageDroite(){
+    if (gauche>=2 && droite>=6){
+        document.getElementById("p"+droite).style.display="none";
+        gauche-=1;
+        droite-=1;
+
+        for(i=gauche;i<=droite;i++){
+            document.getElementById("p"+i).style.display="inline-block";
+        }
+    }
+    else
+        return;
+}
+
+
+

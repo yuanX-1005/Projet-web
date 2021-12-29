@@ -8,7 +8,7 @@
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
         <script src="./js/js.js"></script>
     </head>
-    <body>
+    <body  onload="show()">
         <header>
           <!-- Navbar -->
             <nav class="">
@@ -22,37 +22,103 @@
                 </div>
             </nav>
         </header>
-        <main class="main" onload="show()">
+        <main class="main">
+            <h2 class="categories-title">Toutes les catégories disponibles</h2>
             <div class="box">
-                <div id="leftarrow" onclick="moveleft()">
+                <div id="leftarrow" onclick="decalageGauche()">
                     <button>&lt;</button>
                 </div>
                 <div class="slide-img" id="p1">
                     <img src="images/livres/Elle1.jpg">
                 </div>
                 <div class="slide-img" id="p2">
-                    <img src="images/livres/Elle2.jpg">
+                    <img src="images/livres/hungerGames.jpg">
                 </div>
                 <div class="slide-img" id="p3">
-                    <img src="images/livres/Elle3.jpg">
+                    <img src="images/livres/philosophe.jpg">
                 </div>
                 <div class="slide-img" id="p4">
-                    <img src="images/livres/mic1.jpg">
+                    <img src="images/livres/voyages.jpg">
                 </div>
                 <div class="slide-img" id="p5">
-                    <img src="images/livres/mic2.jpg">
+                    <img src="images/livres/mangas.jpg">
                 </div>
                 <div class="slide-img" id="p6">
-                    <img src="images/livres/mic3.jpg">
+                    <img src="images/livres/romeo-et-juliette.jpg">
                 </div>
                 <div class="slide-img" id="p7">
-                    <img src="images/livres/mic3.jpg">
+                    <img src="images/livres/histoire.jpg">
                 </div>
-                <div id="rightarrow" onclick="moveright()">
+                <div class="slide-img" id="p8">
+                    <img src="images/livres/mickey.jpg">
+                </div>
+                <div id="rightarrow" onclick="decalageDroite()">
                     <button>&gt;</button>
                 </div>
             </div>
-            <div class="container-livre">
+            <section class="categories-images">
+                <div class="categories-row">
+                    <div class="col">
+                        <h3>CINÉMA</h3>
+                        <img src="images/livres/LeHobbit.jpg">
+                        <h3>Le Hobbit</h3>
+                        <h4 class="neuf">Etat : Neuf</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                    <div class="col">
+                        <h3>CINÉMA</h3>
+                        <img src="images/livres/StarWars.jpg">
+                        <h3>Star Wars</h3>
+                        <h4 class="occasion">Etat : Ocassion</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                    <div class="col">
+                        <h3>CINÉMA</h3>
+                        <img src="images/livres/Divergente.jpg">
+                        <h3>Divergente</h3>
+                        <h4 class="neuf">Etat : Neuf</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                    <div class="col">
+                        <h3>CINÉMA</h3>
+                        <img src="images/livres/HarryPotter.jpg">
+                        <h3>Harry Potter</h3>
+                        <h4 class="occasion">Etat : Ocassion</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                </div>
+                <div class="categories-row">
+                    <div class="col">
+                        <h3>MANGA</h3>
+                        <img src="images/livres/12Ans.jpg">
+                        <h3>12 Ans</h3>
+                        <h4 class="occasion">Etat : Ocassion</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                    <div class="col">
+                        <h3>MANGA</h3>
+                        <img src="images/livres/SpyXFamilyjpg.jpg">
+                        <h3>Spy x Family</h3>
+                        <h4 class="occasion">Etat : Ocassion</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                    <div class="col">
+                        <h3>MANGA</h3>
+                        <img src="images/livres/Japop.jpg">
+                        <h3>Japop</h3>
+                        <h4 class="neuf">Etat : Neuf</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                    <div class="col">
+                        <h3>MANGA</h3>
+                        <img src="images/livres/LaCuisineDesAnime.jpg">
+                        <h3>La Cuisine des Anime</h3>
+                        <h4 class="occasion">Etat : Ocassion</h4>
+                        <a href="#" class="ctn"></a>
+                    </div>
+                </div>
+            </section>
+            <!-- <div class="container-livre">
                 <h2 class="w-100 center">Categorie 1</h2>
                 <div class="w-30 flex justice-contant-center">
                     <img class="couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
@@ -70,83 +136,7 @@
                         Proin pharetra massa et lacus interdum, sed suscipit nisi vulputate.
                     </p>
                 </section>
-            </div>
-            <div class="container-livre">
-                <h2 class="w-100 center">Titre 1</h2>
-                <div class="w-30 flex justice-contant-center">
-                    <img class="couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
-                </div>
-                <section class="w-70">
-                    <p class="">
-                        Titre : <span>"titre de livre"</span>
-                        Auteur : <span>auteur de livre</span>
-                        Etat : <span>disponible</span>
-                    </p>
-                    <p class="example">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam vestibulum urna nec dolor rhoncus, sed tristique lorem imperdiet.
-                        Vivamus pharetra dui vel turpis interdum, consectetur vulputate est gravida.
-                        Proin pharetra massa et lacus interdum, sed suscipit nisi vulputate.
-                    </p>
-                </section>
-            </div>
-            <div class="container-livre">
-                <h2 class="w-100 center">Titre 1</h2>
-                <div class="w-30 flex justice-contant-center">
-                    <img class="couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
-                </div>
-                <section class="w-70">
-                    <p class="">
-                        Titre : <span>"titre de livre"</span>
-                        Auteur : <span>auteur de livre</span>
-                        Etat : <span>disponible</span>
-                    </p>
-                    <p class="example">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam vestibulum urna nec dolor rhoncus, sed tristique lorem imperdiet.
-                        Vivamus pharetra dui vel turpis interdum, consectetur vulputate est gravida.
-                        Proin pharetra massa et lacus interdum, sed suscipit nisi vulputate.
-                    </p>
-                </section>
-            </div>
-            <div class="container-livre">
-                <h2 class="w-100 center">Titre 1</h2>
-                <div class="w-30 flex justice-contant-center">
-                    <img class="couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
-                </div>
-                <section class="w-70">
-                    <p class="">
-                        Titre : <span>"titre de livre"</span>
-                        Auteur : <span>auteur de livre</span>
-                        Etat : <span>disponible</span>
-                    </p>
-                    <p class="example">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam vestibulum urna nec dolor rhoncus, sed tristique lorem imperdiet.
-                        Vivamus pharetra dui vel turpis interdum, consectetur vulputate est gravida.
-                        Proin pharetra massa et lacus interdum, sed suscipit nisi vulputate.
-                    </p>
-                </section>
-            </div>
-            <div class="container-livre">
-                <h2 class="w-100 center">Titre 1</h2>
-                <div class="w-30 flex justice-contant-center">
-                    <img class="couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
-                </div>
-                <section class="w-70">
-                    <p class="">
-                        Titre : <span>"titre de livre"</span>
-                        Auteur : <span>auteur de livre</span>
-                        Etat : <span>disponible</span>
-                    </p>
-                    <p class="example">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam vestibulum urna nec dolor rhoncus, sed tristique lorem imperdiet.
-                        Vivamus pharetra dui vel turpis interdum, consectetur vulputate est gravida.
-                        Proin pharetra massa et lacus interdum, sed suscipit nisi vulputate.
-                    </p>
-                </section>
-            </div>
+            </div> -->
         </main>
         <footer>
             <div class="container-footer">

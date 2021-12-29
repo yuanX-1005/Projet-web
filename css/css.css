@@ -363,16 +363,18 @@ main{
 /**
 *   Page CATEGORIES ********************************
 **/
-.slide-img img{
-    height: auto;
-    width: 100%;
-}
-
 .box{
     display: flex;
     justify-content: center;
     align-items: center;
     height: 400px;
+}
+
+.categories-title{
+    font-family: "Chivo";
+    font-weight: normal;
+    text-align: center;
+    margin-top: 5% auto;
 }
 
 .slide-img{
@@ -381,10 +383,45 @@ main{
     display: none;
 }
 
+.slide-img img{
+    height: 250px;
+    width: 100%;
+}
+
+
 #leftarrow, #rightarrow{
     margin-left: 12px;
     width: 3%;
     display: inline-block;
+}
+
+.categories-images{
+    margin: 80px auto;
+}
+
+.categories-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.categories-images .col{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.categories-images .col img{
+    height: 250px;
+    width: 150px;
+}
+
+.categories-images .col .neuf{
+    color: var(--main-bag-color)
+}
+
+.categories-images .col .occasion{
+    color: var(--second-bag-color)
 }
 
 /**
@@ -628,6 +665,14 @@ footer h3{
 
 .listeActivites a:hover, .reseau-sociaux a:hover i {
     color:var(--second-bag-color);
+}
+
+.imgActivite img{
+    margin-left: 600px;
+    position:absolute;
+    top: 1px;
+    height: 300px;
+    width: 500px;
 }
 
 /***====================== Media query ================================*****/
