@@ -87,6 +87,27 @@ window.addEventListener('load', function(){
             } 
         });  
     });
+
+    //Décaler les images 
+    // var left = 1;
+    // var right = 5;
+
+    function show(){
+        for(i=left;i<=right;i++)
+        {
+            document.getElementById("p1").style.display="inline-block";
+        }
+    }
+    //Décaler les images vers la gauche
+    // function moveleft(){
+    //     document.getElementById("p"+i).style.display="none";
+    //     left+=1;
+    //     right+=1;
+
+    //     for(i=left;i<=right;i++){
+    //         document.getElementById("p"+i).style.display="inline-block";
+    //     }
+    // }
     
     
 });
