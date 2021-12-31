@@ -6,19 +6,33 @@
         <link rel="stylesheet" href="css/css.css">
         <meta name="viewport=" content="width=device-width, initial-scale=1">
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
+        <script src="./js/js.js"></script>
     </head>
     <body>
         <header>
           <!-- Navbar -->
-            <nav class="">
+            <nav>
                 <div class="nav-logo"><img src="images/logo-BiblioShop.png" alt="Logo du site BiblioShop"></div>
                 <div class="nav-content-border">
                     <a class="nav-link" href="accueil.html">Accueil<span></span><span></span><span></span><span></span></a>
                     <a class="nav-link" href="propos.html">A propos<span></span><span></span><span></span><span></span></a>
                     <a class="nav-link" href="categories.html">Catégories<span></span><span></span><span></span><span></span></a>
                     <a class="nav-link" href="activite.html">Activités<span></span><span></span><span></span><span></span></a>
+                    <a class="nav-link" href="evenement.html">Evenement<span></span><span></span><span></span><span></span></a>
                     <a class="nav-link" href="contact.html">Contact<span></span><span></span><span></span><span></span></a>
                 </div>
+
+                <div class="nav-phone">
+                    <button id="navPhone" onclick="afficherNavPhone()"><i class="fas fa-bars"></i></button>
+                </div>
+                <ul id="navPhoneContenu">
+                    <li><a class="" href="accueil.html">Accueil</a></li>
+                    <li><a class="" href="propos.html">A propos</a></li>
+                    <li><a class="" href="categories.html">Catégories</a></li>
+                    <li><a class="" href="activite.html">Activités</a></li>
+                    <li><a class="" href="evenement.html">Evenement</a></li>
+                    <li><a class="" href="contact.html">Contact</a></li>
+                </ul>
             </nav>
         </header>
         <main>
@@ -29,7 +43,7 @@
                 <div class="container-livre">
                     <h2 class="w-100 center">WAKOU</h2>
                     <section class="w-70">
-                        <p class="example">
+                        <p class="doc-description">
                             Le monde merveilleux des animaux :
                             Votre enfant est curieux de nature et s'émerveille devant les animaux.
                             Les photos et les textes d'une grande sensibilité permettent au jeune lecteur
@@ -53,7 +67,7 @@
                         <img class="couvert" src="images/livres/lesmiserables.jpg" alt="couverture de magazine">
                     </div>
                     <section class="w-70">
-                        <p class="example">
+                        <p class="doc-description">
                             Roman réaliste, Les Misérables décrit un monde de gens humbles. 
                             C’est une peinture très précise de la vie en France et le Paris pauvre début du XIXe siècle. 
                             Son succès populaire est parfois lié à la charge avec laquelle les personnages sont peints dans le roman.
@@ -68,7 +82,7 @@
                 <div class="container-livre">
                     <h2 class="w-100 center">Roméo et Juliette</h2>
                     <section class="w-70">
-                        <p class="example">
+                        <p class="doc-description">
                             Roméo et Juliette est une tragédie de William Shakespeare. 
                             Écrite vers le début de sa carrière, elle raconte l'histoire de deux jeunes gens, 
                             Roméo Montaigu et Juliette Capulet, qui s'aiment malgré la haine que se vouent leurs familles et connaissent un destin funeste.
@@ -82,7 +96,7 @@
         </main>
         <footer>
             <div class="container-footer">
-                <div class="detailsFooter flex">
+                <div class="detailsFooter flex flex-wrap">
                     <div class="footer-bloc">
                         <h3>Nos Activités</h3>
                         <ul class="listeActivites">

@@ -6,7 +6,11 @@
     --third-color : #fdbfc9;
 
     /* fonts sizes */
-    --font-size-1: calc(24px + (36 - 24)*(100vw - 768px)/(2560 - 768));
+    --font-size-1: calc(24px + (36 - 24)*(100vw - 320px)/(1440- 320));
+    --font-size-2: calc(18px + (30 - 18)*(100vw - 320px)/(1440 - 320));
+    --font-size-3: calc(14px + (24 - 14)*(100vw - 320px)/(1440 - 320));
+    --font-size-4: calc(12px + (20 - 12)*(100vw - 320px)/(1440 - 320));
+    --font-size-5: calc(12px + (14 - 12)*(100vw - 320px)/(1440 - 320));
     --main-margin:16%; 
 }
 
@@ -77,6 +81,29 @@
     background-color : var(--third-bag-color);
 }
 
+/* Font */
+
+h1{
+    font-size: var(--font-size-1);
+}
+
+h2{
+    font-size: var(--font-size-2);
+}
+
+h3{
+    font-size: var(--font-size-3);
+}
+
+h4{
+    font-size: var(--font-size-4);
+}
+
+p{
+    font-size: var(--font-size-4);
+}
+
+
 /************Width***********/
 .w-10{
     width: 10%;
@@ -135,6 +162,20 @@
 }
 
 
+/* Enlever certain style par defaut */
+a:link, a:active, a:visited{
+    color: black;
+    text-decoration: none;
+}
+a:hover{
+    color: var(--main-bag-color);
+}
+
+ul,li{
+    list-style: none;
+}
+
+
 /************Body***********/
 
 
@@ -149,11 +190,6 @@ html, body{
     padding : 0;
 }
 
-/* proprietaire par defaut */
-a:link, a:active, a:visited{
-    color: black;
-    text-decoration: none;
-}
 
 /***========================= Header =============================*****/
 header{
@@ -164,6 +200,7 @@ header{
     top:0;
     z-index: 1000;
 }
+
 /**
 *   Navbar ********************************
 **/
@@ -178,25 +215,23 @@ nav{
     box-shadow: 3px 3px 30px #999;
     position: fixed;
     top:0;
+    font-size: var(--font-size-3);
+    white-space: nowrap;
 }
 
-/*logo de navbar*/
-/* .nav-logo{
-    width: 20%;
-    padding: 0 6% 0 4%;
-} */
+/* nav pour telephone */
+.nav-phone,#navPhoneContenu{
+    display: none;
+}
 
-/***/
+/* logo du site*/
 .nav-logo{
     padding-left: 4%;
 }
-/***/
+
 .nav-logo img{
     max-height: 40px;
     max-width: max-content;
-    /* margin: auto 2%; */
-    /* top: 50%; */
-    /* bottom: 50%; */
 }
 
 /* menu de navbar */
@@ -206,11 +241,6 @@ nav{
     align-items: center;
 }
 
-/* .nav-link{
-    margin: 0 2%;
-    font-weight: bold;
-} */
-/***/
 .nav-link {
     --c: rgb(99, 165, 138) ;
     font-size: 16px;
@@ -228,7 +258,7 @@ nav{
     position: absolute;
     width: 25%;
     height: 100%;
-    background-color: var(--c);
+    background-color: var(--second-bag-color);
     transform: translateY(150%);
     border-radius: 50%;
     left: calc((var(--n) - 1) * 25%);
@@ -273,55 +303,59 @@ main{
 
 .main{
     margin: auto var(--main-margin);
+    background-color: #fff;
 }
 
+
+/**
+*   Page ACCUEIL ********************************
+**/
+
+/* images de decoration */
+.show-img{
+    width: 100%;
+}
+
+
+/* ** les livres representants */
 .container-livre{
     display: flex;
     flex-wrap: wrap;
     margin : 2% var(--main-margin);
 }
 
-.container-citation{
-    height: 200px;
-    border-bottom: 2px solid var(--main-bag-color);
-    border-top: 2px solid var(--main-bag-color);
-
-    /* background-color: var(--main-bag-color); */
-}
-
-.container-citation p{
-    text-align: center;
-    font-family: "Estonia",serif;
-    font-size: 24px;
-}
-
+/* couverture de livre */
 .couvert{
     max-width: 100px;
 }
 
-/**
-*   Page ACCUEIL ********************************
-**/
-
-.show-img{
-    max-width: 100%;
-}
-
-/*à supprimer*/
-.example{
+/* descriptions des documents */
+.doc-description{
     width: 100%;
     text-align: left;
     margin : 3% 0% 2%;
+    text-align: justify;
 }
 
-.container-livre .example {
-    text-align: center; 
+/* citations interessant */
+
+.container-citation{
+    padding: 5%;
+    border-bottom: 2px solid var(--main-bag-color);
+    border-top: 2px solid var(--main-bag-color);
 }
 
 .container-citation p{
     font-style: italic;
     color: var(--second-bag-color);
+    font-size: var(--font-size-3);
+    text-align: center;
+    font-family: "Estonia",serif;
+    font-size: 24px;
 }
+
+/* ** */
+
 /**
 *   Page A PROPOS ********************************
 **/
@@ -383,7 +417,7 @@ main{
 }
 
 .slide-img img{
-    height: 250px;
+    height: 200px;
     width: 100%;
 }
 
@@ -408,11 +442,13 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 1%;
 }
 
 .categories-images .col img{
     height: 250px;
     width: 150px;
+    /* margin: 2%; */
 }
 
 .categories-images .col .neuf{
@@ -610,7 +646,7 @@ form .button input:hover{
 /***====================== Footer ================================*****/
 
 footer{
-    font-size: 12px;
+    font-size: 12px!important;
     background-color: var(--third-color);
     /* margin-top: -100px;
     line-height: 100px;*/
@@ -632,7 +668,7 @@ footer h3{
 }
 
 .footer-bloc{
-    width: 25%;
+    width: 21%;
     margin: 5px 2%;
 }
 
@@ -675,14 +711,57 @@ footer h3{
 }
 
 /***====================== Media query ================================*****/
-@media (min-width : 560px) and (max-width: 1200px){
+
+
+@media (min-width: 560px) and (max-width: 1200px){
     :root {
         /* fonts sizes */
         --main-margin:5%; 
     }
 }
 
+
+
 @media (max-width : 900px){
+
+ /***/
+    /*Navbar */
+    .nav-logo img{
+        padding-top: 7px;
+        max-height: 25px;
+        max-width: max-content;
+    }
+
+    nav{
+        min-height: 50px;
+        height: auto;
+        display:block;
+        font-size: 12px;
+        line-height: 25px;
+    }
+
+    .nav-content-border{
+        display: none;
+    }
+    .nav-phone, #navPhoneContenu{
+        display: block;
+    }
+
+    #navPhone{
+        width: 2rem;
+        height: 2rem;
+        top: 1%;
+        right: 4%;
+        position: fixed;
+    }
+
+    #navPhone button{
+        width: 3rem;
+    }
+
+
+
+
     /**
 *   Page A PROPOS ********************************
 **/
@@ -703,22 +782,34 @@ footer h3{
     }
     
     
-    /***/
-    /*Navbar */
-    .nav-link{
-        font-size: 11px;
+  /**
+*   Page CATEGORIE ********************************
+**/  
+
+    .slide-img img{
+        height: 150px;
+    }
+}
+
+
+@media (max-width : 500px){
+    .w-70,.w-30{
+        width: 100%;
     }
 
-    .nav-logo img{
-        padding-top: 7px;
-        max-height: 25px;
-        max-width: max-content;
-        /* margin: auto 2%; */
-        /* top: 50%; */
-        /* bottom: 50%; */
+    .footer-bloc{
+        width: 40%;
+        margin: 5px 2%;
+        text-align: left!important;
     }
 
-    /***/
+    /**
+*   Page CATEGORIE ********************************
+**/  
+
+    .slide-img img{
+        height: 120px;
+    }
 }
 
 
@@ -729,25 +820,14 @@ footer h3{
         --main-margin:2%;
     }
 
+}
 
-    /**
-    *   Navbar ********************************
-    **/
+@media (max-width : 300px){
 
-    /*logo de navbar*/
-    /* .nav-logo{
-        width: 15%;
-        padding: 0 3% 0 2%;
+    .footer-bloc:last-child{
+        width: 70%;
     }
-
-    .nav-logo img{
-        max-width: 70px;
-    } */
-
-    /* menu de navbar */
-    /* .nav-content-border{
-        font-size: 14px;
-    } */
 
 
 }
+
