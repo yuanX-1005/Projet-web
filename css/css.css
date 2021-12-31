@@ -63,7 +63,6 @@
     text-align: left;
 }
 
-
 /************Couleur***********/
 .bgBaseColor{
     background-color : var(--base-bag-color);
@@ -593,6 +592,7 @@ form {
     border: 2px solid var(--third-color);
     margin: auto;
     font-size: 16px;
+    font-family: 'CrimsonPro';
 }
 
 
@@ -723,6 +723,7 @@ footer p{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
 
 .liste-horaires li{
