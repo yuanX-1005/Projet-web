@@ -35,11 +35,12 @@
                 </ul>
             </nav>
         </header>
+        <!-- Main de page categories -->
         <main class="main">
             <h2 class="categories-title">Toutes les catégories disponibles</h2>
             <div class="box">
                 <div id="leftarrow" onclick="decalageGauche()">
-                    <button>&lt;</button>
+                    <button><i class="fas fa-caret-left"></i></button>
                 </div>
                 <div class="slide-img" id="p1">
                     <img src="images/livres/Elle1.jpg">
@@ -66,97 +67,81 @@
                     <img src="images/livres/mickey.jpg">
                 </div>
                 <div id="rightarrow" onclick="decalageDroite()">
-                    <button>&gt;</button>
+                    <button><i class="fas fa-caret-right"></i></button>
                 </div>
             </div>
-            <section class="categories-images">
+            <div class="categories-images">
+                <h3 class="center">CINÉMAS :</h3>
                 <div class="categories-row">
-                    <div class="col">
-                        <h3>CINÉMA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/LeHobbit.jpg">
                         <h3>Le Hobbit</h3>
                         <h4 class="neuf">Etat : Neuf</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <h5>Auteur : nom de l'auteur</h5>
+                            <article>
+                                description
+                            </article>
+                        </details>
                     </div>
-                    <div class="col">
-                        <h3>CINÉMA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/StarWars.jpg">
                         <h3>Star Wars</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
                         <a href="#" class="ctn"></a>
                     </div>
-                    <div class="col">
-                        <h3>CINÉMA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/Divergente.jpg">
                         <h3>Divergente</h3>
                         <h4 class="neuf">Etat : Neuf</h4>
                         <a href="#" class="ctn"></a>
                     </div>
-                    <div class="col">
-                        <h3>CINÉMA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/HarryPotter.jpg">
                         <h3>Harry Potter</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
                         <a href="#" class="ctn"></a>
                     </div>
                 </div>
+
+                <h3 class="center">MANGAS : </h3>
                 <div class="categories-row">
-                    <div class="col">
-                        <h3>MANGA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/12Ans.jpg">
                         <h3>12 Ans</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
                         <a href="#" class="ctn"></a>
                     </div>
-                    <div class="col">
-                        <h3>MANGA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/SpyXFamilyjpg.jpg">
                         <h3>Spy x Family</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
                         <a href="#" class="ctn"></a>
                     </div>
-                    <div class="col">
-                        <h3>MANGA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/Japop.jpg">
                         <h3>Japop</h3>
                         <h4 class="neuf">Etat : Neuf</h4>
                         <a href="#" class="ctn"></a>
                     </div>
-                    <div class="col">
-                        <h3>MANGA</h3>
+                    <div class="col w-25 center">
                         <img src="images/livres/LaCuisineDesAnime.jpg">
                         <h3>La Cuisine des Anime</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
                         <a href="#" class="ctn"></a>
                     </div>
                 </div>
-            </section>
-            <!-- <div class="container-livre">
-                <h2 class="w-100 center">Categorie 1</h2>
-                <div class="w-30 flex justice-contant-center">
-                    <img class="couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
-                </div>
-                <section class="w-70">
-                    <p class="">
-                        Titre : <span>"titre de livre"</span>
-                        Auteur : <span>auteur de livre</span>
-                        Etat : <span>disponible</span>
-                    </p>
-                    <p class="example">
-                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                        Nam vestibulum urna nec dolor rhoncus, sed tristique lorem imperdiet.
-                        Vivamus pharetra dui vel turpis interdum, consectetur vulputate est gravida.
-                        Proin pharetra massa et lacus interdum, sed suscipit nisi vulputate.
-                    </p>
-                </section>
-            </div> -->
+            </div>
         </main>
         <footer>
             <div class="container-footer">
                 <div class="detailsFooter flex">
                     <div class="footer-bloc">
                         <h3>Nos Activités</h3>
-                        <ul class="listeActivites">
+                        <ul class="liste-actives">
                             <li><a href="#">Événement</a></li>
                             <li><a href="#">Concours</a></li>
                             <li><a href="#">Lecture</a></li>
@@ -172,7 +157,7 @@
                     </div>
                     <div class="footer-bloc center">
                         <h3>Nos Horaires</h3>
-                        <ul class="listeHoraires">
+                        <ul class="liste-horaires">
                             <li><i class="fas fa-check"></i> Lun 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mar 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mer 8h00 - 19h00</li>

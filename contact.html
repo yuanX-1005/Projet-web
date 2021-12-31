@@ -40,48 +40,47 @@
         <main class="main">
             <div class="contactRegistration">
                 <div class="registration">Nous Contacter</div>
-				<form name="contactForm">
-					<div class="flex flex-wrap">
+				<form name="contactForm" onsubmit="return validateForm()">
+					<div class="flex flex-wrap center">
 						<!-- <h3>Vos coordonnées</h3> -->
                         <div class="input-box w-50">
-							<input type="text" name="nom" placeholder="Nom" required>
+							<input type="text" name="nom" minlength="2" maxlength="20" placeholder="* Nom" title="Veuillez" required>
 						</div>
 						<div class="input-box w-50">
-							<input type="text" name="prenom" placeholder="Prénom" required>
-						</div>
-                    </div>
-                    <div class="flex flex-wrap">
-						<div class="input-box w-50">
-							<input type="text" name="adresse" placeholder="Adresse" required>
-						</div>
-						<div class="input-box w-50">
-							<input type="text"name="ville"  placeholder="Ville" required>
+							<input type="text" name="prenom" minlength="2" maxlength="20" placeholder="* Prénom" required>
 						</div>
                     </div>
-                    <div class="flex flex-wrap">
+                    <div class="flex flex-wrap center">
 						<div class="input-box w-50">
-							<input type="text" name="tele" placeholder="Téléphone" required>
+							<input type="text" name="adresse" placeholder="* Adresse" required>
 						</div>
 						<div class="input-box w-50">
-							<input type="email" name="email" placeholder="E-mail" required>
+							<input type="text"name="ville"  placeholder="* Ville" required>
+						</div>
+                    </div>
+                    <div class="flex flex-wrap center">
+						<div class="input-box w-50">
+							<input type="tel" pattern="[0-9]{10}" title="Veillez entrez une numéro de 10 chiffres" name="tele" placeholder="Téléphone : 0677123456">
+						</div>
+						<div class="input-box w-50">
+							<input type="email" name="email" pattern="[A-Za-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" placeholder="* E-mail" required>
 						</div>
 					</div>
 
 					<div class="flex justice-contant-center">
-                    <!-- <h3>Votre message</h3> -->
-                        <div class="input-box w-90">
+                        <div class="input-box w-100 center">
                             <input type="text" id="sujet" name="sujet" placeholder="Sujet" required>
                         </div>
                     </div>
                     <div class="flex justice-contant-center">
-                        <div class="input-box w-90">
-                            <textarea name="message" name="message" placeholder="Message ..." required></textarea>
+                        <div class="input-box w-100 center">
+                            <textarea name="message" name="message" rows="10" placeholder="Message ..." required></textarea>
                         </div>
 					</div>
 
                     <div class="button flex justice-contant-center">
-                        <input id="ajouter" type="submit" value="Envoyer">
-                        <input id="supprimer" type="button" value="Supprimer">
+                        <input type="submit" value="Envoyer">
+                        <input onclick="supprimerMessage()" type="button" value="Supprimer">
                     </div>
 				</form>
 			</div>
@@ -92,22 +91,6 @@
                         <caption>Les informations que vous avez envoyé : </caption>
                     </thead>
                     <tbody>
-                        <!-- <tr>
-                            <td colspan="2" id="nomRecu">Nom Pr&eacute;nom :</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" id="adresseRecu">Adresse :</td>
-                        </tr>
-                        <tr>
-                            <td id="phoneRecu">T&eacute;l&eacute;phone :</td>
-                            <td id="emailRecu">E-mail :</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" id="sujetRecu">Sujet :</td>
-                        </tr>
-                        <tr>
-                            <td colspan="2" id="messageRecu">Message</td>
-                        </tr> -->
                     </tbody>
                 </table>
             </div>
@@ -167,7 +150,7 @@
                 <div class="detailsFooter flex">
                     <div class="footer-bloc">
                         <h3>Nos Activités</h3>
-                        <ul class="listeActivites">
+                        <ul class="liste-actives">
                             <li><a href="#">Événement</a></li>
                             <li><a href="#">Concours</a></li>
                             <li><a href="#">Lecture</a></li>
@@ -183,7 +166,7 @@
                     </div>
                     <div class="footer-bloc center">
                         <h3>Nos Horaires</h3>
-                        <ul class="listeHoraires">
+                        <ul class="liste-horaires">
                             <li><i class="fas fa-check"></i> Lun 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mar 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mer 8h00 - 19h00</li>
