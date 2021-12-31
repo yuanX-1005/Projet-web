@@ -1,5 +1,7 @@
 window.addEventListener('load', function(){
-    // alert(111);
+
+
+
     // var contactForm = document.forms.contactForm;
     var btnAjouter = document.querySelector('#ajouter');
     var btnSupprimer = document.querySelector('#supprimer');
@@ -77,6 +79,8 @@ window.addEventListener('load', function(){
           tbody.removeChild(tbody.firstChild)
         }
     }
+
+   
 });
 
 var gauche=1;
@@ -88,6 +92,8 @@ function show(){
         document.getElementById("p"+i).style.display="inline-block";
     }
 }
+
+
 //Décaler les images vers la gauche
 function decalageGauche(){
     if (gauche <=3 && droite<=7){
@@ -118,5 +124,16 @@ function decalageDroite(){
         return;
 }
 
+// affiche et cache le nav en cliquant l'icon nav
+var flag = false;
+function afficherNavPhone() {
+    flag = !flag;
+    flag==false?document.getElementById("navPhoneContenu").style.display="block":document.getElementById("navPhoneContenu").style.display="none";
+}
 
-
+// cacher le menu de nav si l'ecran soit superieur à 900px
+window.addEventListener('resize', function(){
+    if(window.outerWidth>=900){
+        document.getElementById("navPhoneContenu").style.display="none";
+    }
+});
