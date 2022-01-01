@@ -445,7 +445,9 @@ main{
 }
 
 .tache-effectuee li:before{
-    content:"\25C8"
+    content:"\25C8";
+    color: var(--main-bag-color);
+    margin-right: 20px;
 }
 
 /**
