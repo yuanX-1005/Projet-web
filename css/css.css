@@ -63,7 +63,6 @@
     text-align: left;
 }
 
-
 /************Couleur***********/
 .bgBaseColor{
     background-color : var(--base-bag-color);
@@ -142,6 +141,7 @@ p{
     width: 100%;
 }
 
+/* flex */
 .flex{
     display: flex;
 }
@@ -161,6 +161,9 @@ p{
     justify-content: space-around;
 }
 
+.justice-contant-space-between{
+    justify-content: space-between;
+}
 
 /* Enlever certain style par defaut */
 a:link, a:active, a:visited{
@@ -180,7 +183,7 @@ ul,li{
 
 
 html, body{
-    background-color: var(--base-bag-color);
+    /* background-color: var(--base-bag-color); */
     color: black;
     font-family: "CrimsonPro", serif;
     font-size: 16px;
@@ -188,6 +191,10 @@ html, body{
     width: 100%;
     margin: 0;
     padding : 0;
+}
+
+body{
+    background:  linear-gradient(90deg, #edc0bf 0,#c4caef 58%);
 }
 
 
@@ -306,6 +313,12 @@ main{
     background-color: #fff;
 }
 
+/* style du titre de chaque pages */
+.title-pages{
+    font-family: "Chivo";
+    font-weight: normal;
+    text-align: center;
+}
 
 /**
 *   Page ACCUEIL ********************************
@@ -315,7 +328,6 @@ main{
 .show-img{
     width: 100%;
 }
-
 
 /* ** les livres representants */
 .container-livre{
@@ -343,11 +355,21 @@ main{
     padding: 5%;
     border-bottom: 2px solid var(--main-bag-color);
     border-top: 2px solid var(--main-bag-color);
+    background-image: url("./../images/feuilles.png");
+    background-repeat:no-repeat;
+    background-attachment:center;
+    background-size:cover;
+}
+.container-citation:nth-child(1){
+    background-position: right;
+}
+.container-citation:nth-child(2){
+    background-position: left;
 }
 
 .container-citation p{
     font-style: italic;
-    color: var(--second-bag-color);
+    color: var(--main-bag-color);
     font-size: var(--font-size-3);
     text-align: center;
     font-family: "Estonia",serif;
@@ -394,25 +416,48 @@ main{
 .imgDescription p{
     text-align: justify;
 }
+
 /**
 *   Page CATEGORIES ********************************
 **/
-.box{
+
+/* #categorie::before{
+    content:'';
+    position:absolute;
+    top:0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    background-image: url("./../images/fleur.png") ;
+    background-repeat:repeat;
+    background-attachment:local ;
+    background-size:cover;
+    filter:blur(5px);
+    z-index:-1;
+} */
+
+#categorie{
+    background-image: url("./../images/fleur.png");
+    background-repeat:repeat;
+    background-attachment:local ;
+    background-size:cover;
+}
+
+#categorie main{
+    background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+/* slides des documents representants */
+#categorie .box{
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 400px;
-}
-
-.categories-title{
-    font-family: "Chivo";
-    font-weight: normal;
-    text-align: center;
 }
 
 .slide-img{
-    margin-left: 10px;
-    margin-right: 10px;
+    margin: 2% 10px;
     display: none;
 }
 
@@ -421,34 +466,55 @@ main{
     width: 100%;
 }
 
-
 #leftarrow, #rightarrow{
-    margin-left: 12px;
-    width: 3%;
     display: inline-block;
 }
 
+#leftarrow button, #rightarrow button{
+    background-color: var(--main-bag-color);
+    color: #fff;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+#leftarrow button:hover, #rightarrow button:hover{
+    background-color: var(--third-color);
+}
+
+#leftarrow button i, #rightarrow button i{
+    font-size: 1rem;
+}
+
+/* Les documents de chaque categorie*/
 .categories-images{
-    margin: 80px auto;
+    margin: 5% auto;
 }
 
 .categories-row{
     display: flex;
-    align-items: center;
-    justify-content: space-evenly;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
 
+
 .categories-images .col{
-    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 1%;
+    margin: 2% 0;
 }
 
 .categories-images .col img{
     height: 250px;
     width: 150px;
-    /* margin: 2%; */
+}
+
+/* le titre et l'etat de document +   */
+.categories-row h3,.categories-row h4{
+    margin: 1%;
 }
 
 .categories-images .col .neuf{
@@ -463,9 +529,13 @@ main{
 *   Page ACTIVITES ********************************
 **/
 .timeline-container {
-    max-width: 600px;
+    max-width: 92%;
     border-left: 4px solid var(--second-bag-color);
     padding-left: 25px;
+}
+
+.timeline-container p{
+    font-size: var(--font-size-5);
 }
 
 .timeline-container h2{
@@ -476,8 +546,8 @@ main{
 
 .timeline-container .event{
     box-shadow : 0px 3px 6px -2px rgba(0, 0, 0, 0.2);
-    padding: 32px;
-    margin : 48px 0;
+    padding: 4%;
+    margin: 10% 0;
     line-height: 2;
     cursor: pointer;
     position: relative;
@@ -504,17 +574,41 @@ main{
     background: var(--main-bag-color);
 }
 
+.timeline-content{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
 .timeline-content p{
     text-align: justify;
+    /* padding: 1%; */
 }
 
 .timeline-container .event .event-date{
     position: absolute;
-    left: -165px;
+    left: -25%;
     top: 10%;
     transform: translateY(-50%);
     font-weight: bold;
 }
+
+.image-active img{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+/* 
+.imgActivite img{
+    margin-left: 600px;
+    position: relative;
+    top: 1px;
+    max-height: 300px;
+    max-width: 500px;
+} */
+
 
 /**
 *   Page CONTACT ********************************
@@ -535,32 +629,34 @@ form {
 }
  
 .contactRegistration .registration{
-    text-align: center;
+    /* text-align: center;
     font-size: 25px;
-    font-weight: 500;
+    font-weight: 500; */
 } 
+
+/* .input-box{
+    margin: 1% 0;
+    text-align: center; */
+    /* width: calc(100% / 2 - 20px); */
+/* } */
 
 .input-box{
     margin: 1% 0;
-    text-align: center;
-    /* width: calc(100% / 2 - 20px); */
 }
-
 
 .input-box input{
     height: 30px;
-    width: 80%;
+    width: calc(100% - 30px);
     outline: none;
     border-radius: 5px;
     border: 2px solid var(--third-color);
     margin: auto;
     font-size: 16px;
+    font-family: 'CrimsonPro';
 }
 
-.input-box input[name="sujet"],.input-box input[name="message"]{
-    width: 100%;
-}
 
+/* changer la couleur de border quand on focus sur un input */
 .input-box input:focus,
 .input-box textarea:focus,
 .input-box input:valid,
@@ -570,11 +666,13 @@ form {
 }
 
 textarea {
-    width: 100%;
-    height: 100px;
+    border-radius: 5px;
+    width: calc(100% - 26px);
     outline: none;
     box-sizing: border-box;
     border: 2px solid var(--third-color);
+    resize: none;
+    overflow-y: auto;
 }
 
 /*buttons de forme */
@@ -632,10 +730,10 @@ form .button input:hover{
 }
 
 .horaire table{
-    width: 60%;
     margin : 5% auto 2%;
-    border: 2px solid var(--main-bag-color) ;
+    border: 2px solid var(--main-bag-color);
     text-align: center;
+    /* max-width: 900px; */
 }
 
 .horaire th,.horaire td{
@@ -646,12 +744,8 @@ form .button input:hover{
 /***====================== Footer ================================*****/
 
 footer{
-    font-size: 12px!important;
+    font-size: var(--font-size-5)!important;
     background-color: var(--third-color);
-    /* margin-top: -100px;
-    line-height: 100px;*/
-    /* height: 300px; */
-    /* flex-shrink: 0; */
     width: 100%;
 } 
 
@@ -679,36 +773,31 @@ footer h3{
     font-size: 16px;
 }
 
-.listeActivites,
-.listeHoraires{
+
+.liste-actives,
+.liste-horaires{
     list-style-type: none;
     margin: 0;
     padding: 0;
+    
 }
 
-.listeHoraires li{
+.liste-horaires li{
     white-space: nowrap;
 }
 
-.listeActivites li{
+.liste-actives li{
     padding: 2px 0;
 }
  
-.listeActivites a{
+.liste-actives a{
     text-decoration: none;
 }
 
-.listeActivites a:hover, .reseau-sociaux a:hover i {
+.liste-actives a:hover, .reseau-sociaux a:hover i {
     color:var(--second-bag-color);
 }
 
-.imgActivite img{
-    margin-left: 600px;
-    position:absolute;
-    top: 1px;
-    height: 300px;
-    width: 500px;
-}
 
 /***====================== Media query ================================*****/
 
@@ -716,8 +805,17 @@ footer h3{
 @media (min-width: 560px) and (max-width: 1200px){
     :root {
         /* fonts sizes */
-        --main-margin:5%; 
+        --main-margin:6%; 
     }
+
+    .timeline-container .event .event-date{
+       
+        left: 5%;
+        top: 10%;
+        transform: translateY(-100%);
+        font-weight: bold;
+    }
+    
 }
 
 
@@ -760,8 +858,6 @@ footer h3{
     }
 
 
-
-
     /**
 *   Page A PROPOS ********************************
 **/
@@ -785,15 +881,26 @@ footer h3{
   /**
 *   Page CATEGORIE ********************************
 **/  
-
     .slide-img img{
         height: 150px;
     }
 }
+@media (max-width : 800px){
+    .w-25{
+        width: 50%;
+    }
+}
 
+
+@media (max-width : 700px){
+    #rightarrow{
+        left:-1%;
+        position: relative;
+    }
+}
 
 @media (max-width : 500px){
-    .w-70,.w-30{
+    .w-70,.w-30,.w-50{
         width: 100%;
     }
 
@@ -806,7 +913,6 @@ footer h3{
     /**
 *   Page CATEGORIE ********************************
 **/  
-
     .slide-img img{
         height: 120px;
     }
@@ -820,14 +926,31 @@ footer h3{
         --main-margin:2%;
     }
 
+    .timeline-container .event .event-date{
+        left: 8%;
+        top: 10%;
+        transform: translateY(-160%);
+        font-weight: bold;
+    }
+
 }
 
 @media (max-width : 300px){
+
+    .w-25{
+        width: 100%;
+    }
 
     .footer-bloc:last-child{
         width: 70%;
     }
 
+    .timeline-container .event .event-date{
+        left: 15%;
+        top: 10%;
+        transform: translateY(-250%);
+        font-weight: bold;
+    }
 
 }
 

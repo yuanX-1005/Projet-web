@@ -1,90 +1,39 @@
-window.addEventListener('load', function(){
+// **** Navbar ****
+// afficher et cacher la navbar en cliquant l'icon nav
+var flag = false;
+function afficherNavPhone() {
+    flag = !flag;
+    flag==false?document.getElementById("navPhoneContenu").style.display="block":document.getElementById("navPhoneContenu").style.display="none";
+}
 
-
-
-    // var contactForm = document.forms.contactForm;
-    var btnAjouter = document.querySelector('#ajouter');
-    var btnSupprimer = document.querySelector('#supprimer');
-    btnAjouter.onclick = function(){
-        ajouterToForm();
-        return false;
-    }
-
-
-    btnSupprimer.onclick = function(){
-        supprimerMessage()
-    }
-
-    //Ajouter les données envoyées dans un tableau
-    function ajouterToForm(){
-        // alert(444);
-        const newItem1 = document.createElement('tr')
-        const nomTd = document.createElement('td')
-        const newItem2 = document.createElement('tr')
-        const adresseTd = document.createElement('td')
-        const newItem3 = document.createElement('tr')
-        const phoneTd = document.createElement('td')
-        const emailTd = document.createElement('td')
-        const newItem4 = document.createElement('tr')
-        const sujetTd = document.createElement('td')
-        const newItem5 = document.createElement('tr')
-        const messageTd = document.createElement('td')
-
-        // alert(555)
-        nomTd.textContent = "Nom Prénom : " + document.contactForm.nom.value
-        nomTd.textContent += " "+ document.contactForm.prenom.value
-        adresseTd.textContent = "Adresse : " + document.contactForm.adresse.value
-        adresseTd.textContent += " "+ document.contactForm.ville.value
-        phoneTd.textContent = "Téléphone : " + document.contactForm.tele.value
-        emailTd.textContent = "E-mail : " +document.contactForm.email.value
-        sujetTd.textContent = "Sujet : " +document.contactForm.sujet.value
-        messageTd.textContent = "Message : "+ document.contactForm.message.value
-
-        // alert(666)
-        nomTd.setAttribute("colspan","2")   
-        adresseTd.setAttribute("colspan","2")
-        sujetTd.setAttribute("colspan","2")
-        messageTd.setAttribute("colspan","2")
-        messageTd.setAttribute("class","colorVide")
-
-        newItem1.append(nomTd)
-        newItem2.append(adresseTd)
-        newItem3.append(phoneTd,emailTd)
-        newItem4.append(sujetTd)
-        newItem5.append(messageTd)
-
-        if (!document.contactForm.nom.checkValidity() ||
-        !document.contactForm.prenom.checkValidity() ||
-        !document.contactForm.adresse.checkValidity() ||
-        !document.contactForm.email.checkValidity() ||
-        !document.contactForm.tele.checkValidity() 
-       ) {
-            alert("erreur de saisir")
-            return
-      }
-
-        const tableMessage = document.querySelector('.tableMessage tbody')
-        tableMessage.appendChild(newItem1)
-        tableMessage.appendChild(newItem2)
-        tableMessage.appendChild(newItem3)
-        tableMessage.appendChild(newItem4)
-        tableMessage.appendChild(newItem5)
-
-       
-    }
-
-    function supprimerMessage(){
-        const tbody = document.querySelector('.tableMessage tbody' )
-        while (tbody.firstChild) {
-          tbody.removeChild(tbody.firstChild)
-        }
-    }
-
-   
+// selon le taille de l'écran  : cacher le menu de nav
+window.addEventListener('resize', function(){
+    if(window.outerWidth>=900){
+        document.getElementById("navPhoneContenu").style.display="none";
+    }    
 });
 
+// **** Page Categorie ****
+// valeur de décalage pour le slide
 var gauche=1;
-var droite=5;  
+var droite=5;
+
+var varleurMaxDecalageGaucheGauche = 3;
+var varleurMaxDecalageGaucheDroite = 7;
+var varleurMaxDecalageDroiteGauche = 2;
+var varleurMaxDecalageDroiteDroite = 6;
+
+
+//changer les valeurs de décalages pour le slide selon le taille d'écran
+window.addEventListener('load', function(){
+    if(window.outerWidth<900){
+        gauche=1;
+        droite=1;
+    }
+});
+
+
+// L'affichage des images de slide
 
 function show(){
     for(i=gauche;i<=droite;i++)
@@ -93,10 +42,13 @@ function show(){
     }
 }
 
-
 //Décaler les images vers la gauche
 function decalageGauche(){
-    if (gauche <=3 && droite<=7){
+    if(window.outerWidth<900){
+        varleurMaxDecalageGaucheGauche = 7;
+        varleurMaxDecalageGaucheDroite = 7;
+    }
+    if (gauche <=varleurMaxDecalageGaucheGauche && droite<=varleurMaxDecalageGaucheDroite){
         document.getElementById("p"+gauche).style.display="none";
         gauche+=1;
         droite+=1;
@@ -111,7 +63,12 @@ function decalageGauche(){
 
 //Décaler les images vers la droite
 function decalageDroite(){
-    if (gauche>=2 && droite>=6){
+    if(window.outerWidth<900){
+        varleurMaxDecalageDroiteGauche = 2;
+        varleurMaxDecalageDroiteDroite = 2;
+    }
+    // alert("gauche : " + gauche + " | droite : " + droite );
+    if (gauche>=varleurMaxDecalageDroiteGauche && droite>=varleurMaxDecalageDroiteDroite){
         document.getElementById("p"+droite).style.display="none";
         gauche-=1;
         droite-=1;
@@ -124,16 +81,114 @@ function decalageDroite(){
         return;
 }
 
-// affiche et cache le nav en cliquant l'icon nav
-var flag = false;
-function afficherNavPhone() {
-    flag = !flag;
-    flag==false?document.getElementById("navPhoneContenu").style.display="block":document.getElementById("navPhoneContenu").style.display="none";
+
+
+// **** Page Contacte ****
+//Ajouter les données envoyées dans un tableau
+function ajouterToForm(){
+    // alert(444);
+    const newItem1 = document.createElement('tr')
+    const nomTd = document.createElement('td')
+    const newItem2 = document.createElement('tr')
+    const adresseTd = document.createElement('td')
+    const newItem3 = document.createElement('tr')
+    const phoneTd = document.createElement('td')
+    const emailTd = document.createElement('td')
+    const newItem4 = document.createElement('tr')
+    const sujetTd = document.createElement('td')
+    const newItem5 = document.createElement('tr')
+    const messageTd = document.createElement('td')
+
+
+    nomTd.textContent = "Nom Prénom : " + document.contactForm.nom.value
+    nomTd.textContent += " "+ document.contactForm.prenom.value
+    adresseTd.textContent = "Adresse : " + document.contactForm.adresse.value
+    adresseTd.textContent += " "+ document.contactForm.ville.value
+    phoneTd.textContent = "Téléphone : " + document.contactForm.tele.value
+    emailTd.textContent = "E-mail : " +document.contactForm.email.value
+    sujetTd.textContent = "Sujet : " +document.contactForm.sujet.value
+    messageTd.textContent = "Message : "+ document.contactForm.message.value
+
+    nomTd.setAttribute("colspan","2")   
+    adresseTd.setAttribute("colspan","2")
+    sujetTd.setAttribute("colspan","2")
+    messageTd.setAttribute("colspan","2")
+    messageTd.setAttribute("class","colorVide")
+
+    newItem1.append(nomTd)
+    newItem2.append(adresseTd)
+    newItem3.append(phoneTd,emailTd)
+    newItem4.append(sujetTd)
+    newItem5.append(messageTd)
+
+    const tableMessage = document.querySelector('.tableMessage tbody')
+    tableMessage.appendChild(newItem1)
+    tableMessage.appendChild(newItem2)
+    tableMessage.appendChild(newItem3)
+    tableMessage.appendChild(newItem4)
+    tableMessage.appendChild(newItem5)
+
 }
 
-// cacher le menu de nav si l'ecran soit superieur à 900px
-window.addEventListener('resize', function(){
-    if(window.outerWidth>=900){
-        document.getElementById("navPhoneContenu").style.display="none";
+// supprimer tous les messages envoyés
+function supprimerMessage(){
+    const tbody = document.querySelector('.tableMessage tbody' )
+    while (tbody.firstChild) {
+        tbody.removeChild(tbody.firstChild)
     }
-});
+}
+   
+// verifier si les chmaps de forma est-il remplir ou pas.
+function validateForm(){
+    var nom =document.forms["contactForm"]["nom"].value;
+    var prenom =document.forms["contactForm"]["prenom"].value;
+    var adresse =document.forms["contactForm"]["adresse"].value;
+    var ville =document.forms["contactForm"]["ville"].value;
+    var email =document.forms["contactForm"]["email"].value;
+    var sujet =document.forms["contactForm"]["sujet"].value;
+    var message =document.forms["contactForm"]["message"].value;
+
+    if (nom==null || nom==""){
+        alert("N'obliez pas de remplir votre nom.");
+        return false;
+    }
+
+    if (prenom==null || prenom==""){
+        alert("N'obliez pas de remplir votre prénom.");
+        return false;
+    }
+
+    if (nom==null || nom==""){
+        alert("N'obliez pas de remplir votre nom.");
+        return false;
+    }
+
+    if (adresse==null || adresse==""){
+        alert("N'obliez pas de remplir votre adresse.");
+        return false;
+    }
+
+    if (ville==null || ville==""){
+        alert("N'obliez pas de remplir votre ville.");
+        return false;
+    }
+
+    if (email==null || email==""){
+        alert("N'obliez pas de remplir votre email.");
+        return false;
+    }
+
+    if (sujet==null || sujet==""){
+        alert("N'obliez pas de remplir votre sujet.");
+        return false;
+    }
+
+    if (message==null || message==""){
+        alert("N'obliez pas de remplir les message.");
+        return false;
+    }
+
+    ajouterToForm();
+    return false;
+}
+
