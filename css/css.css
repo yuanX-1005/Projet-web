@@ -6,7 +6,7 @@
     --third-color : #fdbfc9;
 
     /* fonts sizes */
-    --font-size-1: calc(24px + (36 - 24)*(100vw - 320px)/(1440- 320));
+    --font-size-1: calc(24px + (36 - 24)*(100vw - 320px)/(1440 - 320));
     --font-size-2: calc(18px + (30 - 18)*(100vw - 320px)/(1440 - 320));
     --font-size-3: calc(14px + (24 - 14)*(100vw - 320px)/(1440 - 320));
     --font-size-4: calc(12px + (20 - 12)*(100vw - 320px)/(1440 - 320));
@@ -324,11 +324,6 @@ main{
 *   Page ACCUEIL ********************************
 **/
 
-/* images de decoration */
-.show-img{
-    width: 100%;
-}
-
 /* ** les livres representants */
 .container-livre{
     display: flex;
@@ -451,7 +446,7 @@ main{
 }
 
 .tache-effectuee li {
-    font-size: var(--font-size-1);
+    font-size: var(--font-size-3);
     text-transform: uppercase;
     list-style: none;
 }
@@ -769,6 +764,8 @@ form .button input:hover{
     text-align: center;
     max-width: 550px;
     width: 90%;
+    border-spacing: 0;
+    border-width: 1;
 }
 
 .horaire caption{
