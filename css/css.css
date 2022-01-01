@@ -382,15 +382,32 @@ main{
 *   Page A PROPOS ********************************
 **/
 
-.aPropos{
-    margin-top: 50%;
-    max-width: 80%;
-    margin-left: 100px;
+/* titre du page à propos */
+#title-page-propos{
+    font-size: var(--font-size-2);
+    color: var(--main-bag-color);
+    /* margin: 0px 0px 10px 0px; */
+    /* line-height: 100px; */
+    text-align: center;
+}
 
+.content-bienvenue{
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.aPropos{
+    margin: 5% auto;
+    max-width: 550px;
+    padding: 6%;
+    /* margin-left: 100px; */
 }
 
 .aPropos .description{
-    box-shadow: 10px 5px 5px var(--main-bag-color);
+    box-shadow: -1px 5px 15px var(--main-bag-color);
     padding: 15px;
     margin-top: 5%;
 }
@@ -403,39 +420,38 @@ main{
     text-align: justify;
 }
 
-.content-bienvenue{
-    max-width: 100%;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    position: absolute;
-}
-
-.photo-bienvenue img{
-    max-width: 50%;
-    max-height: 50%;
-    margin-left: 50px;
-}
 
 .photo-bienvenue{
-    max-width: 500px;
-    max-height: 500px;
+    /* padding: 4%; */
+}
+.photo-bienvenue img{
+    max-width: 160px;
+    /* max-height: 50%; */
+    /* margin-left: 50px; */
+} 
+
+.photo-bienvenue{
+    text-align: center;
+    /* max-width: 500px; */
+    /* max-height: 500px; */
 }
 
 .texte-bienvenue {
-    max-width: 500px;
+    /* max-width: 500px; */
     text-align: justify;
+    /* padding: 2%; */
 }
 
-.texte-bienvenue h1{
-    font-size: 2.5rem;
-    color: var(--main-bag-color);
-    margin: 0px 0px 10px 0px;
-    line-height: 100px;
+.texte-bienvenue p{
+   padding: 8%;
+}
+
+.tache-effectuee{
+    padding-inline-start: 2%;
 }
 
 .tache-effectuee li {
-    font-size: 20px;
+    font-size: var(--font-size-1);
     text-transform: uppercase;
     list-style: none;
 }
@@ -453,21 +469,6 @@ main{
 /**
 *   Page CATEGORIES ********************************
 **/
-
-/* #categorie::before{
-    content:'';
-    position:absolute;
-    top:0;
-    left:0;
-    height: 100%;
-    width: 100%;
-    background-image: url("./../images/fleur.png") ;
-    background-repeat:repeat;
-    background-attachment:local ;
-    background-size:cover;
-    filter:blur(5px);
-    z-index:-1;
-} */
 
 #categorie{
     background-image: url("./../images/fleur.png");
@@ -653,8 +654,8 @@ form {
 }
 
 .contactRegistration{
-    margin : 5% 2%;
-    /* max-width: 700px; */
+    margin: 5% 6%;
+    /* max-width: 550px; */
     /* width: 100%; */
     background-color:var(--main-bag-color);
     padding: 25px 30px;
@@ -766,12 +767,19 @@ form .button input:hover{
     margin : 5% auto 2%;
     border: 2px solid var(--main-bag-color);
     text-align: center;
-    /* max-width: 900px; */
+    max-width: 550px;
+    width: 90%;
+}
+
+.horaire caption{
+    margin: 5%;
+    font-size: var(--font-size-2);
 }
 
 .horaire th,.horaire td{
     border : 1px solid var(--main-bag-color);
     padding: 1% 4%;
+    width: calc(100%/3);
 }
 
 /***====================== Footer ================================*****/
