@@ -68,6 +68,10 @@
     text-align: left;
 }
 
+.justify{
+    text-align: justify;
+}
+
 /************Font***********/
 
 h1{
@@ -389,7 +393,7 @@ main{
     width: 100%;
 }
 
-/* buttons de deplacement vers la gauche et la droite*/
+/* bouttons de deplacement vers la gauche et la droite*/
 #leftarrow, #rightarrow{
     display: inline-block;
 }
@@ -404,12 +408,12 @@ main{
     border-radius: 50%;
 }
 
-/* symbole de buttons de deplacement */
+/* symbole de bouttons de deplacement */
 #leftarrow button i, #rightarrow button i{
     font-size: 1rem;
 }
 
-/* effet hover de buttons de deplacement */
+/* effet hover de bouttons de deplacement */
 #leftarrow button:hover, #rightarrow button:hover{
     background-color: var(--third-color);
 }
@@ -461,26 +465,32 @@ main{
 
 
 
+
+
 /**
 *   Page ACTIVITES ********************************
 **/
 
+/* la ligne verticale du timeline */
 .activites-timeline-container {
     max-width: 92%;
     border-left: 4px solid var(--second-color);
     padding-left: 25px;
 }
 
+/* la taille de la police de la description de l'evenement */
 .activites-timeline-container p{
     font-size: var(--font-size-5);
 }
 
+/* le titre de l'evenement */
 .activites-timeline-container h2{
     font-family: "Chivo", serif;
     margin: 0;
     border-bottom: 1px solid var(--main-color);
 }
 
+/* le point rond de l'evenement */
 .activites-timeline-container .event{
     box-shadow : 0px 3px 6px -2px rgba(0, 0, 0, 0.2);
     padding: 4%;
@@ -490,10 +500,12 @@ main{
     position: relative;
 }
 
+/* effet hover sur le point rond */
 .activites-timeline-container .event:hover{
     box-shadow: 1px 6px 16px -1px rgba(0, 0, 0, 0.1);
 }
 
+/* l'esthetique du point rond */
 .activites-timeline-container .event::before{
     content: "";
     width: 14px;
@@ -511,15 +523,15 @@ main{
     background: var(--main-color);
 }
 
-.timeline-content{
+/* Mise en page du contenu : evenement + image */
+.activites-timeline-container .timeline-content{
     justify-content: space-between;
     display: flex;
     flex-wrap: wrap;
 }
 
-.timeline-content p{
+.activites-timeline-container .timeline-content p{
     text-align: justify;
-    /* padding: 1%; */
 }
 
 .activites-timeline-container .event .event-date{
@@ -531,7 +543,7 @@ main{
     color: var(--main-color);
 }
 
-.image-active img{
+.activites-timeline-container .image-active img{
     text-align: center;
     width: 100%;
     height: auto;
@@ -586,37 +598,24 @@ main{
 *   Page CONTACT ********************************
 **/
 
-/* Formulaire */
-form {
+/* Formulaire de contact*/
+.contact form {
     margin-top: 5%;
 }
 
-.contactRegistration{
+.contact{
     margin: 5% 6%;
-    /* max-width: 550px; */
-    /* width: 100%; */
     background-color:var(--main-color);
     padding: 25px 30px;
     border-radius: 10px;
 }
- 
-.contactRegistration .registration{
-    /* text-align: center;
-    font-size: 25px;
-    font-weight: 500; */
-} 
 
-/* .input-box{
-    margin: 1% 0;
-    text-align: center; */
-    /* width: calc(100% / 2 - 20px); */
-/* } */
-
-.input-box{
+/* Mise en page des champs du formulaire */
+.contact .input-box{
     margin: 1% 0;
 }
 
-.input-box input{
+.contact .input-box input{
     height: 30px;
     width: calc(100% - 30px);
     outline: none;
@@ -628,7 +627,7 @@ form {
 }
 
 
-/* changer la couleur de border quand on focus sur un input */
+/* changer la couleur de border quand on fait un focus sur un input */
 .input-box input:focus,
 .input-box textarea:focus,
 .input-box input:valid,
@@ -637,7 +636,8 @@ form {
     border-color: var(--second-color);
 }
 
-textarea {
+/* Layout de le champs permettant d'ecrire un message */
+.contact textarea {
     border-radius: 5px;
     width: calc(100% - 26px);
     outline: none;
@@ -647,13 +647,13 @@ textarea {
     overflow-y: auto;
 }
 
-/*buttons de forme */
-form .button{
+/* Les bouttons du formulaire */
+.contact form .button{
     height: 30px;
     margin: 30px 0;
 }
 
-form .button input{
+.contact form .button input{
     display: block;
     margin: auto 2%;
     height: 100%;
@@ -670,7 +670,7 @@ form .button input{
     box-shadow: 3px 3px 30px #999;
 }
 
-form .button input:hover{
+.contact form .button input:hover{
     background: var(--third-color);
     color: black;
     box-shadow: 3px 5px 30px #999;
@@ -704,7 +704,6 @@ form .button input:hover{
 .horaire table{
     margin : 5% auto 2%;
     border: 2px solid var(--main-color);
-    text-align: center;
     max-width: 550px;
     width: 90%;
     border-spacing: 0;
@@ -735,12 +734,10 @@ form .button input:hover{
 #title-page-propos{
     font-size: var(--font-size-2);
     color: var(--main-color);
-    /* margin: 0px 0px 10px 0px; */
-    /* line-height: 100px; */
-    text-align: center;
 }
 
-.content-bienvenue{
+/* description du projet accueilant les utilisateurs */
+.a-propos-content-bienvenue{
     width: 100%;
     display: flex;
     flex-wrap: wrap;
@@ -748,68 +745,49 @@ form .button input:hover{
     align-items: center;
 }
 
-.aPropos{
+.a-propos-content-bienvenue .photo img{
+    max-width: 160px;
+} 
+
+.a-propos-content-bienvenue .texte p{
+   padding: 8%;
+}
+
+/* alignement des deux blocs de membres */
+.a-propos{
     margin: 5% auto;
     max-width: 550px;
     padding: 6% 4%;
-    /* margin-left: 100px; */
 }
 
-.aPropos .propos-description{
+/* contour de chaque bloc */
+.a-propos .description{
     box-shadow: -1px 5px 15px var(--main-color),-1px 5px 15px var(--main-color);
     padding: 15px;
     margin-top: 5%;
 }
 
-.aPropos .propos-description .imgDescription{
+/* marge du bloc de toute la description de chaque membre*/
+.a-propos .description .membre{
     margin-left: 20px;
 }
 
-.imgDescription p{
-    text-align: justify;
-}
-
-
-.photo-bienvenue{
-    /* padding: 4%; */
-}
-.photo-bienvenue img{
-    max-width: 160px;
-    /* max-height: 50%; */
-    /* margin-left: 50px; */
-} 
-
-.photo-bienvenue{
-    text-align: center;
-    /* max-width: 500px; */
-    /* max-height: 500px; */
-}
-
-.texte-bienvenue {
-    /* max-width: 500px; */
-    text-align: justify;
-    /* padding: 2%; */
-}
-
-.texte-bienvenue p{
-   padding: 8%;
-}
-
-.tache-effectuee{
+/* mise en page de la liste des taches effectuees par les membres*/
+.a-propos .tache-effectuee{
     padding-inline-start: 2%;
 }
 
-.tache-effectuee li {
+.a-propos .tache-effectuee li {
     font-size: var(--font-size-3);
     text-transform: uppercase;
     list-style: none;
 }
 
-.tache-effectuee li:not(:last-child){
+.a-propos .tache-effectuee li:not(:last-child){
     margin-bottom: 15px;
 }
 
-.tache-effectuee li:before{
+.a-propos .tache-effectuee li:before{
     content:"\25C8";
     color: var(--main-color);
     margin-right: 20px;
@@ -918,7 +896,7 @@ footer h3{
 
     /***========================= Header =============================*****/
 
-    /* chenger en navbar pour smartphone*/
+    /* changer en navbar pour smartphone*/
     nav{
         min-height: 50px;
         height: auto;

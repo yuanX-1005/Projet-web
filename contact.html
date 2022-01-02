@@ -47,11 +47,17 @@
 
         <!-- Main (Contenu de page) -->
         <main class="main">
+
+            <!-- Titre -->
             <h1 class="titre-pages">Nous Contacter</h1>
-            <div class="contactRegistration">
+
+            <!-- Formulaire de contact -->
+            <div class="contact">
+                
 				<form name="contactForm" onsubmit="return validateForm()">
+                    
+                    <!-- Coordonnees de l'utilisateur -->
 					<div class="flex flex-wrap center">
-						<!-- <h3>Vos coordonnées</h3> -->
                         <div class="input-box w-50">
 							<input type="text" name="nom" minlength="2" maxlength="20" placeholder="* Nom" required>
 						</div>
@@ -59,6 +65,8 @@
 							<input type="text" name="prenom" minlength="2" maxlength="20" placeholder="* Prénom" required>
 						</div>
                     </div>
+
+                    <!-- Coordonnees de l'utilisateur -->
                     <div class="flex flex-wrap center">
 						<div class="input-box w-50">
 							<input type="text" name="adresse" placeholder="* Adresse" required>
@@ -67,6 +75,8 @@
 							<input type="text" name="ville"  placeholder="* Ville" required>
 						</div>
                     </div>
+
+                    <!-- Coordonnees de l'utilsateur -->
                     <div class="flex flex-wrap center">
 						<div class="input-box w-50">
 							<input type="tel" pattern="[0-9]{10}" title="Veillez entrez une numéro de 10 chiffres" name="tele" placeholder="Téléphone : 0677123456">
@@ -76,6 +86,7 @@
 						</div>
 					</div>
 
+                    <!-- Sujet auquel y a un rpobleme -->
 					<div class="flex justice-contant-center">
                         <div class="input-box w-100 center">
                             <input type="text" id="sujet" name="sujet" placeholder="Sujet" required>
@@ -87,6 +98,7 @@
                         </div>
 					</div>
 
+                    <!-- Bouton dans formulaire -->
                     <div class="button flex justice-contant-center">
                         <input type="submit" value="Envoyer">
                         <input onclick="supprimerMessage()" type="button" value="Supprimer">
@@ -94,6 +106,7 @@
 				</form>
 			</div>
 
+             <!-- Recuperation des donnees + titre -->
             <div class="message-envoye">
                 <table class="tableMessage">
                     <caption>Les informations que vous avez envoyé : </caption>
@@ -102,8 +115,9 @@
                 </table>
             </div>
 
+             <!-- Horaires d'ouverture de BiblioShop -->
 			<div class="horaire">
-                <table>
+                <table class="center">
                     <caption>Horaires d'ouverture</caption>
                     <tbody>
                         <tr>
