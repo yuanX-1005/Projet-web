@@ -13,6 +13,9 @@ window.addEventListener('resize', function(){
     }    
 });
 
+
+
+
 // **** Page Categorie ****
 // valeur de décalage pour le slide
 var gauche=1;
@@ -66,7 +69,6 @@ function decalageDroite(){
         varleurMaxDecalageDroiteGauche = 2;
         varleurMaxDecalageDroiteDroite = 2;
     }
-    // alert("gauche : " + gauche + " | droite : " + droite );
     if (gauche>=varleurMaxDecalageDroiteGauche && droite>=varleurMaxDecalageDroiteDroite){
         document.getElementById("p"+droite).style.display="none";
         gauche-=1;
@@ -82,10 +84,12 @@ function decalageDroite(){
 
 
 
+
+
 // **** Page Contacte ****
 //Ajouter les données envoyées dans un tableau
 function ajouterToForm(){
-    // alert(444);
+    // obtenir l'élément
     const newItem1 = document.createElement('tr')
     const nomTd = document.createElement('td')
     const newItem2 = document.createElement('tr')
@@ -98,7 +102,7 @@ function ajouterToForm(){
     const newItem5 = document.createElement('tr')
     const messageTd = document.createElement('td')
 
-
+    // changer les données
     nomTd.textContent = "Nom Prénom : " + document.contactForm.nom.value
     nomTd.textContent += " "+ document.contactForm.prenom.value
     adresseTd.textContent = "Adresse : " + document.contactForm.adresse.value
@@ -108,18 +112,21 @@ function ajouterToForm(){
     sujetTd.textContent = "Sujet : " +document.contactForm.sujet.value
     messageTd.textContent = "Message : "+ document.contactForm.message.value
 
+    // ajouter le style
     nomTd.setAttribute("colspan","2")   
     adresseTd.setAttribute("colspan","2")
     sujetTd.setAttribute("colspan","2")
     messageTd.setAttribute("colspan","2")
     messageTd.setAttribute("class","colorVide")
 
+    // ajouter les données
     newItem1.append(nomTd)
     newItem2.append(adresseTd)
     newItem3.append(phoneTd,emailTd)
     newItem4.append(sujetTd)
     newItem5.append(messageTd)
 
+    // les affiches
     const tableMessage = document.querySelector('.tableMessage tbody')
     tableMessage.appendChild(newItem1)
     tableMessage.appendChild(newItem2)
@@ -189,5 +196,15 @@ function validateForm(){
 
     ajouterToForm();
     return false;
+}
+
+
+
+
+// **** Page à propos ****
+
+// revient en heut du page
+function derouleVersHaut(){
+    document.body.scrollTop = document.documentElement.scrollTop = 0;
 }
 
