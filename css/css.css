@@ -1,6 +1,6 @@
 :root {
     /*backagrounds colors : nommée en chiffre -> pour eviter le changement de couleur par la suite*/
-    --base-color :#e8e8e8;
+    --base-color: snow;
     --main-color:#47876c;
     --second-color:#beb887;
     --third-color : #fdbfc9;
@@ -11,7 +11,7 @@
     --font-size-3: calc(14px + (24 - 14)*(100vw - 320px)/(1440 - 320));
     --font-size-4: calc(12px + (20 - 12)*(100vw - 320px)/(1440 - 320));
     --font-size-5: calc(12px + (14 - 12)*(100vw - 320px)/(1440 - 320));
-    --main-margin:16%; 
+    --main-margin:16%;
 }
 
 /************Font used***********/
@@ -374,6 +374,7 @@ main{
     background-attachment:center;
     background-size:cover;
     text-align: center;
+    background-color: var(--base-color);
 }
 
 .accueil-conteneur-citation:nth-child(1){
