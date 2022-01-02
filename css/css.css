@@ -815,10 +815,11 @@ main{
 
 
 
+
 /**
 *   Page SOURCES ********************************
 **/
-
+/* ancre pour aller jusqu'à entete du page */
 #top-ancre{
     width: max-content;
     position:fixed;
@@ -836,6 +837,13 @@ main{
     color: var(--main-color);
 }
 
+/* titre du type de sources */
+.sources-type h3{
+    margin:8% auto 2% auto ;
+    width: max-content;
+    border-bottom: 2px solid var(--main-color);
+}
+
 /* sources */
 .sources-type .source{
     margin-top: 5%;
@@ -849,12 +857,11 @@ main{
 }
 
 /* image de source */
-.source img{
+.source img, .source video{
     width: 90%;
     max-width: 200px;
     margin: 0;
 }
-
 
 /* lien de source */
 .source p{
@@ -862,6 +869,11 @@ main{
     word-break: break-all;
     margin: 0;
 }
+
+
+
+
+
 
 /***====================== Footer ================================*****/
 
