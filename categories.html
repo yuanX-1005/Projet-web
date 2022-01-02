@@ -1,20 +1,28 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+    <!-- Head -->
     <head>
         <meta charset="utf-8">
-        <title>Catégories</title>
+        <title>Accueil</title>
         <link rel="shortcut icon" href="./favicon.png">
         <link rel="stylesheet" href="css/css.css">
-        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
         <script src="./js/js.js"></script>
-        
     </head>
-    <body  id="categorie" onload="show()">
+
+
+    <!-- Body -->
+    <body id="font-image" onload="show()">
+
+        <!-- Header (Entete de page) -->
         <header>
-            <!-- Navbar -->
+          <!-- Navbar -->
             <nav>
+                <!-- Logo du site -->
                 <div class="nav-logo"><img src="images/logo-BiblioShop.png" alt="Logo du site BiblioShop"></div>
+                <!-- Navbar pour PC -->
                 <div class="nav-content-border">
                     <a class="nav-link" href="accueil.html">Accueil<span></span><span></span><span></span><span></span></a>
                     <a class="nav-link" href="categories.html">Catégories<span></span><span></span><span></span><span></span></a>
@@ -23,156 +31,264 @@
                     <a class="nav-link" href="contact.html">Contact<span></span><span></span><span></span><span></span></a>
                 </div>
 
+                <!-- Navbar pour smartphone -->
                 <div class="nav-phone">
                     <button id="navPhone" onclick="afficherNavPhone()"><i class="fas fa-bars"></i></button>
                 </div>
                 <ul id="navPhoneContenu">
-                    <li><a class="" href="accueil.html">Accueil</a></li>
-                    <li><a class="" href="categories.html">Catégories</a></li>
-                    <li><a class="" href="activite.html">Activités</a></li>
-                    <li><a class="" href="evenement.html">Evenement</a></li>
-                    <li><a class="" href="contact.html">Contact</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="activite.html">Activités</a></li>
+                    <li><a href="evenement.html">Evenement</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
-        <!-- Main de page categories -->
+
+
+        <!-- Main (Contenu de page) -->
         <main class="main">
-            <h2 class="title-pages">Toutes les catégories disponibles</h2>
-            <div class="box">
+
+            <!-- Titre -->
+            <h1 class="titre-pages">Toutes les catégories disponibles</h1>
+
+            <!-- Slides pour les documents representants -->
+            <div id="categories-bloc-slides">
                 <div id="leftarrow" onclick="decalageGauche()">
                     <button><i class="fas fa-caret-left"></i></button>
                 </div>
                 <div class="slide-img" id="p1">
-                    <img src="images/livres/Elle1.jpg">
+                    <img src="images/livres/Elle1.jpg"  alt="magasine ELLE">
                 </div>
                 <div class="slide-img" id="p2">
-                    <img src="images/livres/hungerGames.jpg">
+                    <img src="images/livres/hungerGames.jpg" alt="livre hunger games">
                 </div>
                 <div class="slide-img" id="p3">
-                    <img src="images/livres/philosophe.jpg">
+                    <img src="images/livres/philosophe.jpg"  alt="livre philosophe Aristote">
                 </div>
                 <div class="slide-img" id="p4">
-                    <img src="images/livres/voyages.jpg">
+                    <img src="images/livres/voyages.jpg" alt="livre Gude de voyage en Asie">
                 </div>
                 <div class="slide-img" id="p5">
-                    <img src="images/livres/mangas.jpg">
+                    <img src="images/livres/mangas.jpg" alt="manga One piece">
                 </div>
                 <div class="slide-img" id="p6">
-                    <img src="images/livres/romeo-et-juliette.jpg">
+                    <img src="images/livres/romeo-et-juliette.jpg" alt="livre romeo et juliette">
                 </div>
                 <div class="slide-img" id="p7">
-                    <img src="images/livres/histoire.jpg">
+                    <img src="images/livres/histoire.jpg" alt="livre Grande Histoire de France">
                 </div>
                 <div class="slide-img" id="p8">
-                    <img src="images/livres/mickey.jpg">
+                    <img src="images/livres/mickey.jpg" alt="magazine Mickey">
                 </div>
                 <div id="rightarrow" onclick="decalageDroite()">
                     <button><i class="fas fa-caret-right"></i></button>
                 </div>
             </div>
-            <div class="categories-images">
+
+            <!-- Differents Categories -->
+            <div class="categories-conteneur-oeuvres">
+
+                <!-- Titre de categorie -->
                 <h3 class="center">CINÉMAS :</h3>
-                <div class="categories-row">
+                
+                <!-- Les oeuvres par categorie -->
+                <div class="categorie-oeuvres">
+
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/LeHobbit.jpg">
+                        <img src="images/livres/LeHobbit.jpg" alt="livre Le Hobbit">
                         <h3>Le Hobbit</h3>
                         <h4 class="neuf">Etat : Neuf</h4>
                         <details>
                             <summary>
                                 Détails
                             </summary>
-                            <h5>Auteur : J. R. R. Tolkien</h5>
                             <article>
-                                C'est l'histoire de la façon dont Bilbo Sacquet 
-                                a eu une aventure et s'est retrouvé à faire et 
-                                à dire des choses tout à fait inattendues.
+                                <h5>Auteur : J. R. R. Tolkien</h5>
+                                <p>C'est l'histoire de la façon dont Bilbo Sacquet 
+                                a eu une aventure et s'est retrouvé à faire et à
+                                dire des choses tout à fait inattendues.</p> 
                             </article>
                         </details>
                     </div>
+
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/StarWars.jpg">
+                        <img src="images/livres/StarWars.jpg" alt="livre Star Wars">
                         <h3>Star Wars</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <article>
+                                <h5>Auteur : George Lucas</h5>
+                                <p>Les héros du Réveil de la Force se lancent dans
+                                une aventure épique avec des légendes de la galaxie, 
+                                découvrant les secrets ancestraux de la Force et apportant
+                                des révélations étonnantes sur le passé.</p> 
+                            </article>
+                        </details>
                     </div>
+
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/Divergente.jpg">
+                        <img src="images/livres/Divergente.jpg" alt="livre Divergente">
                         <h3>Divergente</h3>
                         <h4 class="neuf">Etat : Neuf</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <article>
+                                <h5>Auteur : Veronica Roth</h5>
+                                <p>Tris vit dans un monde post-apocalyptique où la
+                                société est divisée en cinq tribus. A l’âge de 16 ans, 
+                                elle a dû choisir son clan pour le reste de sa vie 
+                                mais elle est divergente.</p> 
+                            </article>
+                        </details>
                     </div>
+
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/HarryPotter.jpg">
+                        <img src="images/livres/HarryPotter.jpg" alt="livre Harry Potter">
                         <h3>Harry Potter</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <article>
+                                <h5>Auteur : J.K Rowling</h5>
+                                <p>Lorsque Harry Potter a commencé sa sixième année à 
+                                l'école des sorciers, il a trouvé un mystérieux livre 
+                                de magie avec les mots "Ce livre appartient au prince 
+                                de sang-mêlé".</p> 
+                            </article>
+                        </details>
                     </div>
                 </div>
 
+                <!-- Titre de categorie -->                
                 <h3 class="center">MANGAS : </h3>
-                <div class="categories-row">
+                
+                <!-- Les oeuvres par categorie -->
+                <div class="categorie-oeuvres">
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/12Ans.jpg">
+                        <img src="images/livres/12Ans.jpg" alt="manga 12 anns">
                         <h3>12 Ans</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <article>
+                                <h5>Auteur : nom de l'auteur</h5>
+                                <p>description</p> 
+                            </article>
+                        </details>
                     </div>
+
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/SpyXFamilyjpg.jpg">
+                        <img src="images/livres/SpyXFamilyjpg.jpg" alt="manga Spy X Family">
                         <h3>Spy x Family</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <article>
+                                <h5>Auteur : nom de l'auteur</h5>
+                                <p>description</p> 
+                            </article>
+                        </details>
                     </div>
+
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/Japop.jpg">
+                        <img src="images/livres/Japop.jpg" alt="manga Japop">
                         <h3>Japop</h3>
                         <h4 class="neuf">Etat : Neuf</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <article>
+                                <h5>Auteur : nom de l'auteur</h5>
+                                <p>description</p> 
+                            </article>
+                        </details>
                     </div>
+
+                    <!-- Oeuvre : image + titre + etat + details -->
                     <div class="col w-25 center">
-                        <img src="images/livres/LaCuisineDesAnime.jpg">
+                        <img src="images/livres/LaCuisineDesAnime.jpg" alt="manga la cuisine des anime ">
                         <h3>La Cuisine des Anime</h3>
                         <h4 class="occasion">Etat : Ocassion</h4>
-                        <a href="#" class="ctn"></a>
+                        <details>
+                            <summary>
+                                Détails
+                            </summary>
+                            <article>
+                                <h5>Auteur : nom de l'auteur</h5>
+                                <p>description</p> 
+                            </article>
+                        </details>
                     </div>
                 </div>
             </div>
         </main>
+
+
+
+        <!-- Footer (Pied de page)-->
         <footer>
             <div class="container-footer">
-                <div class="detailsFooter flex flex-wrap">
+                <div class="flex flex-wrap">
+                    
+                    <!-- Liste d'activites -->
                     <div class="footer-bloc">
                         <h3>Nos Activités</h3>
-                        <ul class="liste-actives">
-                            <li><a href="#">Événement</a></li>
+                        <ul class="footer-liste-activites">
                             <li><a href="#">Concours</a></li>
                             <li><a href="#">Lecture</a></li>
                             <li><a href="#">Calligraphie</a></li>
                             <li><a href="#">Créativité</a></li>
                             <li><a href="propos.html">A propos</a></li>
+                            <li><a href="sources.html">Sources</a></li>
                         </ul>
                     </div>
+
+                    <!-- L'adresse -->
                     <div class="footer-bloc">
                         <h3>Nous Contacter</h3>
                         <p>777-777-777</p>
                         <p>biblioShop@gmail.com</p>
                         <p>12 rue de Paradis, 75010, Paris</p>
                     </div>
+
+                    <!-- Liste d'horaires -->
                     <div class="footer-bloc center">
                         <h3>Nos Horaires</h3>
-                        <ul class="liste-horaires">
+                        <ul class="footer-liste-horaires">
                             <li><i class="fas fa-check"></i> Lun 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mar 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mer 8h00 - 19h00</li>
-                            <li><i class="fas fa-check"></i> Jeu 14h00 - 20h00</li>
+                            <li><i class="fas fa-check"></i> Jeu Fermé - 20h00</li>
                             <li><i class="fas fa-check"></i> Ven 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Sam 8h00 - 20h00</li>
                             <li><i class="fas fa-times"></i> Dim fermé - fermé</li>
                         </ul>
                     </div>
+
+                    <!-- Reseaux sociaux -->
                     <div class="footer-bloc center">
                         <h3>Suivez-nous</h3>
-                        <div class="icons flex flex-nowrap justice-contant-space-around">
+                        <div class="reseau-sociaux">
                             <a href=""><i class="fab fa-facebook"></i></a>
                             <a href=""><i class="fab fa-instagram"></i></a>
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -182,5 +298,7 @@
                 </div>
             </div>
         </footer>
+
     </body>
+    
 </html>
