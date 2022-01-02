@@ -325,6 +325,30 @@ main{
 *   Page ACCUEIL ********************************
 **/
 
+/* background avec l'image de bibliotheque */
+.accueil-presentation-bibliotheque{
+    background-image: url("./../images/bibliotheque.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment:fixed;
+    width: 100%;
+    height: 400px;
+}
+
+/* Text de bienvenue */
+.accueil-presentation-bibliotheque section{
+    text-align: center;
+    margin: 0;
+    padding: 10% 5%;
+}
+
+.accueil-presentation-bibliotheque h1,.accueil-presentation-bibliotheque p{
+    margin: 5% auto;
+    text-align: center;
+    background-color: var(--base-color);
+    padding: 0 5%;
+}
+
 /* le bloc de livres representants */
 .accueil-conteneur-livre{
     display: flex;
@@ -462,6 +486,11 @@ main{
 }
 
 
+.categorie-oeuvres article p{
+    padding:2%;
+    font-size: var(--font-size-5);
+}
+
 
 
 
@@ -549,18 +578,6 @@ main{
     height: auto;
     padding: 2%;
 }
-
-/* 
-.imgActivite img{
-    margin-left: 600px;
-    position: relative;
-    top: 1px;
-    max-height: 300px;
-    max-width: 500px;
-} */
-
-
-
 
 
 
@@ -795,6 +812,22 @@ main{
 
 
 
+
+/**
+*   Page A PROPOS ********************************
+**/
+
+.sources-type .source{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+}
+.sources-type .source>div{
+    padding:2%;
+}
+
+
+
 /***====================== Footer ================================*****/
 
 footer{
@@ -943,7 +976,16 @@ footer h3{
 
     /***========================= Main =============================*****/
 
-    
+        
+    /**
+    *   Page ACCUEIL ********************************
+    **/
+
+    /* heuteur du background avec l'image de bibliotheque */
+    .accueil-presentation-bibliotheque{
+        height: 300px;
+    }
+
     /**
     *   Page CATEGORIE ********************************
     **/  
@@ -984,6 +1026,17 @@ footer h3{
         width: 100%;
     }
 
+    
+    /**
+    *   Page ACCUEIL ********************************
+    **/
+
+    /* heuteur du background avec l'image de bibliotheque */
+    .accueil-presentation-bibliotheque{
+        height: 200px;
+    }
+
+
 
     /**
     *   Page CATEGORIES ********************************
@@ -1006,14 +1059,24 @@ footer h3{
     }
 }
 
-
+/* pour le taille d'écran entre 300px et 560px */
 @media (min-width : 300px) and (max-width:560px){
 
+    
+    /***========================= Main =============================*****/
+
+
+    /* changer le margin du main */
     :root {
-        /* fonts sizes */
         --main-margin:2%;
     }
 
+    
+    /**
+    *   Page ACTIVITES ********************************
+    **/
+
+    /* changer l'emplacement de date des activités */
     .activites-timeline-container .event .event-date{
         left: 8%;
         top: 10%;
