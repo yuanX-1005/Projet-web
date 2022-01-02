@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="fr">
-    <!-- head -->
+
+    <!-- Head -->
     <head>
         <meta charset="utf-8">
         <title>Accueil</title>
@@ -10,12 +11,18 @@
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
         <script src="./js/js.js"></script>
     </head>
+
+
     <!-- Body -->
     <body>
+
+        <!-- Header (Entete de page) -->
         <header>
           <!-- Navbar -->
             <nav>
+                <!-- Logo du site -->
                 <div class="nav-logo"><img src="images/logo-BiblioShop.png" alt="Logo du site BiblioShop"></div>
+                <!-- Navbar pour PC -->
                 <div class="nav-content-border">
                     <a class="nav-link" href="accueil.html">Accueil<span></span><span></span><span></span><span></span></a>
                     <a class="nav-link" href="categories.html">Catégories<span></span><span></span><span></span><span></span></a>
@@ -24,27 +31,32 @@
                     <a class="nav-link" href="contact.html">Contact<span></span><span></span><span></span><span></span></a>
                 </div>
 
+                <!-- Navbar pour smartphone -->
                 <div class="nav-phone">
                     <button id="navPhone" onclick="afficherNavPhone()"><i class="fas fa-bars"></i></button>
                 </div>
                 <ul id="navPhoneContenu">
-                    <li><a class="" href="accueil.html">Accueil</a></li>
-                    <li><a class="" href="categories.html">Catégories</a></li>
-                    <li><a class="" href="activite.html">Activités</a></li>
-                    <li><a class="" href="evenement.html">Evenement</a></li>
-                    <li><a class="" href="contact.html">Contact</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="activite.html">Activités</a></li>
+                    <li><a href="evenement.html">Evenement</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
+
+
+        <!-- Main (Contenu de page) -->
         <main>
-            <div class="">
-                <img class="w-100" src="images/etageres1.jpg" alt="image de bibliotheque">
-            </div>
-            <div class="">
-                <div class="container-livre">
+            <!-- Image de la bibliothèque -->
+            <img class="w-100" src="images/etageres1.jpg" alt="image de bibliotheque">
+            
+            <!-- L'image et la descrption du livre representant -->
+            <div>
+                <div class="accueil-conteneur-livre">
                     <section class="w-70">
-                        <h2 class="w-100 center">WAKOU</h2>
-                        <p class="doc-description">
+                        <h2 class="center">WAKOU</h2>
+                        <p class="description">
                             Le monde merveilleux des animaux :
                             Votre enfant est curieux de nature et s'émerveille devant les animaux.
                             Les photos et les textes d'une grande sensibilité permettent au jeune lecteur
@@ -53,77 +65,97 @@
                         </p>
                     </section>
                     <div class="w-30 flex justice-contant-center">
-                        <img class="couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
+                        <img class="accueil-livre-couvert" src="images/livres/wak1.jpg" alt="couverture de magazine">
                     </div>
                 </div>
 
-                <div class="container-citation">
+                <!-- La citation du phrase interessant -->
+                <div class="accueil-conteneur-citation">
                     <figure>
-                        <blockquote cite="https://www.histoire-en-citations.fr/citations/victor-hugo-on-a-voulu-a-tort-faire-de-la-bourgeoisie-une-classe">
-                            <p>On a voulu, à tort, faire de la bourgeoisie une classe. <br>La bourgeoisie est tout simplement la portion contentée du peuple.</p>
+                        <blockquote cite="https://www.dicocitations.com/citations/citation-7552.php">
+                            <p>« On a voulu, à tort, faire de la bourgeoisie une classe. <br>
+                                La bourgeoisie est tout simplement la portion contentée du peuple. »</p>
                         </blockquote>
-                        <figcaption>Victor HUGO (1802-1885)<cite>Les Misérables (1862)</cite></figcaption>
+                        <figcaption>—Victor HUGO (1802-1885) <cite>- Les Misérables (1862)</cite></figcaption>
                     </figure>
-                        <!-- <p>« On a voulu, à tort, faire de la bourgeoisie une classe. <br>La bourgeoisie est tout simplement la portion contentée du peuple. » 
-                        <br><br> - Victor Hugo</p> -->
                 </div>
 
-                <div class="container-livre">
+                <!-- L'image et la descrption du livre representant -->
+                <div class="accueil-conteneur-livre">
                     <div class="w-30 flex justice-contant-center">
-                        <img class="couvert" src="images/livres/lesmiserables.jpg" alt="couverture de magazine">
+                        <img class="accueil-livre-couvert" src="images/livres/lesmiserables.jpg" alt="couverture de magazine">
                     </div>
                     <section class="w-70">
                         <h2 class="w-100 center">Les misérables</h2>
-                        <p class="doc-description">
+                        <p class="description">
                             Roman réaliste, Les Misérables décrit un monde de gens humbles. 
                             C’est une peinture très précise de la vie en France et le Paris pauvre début du XIXe siècle. 
                             Son succès populaire est parfois lié à la charge avec laquelle les personnages sont peints dans le roman.
                         </p>
                     </section>
                 </div>
-                <div class="container-citation">
-                    <p>« L'amour, c'est la fumée qu'exhalent les soupirs,<br>
-                    Attisé, c'est le feu dans les yeux des amants,<br>
-                    Contrarié, c'est la mer que viennent grossir leurs larmes. » <br><br> - William Shakespeare</p>
+
+                <!-- La citation du phrase interessant -->
+                <div class="accueil-conteneur-citation">
+                    <figure>
+                        <blockquote cite="https://www.dicocitations.com/citations/citation-130708.php">
+                            <p>« L'amour, c'est la fumée qu'exhalent les soupirs,<br>
+                                Attisé, c'est le feu dans les yeux des amants,<br>
+                                Contrarié, c'est la mer que viennent grossir leurs larmes. » </p>
+                        </blockquote>
+                        <figcaption>—William Shakespeare (1564-1616) <cite>- Roméo et Juliette (1594)</cite></figcaption>
+                    </figure>
                 </div>
-                <div class="container-livre">
+
+                <!-- L'image et la descrption du livre representant -->
+                <div class="accueil-conteneur-livre">
                     <section class="w-70">
                         <h2 class="w-100 center">Roméo et Juliette</h2>
-                        <p class="doc-description">
+                        <p class="description">
                             Roméo et Juliette est une tragédie de William Shakespeare. 
                             Écrite vers le début de sa carrière, elle raconte l'histoire de deux jeunes gens, 
                             Roméo Montaigu et Juliette Capulet, qui s'aiment malgré la haine que se vouent leurs familles et connaissent un destin funeste.
                         </p>
                     </section>
                     <div class="w-30 flex justice-contant-center">
-                        <img class="couvert" src="images/livres/romeo-et-juliette.jpg" alt="couverture de magazine">
+                        <img class="accueil-livre-couvert" src="images/livres/romeo-et-juliette.jpg" alt="couverture de magazine">
                     </div>
                 </div>
             </div>
         </main>
+
+
+
+        <!-- Footer (Pied de page)-->
         <footer>
             <div class="container-footer">
-                <div class="detailsFooter flex flex-wrap">
+                <div class="flex flex-wrap">
+                    
+                    <!-- Liste d'activites -->
                     <div class="footer-bloc">
                         <h3>Nos Activités</h3>
-                        <ul class="liste-actives">
-                            <li><a href="#">Événement</a></li>
+                        <ul class="footer-liste-activites">
                             <li><a href="#">Concours</a></li>
                             <li><a href="#">Lecture</a></li>
                             <li><a href="#">Calligraphie</a></li>
                             <li><a href="#">Créativité</a></li>
                             <li><a href="propos.html">A propos</a></li>
+                            <li><a href="sources.html">Sources</a></li>
                         </ul>
                     </div>
+
+                    <!-- L'adresse -->
                     <div class="footer-bloc">
                         <h3>Nous Contacter</h3>
                         <p>777-777-777</p>
                         <p>biblioShop@gmail.com</p>
                         <p>12 rue de Paradis, 75010, Paris</p>
                     </div>
+
+                    <!-- Liste d'horaires -->
                     <div class="footer-bloc center">
                         <h3>Nos Horaires</h3>
-                        <ul class="liste-horaires">
+                        <ul class="footer-liste-horaires">
                             <li><i class="fas fa-check"></i> Lun 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mar 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mer 8h00 - 19h00</li>
@@ -133,9 +165,11 @@
                             <li><i class="fas fa-times"></i> Dim fermé - fermé</li>
                         </ul>
                     </div>
+
+                    <!-- Reseaux sociaux -->
                     <div class="footer-bloc center">
                         <h3>Suivez-nous</h3>
-                        <div class="icons flex flex-nowrap justice-contant-space-around">
+                        <div class="reseau-sociaux">
                             <a href=""><i class="fab fa-facebook"></i></a>
                             <a href=""><i class="fab fa-instagram"></i></a>
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -145,5 +179,7 @@
                 </div>
             </div>
         </footer>
+
     </body>
+    
 </html>

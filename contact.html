@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
+
+    <!-- Head -->
     <head>
         <meta charset="utf-8">
-        <title>Contact</title>
+        <title>Accueil</title>
         <link rel="shortcut icon" href="./favicon.png">
         <link rel="stylesheet" href="css/css.css">
-        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">        
+        <meta name="viewport" content="width=device-width,initial-scale=1,user-scalable=no">
         <script src="https://kit.fontawesome.com/6dd7ccfc27.js"></script>
         <script src="./js/js.js"></script>
     </head>
 
-    <body>
+    <!-- Body -->
+    <body id="font-image">
+
+        <!-- Header (Entete de page) -->
         <header>
-            <!-- Navbar -->
+          <!-- Navbar -->
             <nav>
+                <!-- Logo du site -->
                 <div class="nav-logo"><img src="images/logo-BiblioShop.png" alt="Logo du site BiblioShop"></div>
+                <!-- Navbar pour PC -->
                 <div class="nav-content-border">
                     <a class="nav-link" href="accueil.html">Accueil<span></span><span></span><span></span><span></span></a>
                     <a class="nav-link" href="categories.html">Catégories<span></span><span></span><span></span><span></span></a>
@@ -23,22 +30,25 @@
                     <a class="nav-link" href="contact.html">Contact<span></span><span></span><span></span><span></span></a>
                 </div>
 
+                <!-- Navbar pour smartphone -->
                 <div class="nav-phone">
                     <button id="navPhone" onclick="afficherNavPhone()"><i class="fas fa-bars"></i></button>
                 </div>
                 <ul id="navPhoneContenu">
-                    <li><a class="" href="accueil.html">Accueil</a></li>
-                    <li><a class="" href="categories.html">Catégories</a></li>
-                    <li><a class="" href="activite.html">Activités</a></li>
-                    <li><a class="" href="evenement.html">Evenement</a></li>
-                    <li><a class="" href="contact.html">Contact</a></li>
+                    <li><a href="accueil.html">Accueil</a></li>
+                    <li><a href="categories.html">Catégories</a></li>
+                    <li><a href="activite.html">Activités</a></li>
+                    <li><a href="evenement.html">Evenement</a></li>
+                    <li><a href="contact.html">Contact</a></li>
                 </ul>
             </nav>
         </header>
+
+
+        <!-- Main (Contenu de page) -->
         <main class="main">
-            <h2 class="title-pages">Nous Contacter</h2>
+            <h1 class="titre-pages">Nous Contacter</h1>
             <div class="contactRegistration">
-                <!-- <div class="registration title-pages"></div> -->
 				<form name="contactForm" onsubmit="return validateForm()">
 					<div class="flex flex-wrap center">
 						<!-- <h3>Vos coordonnées</h3> -->
@@ -140,29 +150,39 @@
                 </table>
             </div>
         </main>
+
+
+
+        <!-- Footer (Pied de page)-->
         <footer>
             <div class="container-footer">
-                <div class="detailsFooter flex flex-wrap">
+                <div class="flex flex-wrap">
+                    
+                    <!-- Liste d'activites -->
                     <div class="footer-bloc">
                         <h3>Nos Activités</h3>
-                        <ul class="liste-actives">
-                            <li><a href="#">Événement</a></li>
+                        <ul class="footer-liste-activites">
                             <li><a href="#">Concours</a></li>
                             <li><a href="#">Lecture</a></li>
                             <li><a href="#">Calligraphie</a></li>
                             <li><a href="#">Créativité</a></li>
                             <li><a href="propos.html">A propos</a></li>
+                            <li><a href="sources.html">Sources</a></li>
                         </ul>
                     </div>
+
+                    <!-- L'adresse -->
                     <div class="footer-bloc">
                         <h3>Nous Contacter</h3>
                         <p>777-777-777</p>
                         <p>biblioShop@gmail.com</p>
                         <p>12 rue de Paradis, 75010, Paris</p>
                     </div>
+
+                    <!-- Liste d'horaires -->
                     <div class="footer-bloc center">
                         <h3>Nos Horaires</h3>
-                        <ul class="liste-horaires">
+                        <ul class="footer-liste-horaires">
                             <li><i class="fas fa-check"></i> Lun 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mar 8h00 - 19h00</li>
                             <li><i class="fas fa-check"></i> Mer 8h00 - 19h00</li>
@@ -172,9 +192,11 @@
                             <li><i class="fas fa-times"></i> Dim fermé - fermé</li>
                         </ul>
                     </div>
+
+                    <!-- Reseaux sociaux -->
                     <div class="footer-bloc center">
                         <h3>Suivez-nous</h3>
-                        <div class="icons flex flex-nowrap justice-contant-space-around">
+                        <div class="reseau-sociaux">
                             <a href=""><i class="fab fa-facebook"></i></a>
                             <a href=""><i class="fab fa-instagram"></i></a>
                             <a href=""><i class="fab fa-twitter"></i></a>
@@ -184,5 +206,7 @@
                 </div>
             </div>
         </footer>
+
     </body>
+    
 </html>

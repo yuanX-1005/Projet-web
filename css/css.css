@@ -1,8 +1,8 @@
 :root {
     /*backagrounds colors : nommée en chiffre -> pour eviter le changement de couleur par la suite*/
-    --base-bag-color :#e8e8e8;
-    --main-bag-color:#63a58a;
-    --second-bag-color:#beb887;
+    --base-color :#e8e8e8;
+    --main-color:#47876c;
+    --second-color:#beb887;
     --third-color : #fdbfc9;
 
     /* fonts sizes */
@@ -48,7 +48,12 @@
     font-weight: normal;
 }
 
-/************Code basique***********/
+
+/* **
+* Certaines codes frequantement utilisé
+* */
+
+/************Text-align***********/
 
 /*text-align*/
 .center{
@@ -63,24 +68,7 @@
     text-align: left;
 }
 
-/************Couleur***********/
-.bgBaseColor{
-    background-color : var(--base-bag-color);
-}
-
-.bgMainColor{
-    background-color : var(--main-bag-color);
-}
-
-.bgSecColor{
-    background-color : var(--second-bag-color);
-}
-
-.bgThrColor{
-    background-color : var(--third-bag-color);
-}
-
-/* Font */
+/************Font***********/
 
 h1{
     font-size: var(--font-size-1);
@@ -104,44 +92,27 @@ p{
 
 
 /************Width***********/
-.w-10{
-    width: 10%;
-}
-.w-20{
-    width: 20%;
-}
+
 .w-25{
     width : 25%
 }
 .w-30{
     width: 30%;
 }
-.w-33{
-    width: 33.33%;
-}
-.w-40{
-    width: 40%;
-}
 .w-50{
     width: 50%;
 }
-.w-60{
-    width: 60%;
-}
 .w-70{
     width: 70%;
-}
-.w-80{
-    width: 80%;
-}
-.w-90{
-    width: 90%;
 }
 .w-100{
     width: 100%;
 }
 
-/* flex */
+
+
+
+/************Flex***********/
 .flex{
     display: flex;
 }
@@ -157,21 +128,14 @@ p{
     justify-content: center;
 }
 
-.justice-contant-space-around{
-    justify-content: space-around;
-}
+/************Changer certain style par defaut***********/
 
-.justice-contant-space-between{
-    justify-content: space-between;
-}
-
-/* Enlever certain style par defaut */
 a:link, a:active, a:visited{
     color: black;
     text-decoration: none;
 }
 a:hover{
-    color: var(--main-bag-color);
+    color: var(--main-color);
 }
 
 ul,li{
@@ -179,11 +143,12 @@ ul,li{
 }
 
 
+
 /************Body***********/
 
 
 html, body{
-    /* background-color: var(--base-bag-color); */
+    /* background-color: var(--base-color); */
     color: black;
     font-family: "CrimsonPro", serif;
     font-size: 16px;
@@ -212,7 +177,7 @@ header{
 *   Navbar ********************************
 **/
 
-/* Navbar */
+/* navbar de PC*/
 nav{
     height: 50px;
     width: 100%;
@@ -226,7 +191,7 @@ nav{
     white-space: nowrap;
 }
 
-/* nav pour telephone */
+/* cacher le navbar de smartphone */
 .nav-phone,#navPhoneContenu{
     display: none;
 }
@@ -241,13 +206,14 @@ nav{
     max-width: max-content;
 }
 
-/* menu de navbar */
+/* bloc de menu de navbar */
 .nav-content-border{
     width: 80%;
     display: flex;
     align-items: center;
 }
 
+/* menu de navbar */
 .nav-link {
     --c: rgb(99, 165, 138) ;
     font-size: 16px;
@@ -261,11 +227,12 @@ nav{
     margin: 0.5em;
 }
 
+/* effet dynamique lors qu'on flotter sur le menu */
 .nav-link span {
     position: absolute;
     width: 25%;
     height: 100%;
-    background-color: var(--second-bag-color);
+    background-color: var(--second-color);
     transform: translateY(150%);
     border-radius: 50%;
     left: calc((var(--n) - 1) * 25%);
@@ -297,9 +264,13 @@ nav{
 .nav-link span:nth-child(5) {
     --n: 5;
 }
-/***/
+
 
 /***========================= Main =============================*****/
+
+/**
+*   CSS pour plusieur pages  ********************************
+**/
 
 main{
     margin: -50px 0 -100px;
@@ -308,70 +279,453 @@ main{
     padding-bottom: 100px;
 }
 
+/* espace principaux pour les pages */
 .main{
     margin: auto var(--main-margin);
-    background-color: #fff;
+    background-color: var(--base-color);    
 }
 
-/* style du titre de chaque pages */
-.title-pages{
+
+/* paragraphe de descriptions (pages : accueil + à propos)*/
+.description{
+    margin : 3% 0% 2%;
+    text-align: justify;
+}
+
+/* style du titre de pages (pages : catégories, activités, événement, contact)*/
+.titre-pages{
     font-family: "Chivo";
     font-weight: normal;
     text-align: center;
+    text-shadow: 6px 6px 0px rgba(0,0,0,0.2);
 }
+
+/* background avec l'image (pages : !!! )*/
+#font-image{
+    background-image: url("./../images/fleur.png");
+    background-repeat:repeat;
+    background-attachment:local ;
+    background-size:cover;
+}
+
+/* background flou  */
+#font-image main{
+    background: rgba(255, 255, 255, .7);
+	-webkit-backdrop-filter: blur(10px);
+	backdrop-filter: blur(10px);
+}
+
+
 
 /**
 *   Page ACCUEIL ********************************
 **/
 
-/* ** les livres representants */
-.container-livre{
+/* le bloc de livres representants */
+.accueil-conteneur-livre{
     display: flex;
     flex-wrap: wrap;
     margin : 2% var(--main-margin);
 }
 
-/* couverture de livre */
-.couvert{
-    max-width: 100px;
+
+/* couverture de livres (pages : accueil + activités) */
+.accueil-livre-couvert{
+    max-width: 120px;
 }
 
-/* descriptions des documents */
-.doc-description{
-    width: 100%;
-    text-align: left;
-    margin : 3% 0% 2%;
-    text-align: justify;
-}
 
-/* citations interessant */
-
-.container-citation{
+/* citations interessants */
+.accueil-conteneur-citation{
     padding: 5%;
-    border-bottom: 2px solid var(--main-bag-color);
-    border-top: 2px solid var(--main-bag-color);
+    border-bottom: 2px solid var(--main-color);
+    border-top: 2px solid var(--main-color);
     background-image: url("./../images/feuilles.png");
     background-repeat:no-repeat;
     background-attachment:center;
     background-size:cover;
+    text-align: center;
 }
-.container-citation:nth-child(1){
+
+.accueil-conteneur-citation:nth-child(1){
     background-position: right;
 }
-.container-citation:nth-child(2){
+.accueil-conteneur-citation:nth-child(2){
     background-position: left;
 }
 
-.container-citation p{
+.accueil-conteneur-citation p{
+    font-family: "Estonia",serif;
     font-style: italic;
-    color: var(--main-bag-color);
     font-size: var(--font-size-3);
     text-align: center;
-    font-family: "Estonia",serif;
-    font-size: 24px;
+    color: var(--main-color);
 }
 
-/* ** */
+
+
+
+
+/**
+*   Page CATEGORIES ********************************
+**/
+
+/* slides des documents representants */
+#categories-bloc-slides{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10%;
+}
+
+/* images de slide */
+#categories-bloc-slides .slide-img{
+    margin: 2% 10px;
+    display: none;
+}
+
+#categories-bloc-slides .slide-img img{
+    height: 200px;
+    width: 100%;
+}
+
+/* buttons de deplacement vers la gauche et la droite*/
+#leftarrow, #rightarrow{
+    display: inline-block;
+}
+
+#leftarrow button, #rightarrow button{
+    background-color: var(--main-color);
+    color: #fff;
+    border: none;
+    width: 1.5rem;
+    height: 1.5rem;
+    text-align: center;
+    border-radius: 50%;
+}
+
+/* symbole de buttons de deplacement */
+#leftarrow button i, #rightarrow button i{
+    font-size: 1rem;
+}
+
+/* effet hover de buttons de deplacement */
+#leftarrow button:hover, #rightarrow button:hover{
+    background-color: var(--third-color);
+}
+
+
+/* Les documents de chaque categorie*/
+.categories-conteneur-oeuvres{
+    margin: 5% auto;
+}
+
+.categorie-oeuvres{
+    display: flex;
+    align-items: stretch;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+
+.categories-conteneur-oeuvres .col{
+    flex-direction: column;
+    align-items: center;
+    margin: 2% 0;
+}
+
+
+/* image des oeuvres */
+.categories-conteneur-oeuvres .col img{
+    height: 250px;
+    width: 150px;
+}
+
+
+/* le titre et l'etat de document */
+.categorie-oeuvres h3,.categorie-oeuvres h4{
+    margin: 1%;
+}
+
+
+/* le couleur de l'état d'oeuvre */
+.categories-conteneur-oeuvres .col .neuf{
+    color: var(--main-color)
+}
+
+.categories-conteneur-oeuvres .col .occasion{
+    color: var(--second-color)
+}
+
+
+
+
+
+/**
+*   Page ACTIVITES ********************************
+**/
+
+.activites-timeline-container {
+    max-width: 92%;
+    border-left: 4px solid var(--second-color);
+    padding-left: 25px;
+}
+
+.activites-timeline-container p{
+    font-size: var(--font-size-5);
+}
+
+.activites-timeline-container h2{
+    font-family: "Chivo", serif;
+    margin: 0;
+    border-bottom: 1px solid var(--main-color);
+}
+
+.activites-timeline-container .event{
+    box-shadow : 0px 3px 6px -2px rgba(0, 0, 0, 0.2);
+    padding: 4%;
+    margin: 10% 0;
+    line-height: 2;
+    cursor: pointer;
+    position: relative;
+}
+
+.activites-timeline-container .event:hover{
+    box-shadow: 1px 6px 16px -1px rgba(0, 0, 0, 0.1);
+}
+
+.activites-timeline-container .event::before{
+    content: "";
+    width: 14px;
+    height: 14px;
+    border : 2px solid var(--second-color);
+    position: absolute;
+    left: -36px;
+    border-radius: 50%;
+    transform: translateY(-50%);
+    background: var(--base-color);
+    top: 10%;
+}
+
+.activites-timeline-container .event:hover::before{
+    background: var(--main-color);
+}
+
+.timeline-content{
+    justify-content: space-between;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.timeline-content p{
+    text-align: justify;
+    /* padding: 1%; */
+}
+
+.activites-timeline-container .event .event-date{
+    position: absolute;
+    left: -25%;
+    top: 10%;
+    transform: translateY(-50%);
+    font-weight: bold;
+    color: var(--main-color);
+}
+
+.image-active img{
+    text-align: center;
+    width: 100%;
+    height: auto;
+    padding: 2%;
+}
+
+/* 
+.imgActivite img{
+    margin-left: 600px;
+    position: relative;
+    top: 1px;
+    max-height: 300px;
+    max-width: 500px;
+} */
+
+
+
+
+
+
+/**
+*   Page EVENEMENTS ********************************
+**/
+
+.evenement-conteneur{
+    width: 100%;
+    text-align: center;
+}
+
+/* bloc qui contient les données de l'évenement */
+.evenement-conteneur section{
+    padding: 2%;
+}
+
+/* titre de l'événement */
+.evenement-conteneur section h3{
+    color: var(--main-color);
+}
+
+/* video des événement*/
+.evenement-conteneur video{
+    max-width:550px;
+    margin: 2% auto;
+    width: 90%;
+    box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+
+
+
+
+/**
+*   Page CONTACT ********************************
+**/
+
+/* Formulaire */
+form {
+    margin-top: 5%;
+}
+
+.contactRegistration{
+    margin: 5% 6%;
+    /* max-width: 550px; */
+    /* width: 100%; */
+    background-color:var(--main-color);
+    padding: 25px 30px;
+    border-radius: 10px;
+}
+ 
+.contactRegistration .registration{
+    /* text-align: center;
+    font-size: 25px;
+    font-weight: 500; */
+} 
+
+/* .input-box{
+    margin: 1% 0;
+    text-align: center; */
+    /* width: calc(100% / 2 - 20px); */
+/* } */
+
+.input-box{
+    margin: 1% 0;
+}
+
+.input-box input{
+    height: 30px;
+    width: calc(100% - 30px);
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid var(--third-color);
+    margin: auto;
+    font-size: 16px;
+    font-family: 'CrimsonPro';
+}
+
+
+/* changer la couleur de border quand on focus sur un input */
+.input-box input:focus,
+.input-box textarea:focus,
+.input-box input:valid,
+.input-box textarea:valid{
+    border: solid;
+    border-color: var(--second-color);
+}
+
+textarea {
+    border-radius: 5px;
+    width: calc(100% - 26px);
+    outline: none;
+    box-sizing: border-box;
+    border: 2px solid var(--third-color);
+    resize: none;
+    overflow-y: auto;
+}
+
+/*buttons de forme */
+form .button{
+    height: 30px;
+    margin: 30px 0;
+}
+
+form .button input{
+    display: block;
+    margin: auto 2%;
+    height: 100%;
+    outline: none;
+    border-radius: 4px;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    background: var(--second-color);
+    color: #fff;
+    border: none;
+    padding: 1% 4%;
+    line-height: 18px;
+    box-shadow: 3px 3px 30px #999;
+}
+
+form .button input:hover{
+    background: var(--third-color);
+    color: black;
+    box-shadow: 3px 5px 30px #999;
+}
+
+/* Tableau : Les messages obtenus */
+.message-envoye table{
+    width : 100%;
+}
+
+.message-envoye td{ 
+    padding: 1%;
+    border-bottom:2px solid var(--third-color);
+}
+
+.message-envoye td.colorVide{
+    padding: 1%;
+    border-bottom:2px solid var(--main-color);
+}
+
+.message-envoye caption, .horaire caption{
+    font-size: var(--font-size-1);
+    font-weight: bold;
+}
+
+/* Tableau : Heures d'ouverture */
+.horaire{
+    margin: 15% auto 2%;
+}
+
+.horaire table{
+    margin : 5% auto 2%;
+    border: 2px solid var(--main-color);
+    text-align: center;
+    max-width: 550px;
+    width: 90%;
+    border-spacing: 0;
+    border-width: 1;
+}
+
+.horaire caption{
+    margin: 5%;
+    font-size: var(--font-size-2);
+}
+
+.horaire th,.horaire td{
+    border : 1px solid var(--main-color);
+    padding: 1% 4%;
+    width: calc(100%/3);
+}
+
+
+
+
+
 
 /**
 *   Page A PROPOS ********************************
@@ -380,7 +734,7 @@ main{
 /* titre du page à propos */
 #title-page-propos{
     font-size: var(--font-size-2);
-    color: var(--main-bag-color);
+    color: var(--main-color);
     /* margin: 0px 0px 10px 0px; */
     /* line-height: 100px; */
     text-align: center;
@@ -397,17 +751,17 @@ main{
 .aPropos{
     margin: 5% auto;
     max-width: 550px;
-    padding: 6%;
+    padding: 6% 4%;
     /* margin-left: 100px; */
 }
 
-.aPropos .description{
-    box-shadow: -1px 5px 15px var(--main-bag-color);
+.aPropos .propos-description{
+    box-shadow: -1px 5px 15px var(--main-color),-1px 5px 15px var(--main-color);
     padding: 15px;
     margin-top: 5%;
 }
 
-.aPropos .description .imgDescription{
+.aPropos .propos-description .imgDescription{
     margin-left: 20px;
 }
 
@@ -457,332 +811,16 @@ main{
 
 .tache-effectuee li:before{
     content:"\25C8";
-    color: var(--main-bag-color);
+    color: var(--main-color);
     margin-right: 20px;
 }
 
-/**
-*   Page CATEGORIES ********************************
-**/
 
-#categorie{
-    background-image: url("./../images/fleur.png");
-    background-repeat:repeat;
-    background-attachment:local ;
-    background-size:cover;
-}
-
-#categorie main{
-    background: rgba(255, 255, 255, .7);
-	-webkit-backdrop-filter: blur(10px);
-	backdrop-filter: blur(10px);
-}
-
-/* slides des documents representants */
-#categorie .box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide-img{
-    margin: 2% 10px;
-    display: none;
-}
-
-.slide-img img{
-    height: 200px;
-    width: 100%;
-}
-
-#leftarrow, #rightarrow{
-    display: inline-block;
-}
-
-#leftarrow button, #rightarrow button{
-    background-color: var(--main-bag-color);
-    color: #fff;
-    border: none;
-    width: 1.5rem;
-    height: 1.5rem;
-    text-align: center;
-    border-radius: 50%;
-}
-
-#leftarrow button:hover, #rightarrow button:hover{
-    background-color: var(--third-color);
-}
-
-#leftarrow button i, #rightarrow button i{
-    font-size: 1rem;
-}
-
-/* Les documents de chaque categorie*/
-.categories-images{
-    margin: 5% auto;
-}
-
-.categories-row{
-    display: flex;
-    align-items: stretch;
-    justify-content: space-around;
-    flex-wrap: wrap;
-}
-
-
-.categories-images .col{
-    flex-direction: column;
-    align-items: center;
-    margin: 2% 0;
-}
-
-.categories-images .col img{
-    height: 250px;
-    width: 150px;
-}
-
-/* le titre et l'etat de document +   */
-.categories-row h3,.categories-row h4{
-    margin: 1%;
-}
-
-.categories-images .col .neuf{
-    color: var(--main-bag-color)
-}
-
-.categories-images .col .occasion{
-    color: var(--second-bag-color)
-}
-
-/**
-*   Page ACTIVITES ********************************
-**/
-.timeline-container {
-    max-width: 92%;
-    border-left: 4px solid var(--second-bag-color);
-    padding-left: 25px;
-}
-
-.timeline-container p{
-    font-size: var(--font-size-5);
-}
-
-.timeline-container h2{
-    font-family: "Chivo", serif;
-    margin: 0;
-    border-bottom: 1px solid var(--main-bag-color);
-}
-
-.timeline-container .event{
-    box-shadow : 0px 3px 6px -2px rgba(0, 0, 0, 0.2);
-    padding: 4%;
-    margin: 10% 0;
-    line-height: 2;
-    cursor: pointer;
-    position: relative;
-}
-
-.timeline-container .event:hover{
-    box-shadow: 1px 6px 16px -1px rgba(0, 0, 0, 0.1);
-}
-
-.timeline-container .event::before{
-    content: "";
-    width: 14px;
-    height: 14px;
-    border : 2px solid var(--second-bag-color);
-    position: absolute;
-    left: -36px;
-    border-radius: 50%;
-    transform: translateY(-50%);
-    background: var(--base-bag-color);
-    top: 10%;
-}
-
-.timeline-container .event:hover::before{
-    background: var(--main-bag-color);
-}
-
-.timeline-content{
-    justify-content: space-between;
-    display: flex;
-    flex-wrap: wrap;
-}
-
-.timeline-content p{
-    text-align: justify;
-    /* padding: 1%; */
-}
-
-.timeline-container .event .event-date{
-    position: absolute;
-    left: -25%;
-    top: 10%;
-    transform: translateY(-50%);
-    font-weight: bold;
-}
-
-.image-active img{
-    text-align: center;
-    width: 100%;
-    height: auto;
-    padding: 2%;
-}
-
-/* 
-.imgActivite img{
-    margin-left: 600px;
-    position: relative;
-    top: 1px;
-    max-height: 300px;
-    max-width: 500px;
-} */
-
-
-/**
-*   Page CONTACT ********************************
-**/
-
-/* Formulaire */
-form {
-    margin-top: 5%;
-}
-
-.contactRegistration{
-    margin: 5% 6%;
-    /* max-width: 550px; */
-    /* width: 100%; */
-    background-color:var(--main-bag-color);
-    padding: 25px 30px;
-    border-radius: 10px;
-}
- 
-.contactRegistration .registration{
-    /* text-align: center;
-    font-size: 25px;
-    font-weight: 500; */
-} 
-
-/* .input-box{
-    margin: 1% 0;
-    text-align: center; */
-    /* width: calc(100% / 2 - 20px); */
-/* } */
-
-.input-box{
-    margin: 1% 0;
-}
-
-.input-box input{
-    height: 30px;
-    width: calc(100% - 30px);
-    outline: none;
-    border-radius: 5px;
-    border: 2px solid var(--third-color);
-    margin: auto;
-    font-size: 16px;
-    font-family: 'CrimsonPro';
-}
-
-
-/* changer la couleur de border quand on focus sur un input */
-.input-box input:focus,
-.input-box textarea:focus,
-.input-box input:valid,
-.input-box textarea:valid{
-    border: solid;
-    border-color: var(--second-bag-color);
-}
-
-textarea {
-    border-radius: 5px;
-    width: calc(100% - 26px);
-    outline: none;
-    box-sizing: border-box;
-    border: 2px solid var(--third-color);
-    resize: none;
-    overflow-y: auto;
-}
-
-/*buttons de forme */
-form .button{
-    height: 30px;
-    margin: 30px 0;
-}
-
-form .button input{
-    display: block;
-    margin: auto 2%;
-    height: 100%;
-    outline: none;
-    border-radius: 4px;
-    font-size: 16px;
-    font-weight: 500;
-    letter-spacing: 1px;
-    background: var(--second-bag-color);
-    color: #fff;
-    border: none;
-    padding: 1% 4%;
-    line-height: 18px;
-    box-shadow: 3px 3px 30px #999;
-}
-
-form .button input:hover{
-    background: var(--third-color);
-    color: black;
-    box-shadow: 3px 5px 30px #999;
-}
-
-/* Tableau : Les messages obtenus */
-.message-envoye table{
-    width : 100%;
-}
-
-.message-envoye td{ 
-    padding: 1%;
-    border-bottom:2px solid var(--third-color);
-}
-
-.message-envoye td.colorVide{
-    padding: 1%;
-    border-bottom:2px solid var(--main-bag-color);
-}
-
-.message-envoye caption, .horaire caption{
-    font-size: var(--font-size-1);
-    font-weight: bold;
-}
-
-/* Tableau : Heures d'ouverture */
-.horaire{
-    margin: 15% auto 2%;
-}
-
-.horaire table{
-    margin : 5% auto 2%;
-    border: 2px solid var(--main-bag-color);
-    text-align: center;
-    max-width: 550px;
-    width: 90%;
-    border-spacing: 0;
-    border-width: 1;
-}
-
-.horaire caption{
-    margin: 5%;
-    font-size: var(--font-size-2);
-}
-
-.horaire th,.horaire td{
-    border : 1px solid var(--main-bag-color);
-    padding: 1% 4%;
-    width: calc(100%/3);
-}
 
 /***====================== Footer ================================*****/
 
 footer{
-    font-size: var(--font-size-5)!important;
+    font-size: var(--font-size-5);
     background-color: var(--third-color);
     width: 100%;
 } 
@@ -793,61 +831,78 @@ footer{
     padding: 2% 0;
 }
 
-/*contenus du footer*/
+
+/* titre des contenus du footer*/
 footer h3{
     margin: 1% auto;
     padding: 1% auto;
 }
 
+
+/* contenu du footer */
 .footer-bloc{
     width: 21%;
     margin: 5px 2%;
 }
 
+.footer-bloc p{
+    font-size: var(--font-size-5);
+}
+
+
+/* liste des activites et des horaires */
+.footer-liste-activites,
+.footer-liste-horaires{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;   
+}
+
+.footer-liste-horaires li{
+    white-space: nowrap;
+}
+
+.footer-liste-activites li{
+    padding: 2px 0;
+}
+
+
 /* reseau sociaux */
-.icons i{
+.footer-bloc .reseau-sociaux{
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.footer-bloc .reseau-sociaux i{
     margin: 20px 2%;
     padding: 5%;
     font-size: 16px;
 }
 
 
-.liste-actives,
-.liste-horaires{
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    
-}
-
-.liste-horaires li{
-    white-space: nowrap;
-}
-
-.liste-actives li{
-    padding: 2px 0;
-}
- 
-.liste-actives a{
-    text-decoration: none;
-}
-
-.liste-actives a:hover, .reseau-sociaux a:hover i {
-    color:var(--second-bag-color);
-}
 
 
 /***====================== Media query ================================*****/
 
-
+/* pour le taille d'écran entre 1200px et 560px */
 @media (min-width: 560px) and (max-width: 1200px){
+
+    /***========================= Main =============================*****/
+
+
+    /* changer le margin du main */
     :root {
-        /* fonts sizes */
         --main-margin:6%; 
     }
 
-    .timeline-container .event .event-date{
-       
+
+    /**
+    *   Page ACTIVITES ********************************
+    **/
+
+    /* changer l'emplacement de date des activités */
+    .activites-timeline-container .event .event-date{
         left: 5%;
         top: 10%;
         transform: translateY(-100%);
@@ -858,16 +913,12 @@ footer h3{
 
 
 
+/* pour le taille d'écran inferieur à 900px */
 @media (max-width : 900px){
 
- /***/
-    /*Navbar */
-    .nav-logo img{
-        padding-top: 7px;
-        max-height: 25px;
-        max-width: max-content;
-    }
+    /***========================= Header =============================*****/
 
+    /* chenger en navbar pour smartphone*/
     nav{
         min-height: 50px;
         height: auto;
@@ -876,65 +927,104 @@ footer h3{
         line-height: 25px;
     }
 
+    /*diminuer la taille du logo du site*/
+    .nav-logo img{
+        padding-top: 7px;
+        max-height: 25px;
+        max-width: max-content;
+    }
+    
+    /* cacher le nav de PC  */
     .nav-content-border{
         display: none;
     }
+
+    /* afficher le nav de smartphone */
     .nav-phone, #navPhoneContenu{
         display: block;
     }
 
+    /* style de nav de smartphone */
     #navPhone{
         width: 2rem;
         height: 2rem;
         top: 1%;
         right: 4%;
         position: fixed;
+        background-color: var(--main-color);
+        border: 0;
+        border-radius: 5px;
+        color: var(--base-color);
     }
 
+    /* style du button de nav de smartphone */
     #navPhone button{
         width: 3rem;
     }
 
 
+    /***========================= Main =============================*****/
 
     
-  /**
-*   Page CATEGORIE ********************************
-**/  
-    .slide-img img{
+    /**
+    *   Page CATEGORIE ********************************
+    **/  
+
+    /* changer l'hauteur des images de slides  */
+    #categories-bloc-slides .slide-img img{
         height: 150px;
     }
 }
+
+
+
+/* pour le taille d'écran inferieur à 800px */
 @media (max-width : 800px){
+    
+    /***========================= Main =============================*****/
+
+    /**
+    *   Page CATEGORIES ********************************
+    **/
+
+    /* changer le largeur des images de l'oeuvre*/
     .w-25{
         width: 50%;
     }
 }
 
 
-@media (max-width : 700px){
-    #rightarrow{
-        left:-1%;
-        position: relative;
-    }
-}
 
+/* pour le taille d'écran inferieur à 500px */
 @media (max-width : 500px){
-    .w-70,.w-30,.w-50{
+
+
+   /***========================= Main =============================*****/
+
+   /* changer la largeur */
+   .w-70,.w-30,.w-50{
         width: 100%;
     }
 
+
+    /**
+    *   Page CATEGORIES ********************************
+    **/
+
+    /* changer l'hauteur des images de slides  */
+    #categories-bloc-slides .slide-img img{
+        height: 120px;
+    }
+
+
+
+    /***========================= Footer =============================*****/
+
+    /* changer la largeur du contenu de footer */
     .footer-bloc{
         width: 40%;
         margin: 5px 2%;
         text-align: left!important;
-    }
-
-    /**
-*   Page CATEGORIE ********************************
-**/  
-    .slide-img img{
-        height: 120px;
     }
 }
 
@@ -946,7 +1036,7 @@ footer h3{
         --main-margin:2%;
     }
 
-    .timeline-container .event .event-date{
+    .activites-timeline-container .event .event-date{
         left: 8%;
         top: 10%;
         transform: translateY(-160%);
@@ -955,21 +1045,40 @@ footer h3{
 
 }
 
+
+/* pour le taille d'écran inferieur à 300px */
 @media (max-width : 300px){
 
+    /***========================= Main =============================*****/
+
+    /**
+    *   Page CATEGORIES ********************************
+    **/
+
+
+    /* changer la largeur des images de l'oeuvre*/
     .w-25{
         width: 100%;
     }
+    
 
-    .footer-bloc:last-child{
-        width: 70%;
-    }
+    /**
+    *   Page ACTIVITES ********************************
+    **/
 
-    .timeline-container .event .event-date{
+    /* changer l'emplacement de date des activités */
+    .activites-timeline-container .event .event-date{
         left: 15%;
         top: 10%;
         transform: translateY(-250%);
         font-weight: bold;
+    }
+
+    /***========================= Footer =============================*****/
+
+    /* changer la largeur du contenu de footer */
+    .footer-bloc:last-child{
+        width: 70%;
     }
 
 }

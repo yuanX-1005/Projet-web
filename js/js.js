@@ -34,7 +34,6 @@ window.addEventListener('load', function(){
 
 
 // L'affichage des images de slide
-
 function show(){
     for(i=gauche;i<=droite;i++)
     {
